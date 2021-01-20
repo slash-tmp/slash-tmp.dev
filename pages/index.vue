@@ -17,48 +17,7 @@
 
         <!-- Manifest paper -->
         <div class="manifesto__paper">
-          <p>
-            La qualité web, c’est ce qui nous anime, c’est un peu notre fer de
-            lance.
-          </p>
-          <p>
-            Un site de qualité, c’est un site qui propose une
-            <strong>
-              expérience optimale pour toutes et tous en répondant aux besoins
-              des utilisateurs et utilisatrices</strong
-            >. C’est une compétence pluridisciplinaire qui passe par le code, le
-            design, la rédaction, la gestion de projet… Comme définie par Élie
-            Sloïm :
-          </p>
-
-          <figure class="manifesto__quality-quote">
-            <blockquote>
-              <p>
-                La qualité web représente l’aptitude d’un service en ligne à
-                satisfaire des exigences explicites ou implicites.
-              </p>
-            </blockquote>
-            <figcaption class="manifesto__quality-quote-source">
-              <cite>Livre Opquast</cite>
-            </figcaption>
-          </figure>
-
-          <p>
-            Alors pourquoi la qualité web ? Déjà parce que ça semble être une
-            évidence de pouvoir consulter et utiliser un site de la meilleure
-            des manières possibles. Mais aussi parce qu’<strong
-              >un site qui ne respecte pas ces principes peut coûter cher, très
-              cher</strong
-            >. On parle de “non-qualité” et cela représente l’ensemble des coûts
-            causés par l’absence de qualité dans un projet : déréferencement
-            dans les moteurs de recherche, ventes non réalisées sur un site
-            e-commerce, retard dans le traitement des réclamations…
-          </p>
-
-          <p>
-            Autant de raisons qui nécessitent de s’intéresser et d’investir dans
-            la qualité web !
-          </p>
+          <nuxt-content :document="manifestoContent" />
         </div>
       </div>
     </section>
@@ -226,6 +185,15 @@
 export default {
   name: 'Index',
   inject: ['notify'],
+  async asyncData(context) {
+    const manifestoContent = await context
+      .$content('home/manifesto')
+      .fetch()
+      .catch((err) => {
+        console.log('Oh no :(', err)
+      })
+    return { manifestoContent }
+  },
   methods: {
     copyEmail() {
       navigator.clipboard.writeText('contact@slash-tmp.dev')
