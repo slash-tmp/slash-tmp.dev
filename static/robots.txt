@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://slash-tmp.netlify.app/sitemap.xml

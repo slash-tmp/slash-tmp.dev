@@ -1,0 +1,13 @@
+$color-purple: #4f448f;
+$color-white: #fff;
+$color-black: #000;
+
+$container-small: 40rem; // 640px
+$container-medium: 56rem; // 900px
+$container-large: 77rem; // 1240px
+$container-full: 100%;
+
+$color-text-heading: $color-black;
+$color-text: mix($color-black, $color-white, $weight: 85%);
+
+$color-background: mix($color-purple, $color-white, $weight: 5%);

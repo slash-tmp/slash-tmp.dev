@@ -1,0 +1,13 @@
+@import 'reset';
+@import 'typography';
+@import 'variables';
+@import 'utilities';
+@import 'sections/contact';
+@import 'sections/quality';
+@import 'sections/footer';
+@import 'sections/services';
+
+*:focus {
+  outline: 3px solid var(--outline-color, #{$color-purple});
+  outline-offset: 1px;
+}
