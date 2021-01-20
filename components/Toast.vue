@@ -6,7 +6,7 @@
       aria-label="Fermer la notification"
       @click="dismiss"
     >
-      <img src="@/assets/img/x.svg" alt="" />
+      <CloseIcon />
     </button>
   </p>
 </template>
