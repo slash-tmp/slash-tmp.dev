@@ -1,3 +1,7 @@
+---
+title: De la qualité web ?
+---
+
 La qualité web, c’est ce qui nous anime, c’est un peu notre fer de lance.
 
 Un site de qualité, c’est un site qui propose une **expérience optimale pour toutes et tous en répondant aux besoins des utilisateurs et utilisatrices**. C’est une compétence pluridisciplinaire qui passe par le code, le design, la rédaction, la gestion de projet… Comme définie par Élie Sloïm :

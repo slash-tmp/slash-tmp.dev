@@ -1,3 +1,41 @@
+<template>
+  <section
+    class="manifesto container--medium"
+    aria-labelledby="manifesto-section-title"
+  >
+    <h2 id="manifesto-section-title">{{ title }}</h2>
+    <div class="manifesto__paper-wrapper">
+      <!-- Background text -->
+      <div
+        class="manifesto__paper-background background-text"
+        aria-hidden="true"
+      >
+        qua<br />lité<br />web
+      </div>
+
+      <!-- Manifest paper -->
+      <div class="manifesto__paper">
+        <slot />
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'QualitySection',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+}
+</script>
+
+<style lang="scss">
+@import '@/assets/scss/variables';
+
 .manifesto {
   display: grid;
   margin: 0 auto;
@@ -56,3 +94,4 @@
     }
   }
 }
+</style>
