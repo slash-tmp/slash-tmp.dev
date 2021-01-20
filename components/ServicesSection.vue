@@ -1,5 +1,42 @@
+<template>
+  <SectionLandmark
+    :level="2"
+    class="container container--medium services-section"
+    :title="title"
+  >
+    <slot />
+  </SectionLandmark>
+</template>
+
+<script>
+export default {
+  name: 'ServicesSection',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
+}
+</script>
+
+<style lang="scss">
+@import '@/assets/scss/variables';
+
 .services-section {
   margin: 0 auto;
+}
+
+.illustration {
+  height: 20rem;
+  width: 22.5rem;
+
+  @media (max-width: 1200px) {
+    align-self: center;
+    height: unset;
+    max-width: 22.5rem;
+    width: 100%;
+  }
 }
 
 .webdev-section {
@@ -11,24 +48,15 @@
     flex-direction: column;
   }
 
-  &__title {
+  h3 {
     align-items: center;
     color: $color-purple;
     display: flex;
   }
 
-  &__illustration {
+  .illustration {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    height: 20rem;
-    width: 22.5rem;
-
-    @media (max-width: 1200px) {
-      align-self: center;
-      height: unset;
-      max-width: 22.5rem;
-      width: 100%;
-    }
   }
 
   p:nth-of-type(2) {
@@ -46,12 +74,7 @@
     flex-direction: column;
   }
 
-  &__paragraph {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  }
-
-  &__title {
+  h3 {
     color: $color-purple;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -63,17 +86,9 @@
     }
   }
 
-  &__illustration {
+  .illustration {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    height: 20rem;
-    width: 22.5rem;
-
-    @media (max-width: 1200px) {
-      align-self: center;
-      height: unset;
-      max-width: 22.5rem;
-      width: 100%;
-    }
   }
 }
+</style>
