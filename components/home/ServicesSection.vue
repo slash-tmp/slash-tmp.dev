@@ -43,10 +43,17 @@
       </h3>
 
       <p class="audit-section__paragraph">
-        Nous sommes tous les deux certifiés
-        <a href="https://www.opquast.com/certification/">Opquast</a> et nous
-        avons une grande sensibilité pour la qualité web et l’expérience
-        utilisateur. Nous pouvons intervenir pour proposer un
+        Nous sommes tous les deux certifiés Opquast (<a
+          href="https://directory.opquast.com/fr/certificat/D6S7X2/"
+        >
+          <span class="visually-hidden">Certification Opquast d'</span>Adrien</a
+        >
+        et
+        <a href="https://directory.opquast.com/fr/certificat/OE1Y9D/">
+          <span class="visually-hidden">Certification Opquast de</span>
+          Quentin</a
+        >) et nous avons une grande sensibilité pour la qualité web et
+        l’expérience utilisateur. Nous pouvons intervenir pour proposer un
         <strong>audit de qualité web</strong>
         et vous aider à repérer les points d’amélioration sur votre projet et
         aussi les corriger pour une mise en conformité. Nous pouvons aussi
