@@ -1,20 +1,23 @@
-# slash-tmp.dev.two
+# slash-tmp.dev
 
-## Build Setup
+Source code of [https://slash-tmp.dev](https://slash-tmp.dev) website.
 
-```bash
-# install dependencies
-$ yarn install
+## Development
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+Install dependencies:
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+```sh
+yarn install
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Run local server on [localhost:3000](localhost:3000):
+
+```sh
+yarn dev
+```
+
+Build production website in `/dist`:
+
+```sh
+yarn generate
+```
