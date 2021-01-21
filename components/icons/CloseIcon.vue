@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'CloseIcon',
+  name: 'CloseIcon'
 }
 </script>

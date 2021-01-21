@@ -40,25 +40,25 @@ export default {
     return {
       notifications: this.notifications,
       notify: this.notify,
-      dismissNotification: this.dismissNotification,
+      dismissNotification: this.dismissNotification
     }
   },
   data: () => ({
     nextNotificationId: 0,
-    notifications: [],
+    notifications: []
   }),
   methods: {
     notify(text) {
       this.dismissNotification()
       this.notifications.push({
         id: this.nextNotificationId,
-        text,
+        text
       })
       this.nextNotificationId++
     },
     dismissNotification() {
       this.notifications.splice(0, this.notifications.length)
-    },
-  },
+    }
+  }
 }
 </script>

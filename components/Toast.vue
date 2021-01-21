@@ -17,8 +17,8 @@ export default {
   methods: {
     dismiss() {
       this.$emit('dismiss')
-    },
-  },
+    }
+  }
 }
 </script>
 

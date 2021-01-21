@@ -20,18 +20,18 @@ export default {
   props: {
     level: {
       type: Number,
-      required: true,
+      required: true
     },
     title: {
       type: String,
       required: false,
-      default: null,
+      default: null
     },
     slug: {
       type: String,
       required: false,
-      default: null,
-    },
+      default: null
+    }
   },
   computed: {
     titleTag() {
@@ -45,7 +45,7 @@ export default {
           .replace(/[^a-z0-9-_\s]/g, '')
           .replace(/ /g, '-')
       )
-    },
-  },
+    }
+  }
 }
 </script>

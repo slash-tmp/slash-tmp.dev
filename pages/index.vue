@@ -61,14 +61,14 @@ export default {
 
     return {
       manifestoContent: await fetchManifesto,
-      servicesContent: await fetchServices,
+      servicesContent: await fetchServices
     }
   },
   methods: {
     copyEmail() {
       navigator.clipboard.writeText('contact@slash-tmp.dev')
       this.notify("L'adresse email a été copiée dans le presse-papier.")
-    },
-  },
+    }
+  }
 }
 </script>

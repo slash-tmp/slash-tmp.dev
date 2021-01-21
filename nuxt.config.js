@@ -6,14 +6,14 @@ export default {
   head: {
     title: 'slash-tmp.dev.two',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -30,14 +30,14 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    '@nuxtjs/stylelint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/sitemap',
+    '@nuxtjs/sitemap'
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -47,6 +47,6 @@ export default {
   build: {},
 
   sitemap: {
-    hostname: 'https://slash-tmp.netlify.app',
-  },
+    hostname: 'https://slash-tmp.netlify.app'
+  }
 }

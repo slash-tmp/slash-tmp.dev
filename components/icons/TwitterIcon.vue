@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'TwitterIcon',
+  name: 'TwitterIcon'
 }
 </script>

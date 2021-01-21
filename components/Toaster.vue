@@ -19,8 +19,8 @@ export default {
   computed: {
     lastNotification() {
       return this.notifications[this.notifications.length - 1] || null
-    },
-  },
+    }
+  }
 }
 </script>
 

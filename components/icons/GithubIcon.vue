@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'GithubIcon',
+  name: 'GithubIcon'
 }
 </script>
