@@ -1,3 +1,39 @@
+<template>
+  <footer class="footer container container--full">
+    <div class="footer__wrapper">
+      <p class="footer__description">
+        /tmp est un petit studio de développement où on code des sites et on
+        fait de la qualité web.
+      </p>
+      <nuxt-link class="footer__legal" :to="{ name: 'mentions-legales' }">
+        Mentions légales
+      </nuxt-link>
+      <span class="footer__hello">
+        Passez une bonne
+        <span id="js-hello-span"
+          >journée <span role="img" aria-label="soleil">☀️</span></span
+        >
+      </span>
+    </div>
+    <div
+      id="js-hello-background"
+      class="footer__background background-text"
+      aria-hidden="true"
+    >
+      bonjour
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: 'SiteFooter'
+}
+</script>
+
+<style lang="scss">
+@import '@/assets/scss/variables';
+
 .footer {
   --outline-color: #{$color-white};
 
@@ -5,6 +41,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  margin-top: 5rem;
   padding-top: 8rem;
   position: relative;
 
@@ -75,3 +112,4 @@
     }
   }
 }
+</style>

@@ -2,7 +2,6 @@
 @import 'typography';
 @import 'variables';
 @import 'utilities';
-@import 'sections/footer';
 
 *:focus {
   outline: 3px solid var(--outline-color, #{$color-purple});
