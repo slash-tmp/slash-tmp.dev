@@ -3,10 +3,10 @@
     <h1>Mentions légales</h1>
 
     <p>
-      <strong>/</strong> est une <strong>SARL</strong> (Société à Responsabilité
-      Limitée) au capital social de <strong>XXX€</strong> domiciliée au XXXX,
-      33000 Bordeaux et enregistrée au registre des commerces et des sociétés de
-      Bordeaux sous le numéro XXX XXX XXX.
+      <strong>/tmp</strong> est une SARL (Société à Responsabilité Limitée) au
+      capital social de XXX€ domiciliée au XXXX, 33000 Bordeaux et enregistrée
+      au registre des commerces et des sociétés de Bordeaux sous le numéro XXX
+      XXX XXX.
     </p>
 
     <div class="legal__sub-section">
