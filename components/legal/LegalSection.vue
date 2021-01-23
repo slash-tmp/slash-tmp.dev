@@ -4,19 +4,20 @@
 
     <p>
       <strong>/tmp</strong> est une SARL (Société à Responsabilité Limitée) au
-      capital social de XXX€ domiciliée au XXXX, 33000 Bordeaux et enregistrée
-      au registre des commerces et des sociétés de Bordeaux sous le numéro XXX
-      XXX XXX.
+      capital social de XXX€ domiciliée au XXXX, 33000 Bordeaux.
+      <strong>/tmp</strong> est enregistrée au registre des commerces et des
+      sociétés de Bordeaux sous le numéro XXX XXX XXX et sous le numéro
+      d'identification fiscale XXX XXX XXX.
     </p>
 
-    <div class="legal__sub-section">
+    <address class="legal__sub-section">
       <h2>Coordonnées</h2>
 
       <ul>
         <li>Email : contact@slash-tmp.dev</li>
         <li>Téléphone : XX XX XX XX XX</li>
       </ul>
-    </div>
+    </address>
 
     <div class="legal__sub-section">
       <h2>Hébergement</h2>
