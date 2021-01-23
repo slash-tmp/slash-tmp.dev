@@ -41,11 +41,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.default-layout {
-  &__header {
-    margin-bottom: 4rem;
-  }
-}
-</style>

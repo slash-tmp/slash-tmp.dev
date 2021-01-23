@@ -1,5 +1,7 @@
 <template>
   <div>
+    <PresentationSection />
+
     <QualitySection />
 
     <ServicesSection />
