@@ -1,15 +1,15 @@
 <template>
-  <main>
-    <header class="container container--full">
-      <nuxt-link :to="{ name: 'index' }" id="hero-section">/tmp</nuxt-link>
-    </header>
+  <div>
+    <SiteHeader class="default-layout__header" />
 
-    <Nuxt />
+    <main>
+      <Nuxt />
+    </main>
 
     <SiteFooter />
 
     <Toaster />
-  </main>
+  </div>
 </template>
 
 <script>
@@ -41,3 +41,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.default-layout {
+  &__header {
+    margin-bottom: 4rem;
+  }
+}
+</style>
