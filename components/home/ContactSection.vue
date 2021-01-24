@@ -58,7 +58,7 @@ export default {
 @import '@/assets/scss/variables';
 
 .contact {
-  margin: 0 auto 5rem;
+  margin: 0 auto;
 
   @media (max-width: 600px) {
     margin-bottom: 2rem;

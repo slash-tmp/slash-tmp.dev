@@ -1,6 +1,10 @@
 .container {
   padding: 3rem;
 
+  &--small {
+    max-width: $container-small;
+  }
+
   &--medium {
     max-width: $container-medium;
   }
