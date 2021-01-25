@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PresentationSection />
+    <PresentationSection class="index__presentation" />
 
     <QualitySection />
 

@@ -16,6 +16,10 @@
         petit studio de développement où on code des sites et on fait de la
         qualité web.
       </p>
+      <div class="presentation-section__avatars">
+        <Avatar src="https://i.pravatar.cc?img=50" alt="Adrien" />
+        <Avatar src="https://i.pravatar.cc?img=69" alt="Quentin" />
+      </div>
     </section>
   </div>
 </template>
@@ -36,9 +40,11 @@ export default {
 @import '@/assets/scss/variables';
 
 .presentation-section {
-  background-color: $color-purple;
   color: $color-white;
   font-size: 1.5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  background-color: $color-purple;
 
   --flow: 3rem;
 
@@ -58,6 +64,20 @@ export default {
 
   &__section {
     margin: 0 auto;
+  }
+
+  &__avatars {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+
+    > :nth-child(1) {
+      transform: translateY(1rem);
+    }
+
+    > :nth-child(2) {
+      transform: translateY(-1rem);
+    }
   }
 
   @media (max-width: 1200px) {
