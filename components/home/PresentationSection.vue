@@ -17,8 +17,16 @@
         qualité web.
       </p>
       <div class="presentation-section__avatars">
-        <Avatar src="https://i.pravatar.cc?img=50" alt="Adrien" />
-        <Avatar src="https://i.pravatar.cc?img=69" alt="Quentin" />
+        <Avatar
+          src="https://i.pravatar.cc?img=50"
+          alt="Adrien"
+          class="presentation-section__avatar"
+        />
+        <Avatar
+          src="https://i.pravatar.cc?img=69"
+          alt="Quentin"
+          class="presentation-section__avatar"
+        />
       </div>
     </section>
   </div>
@@ -47,6 +55,8 @@ export default {
   background-color: $color-purple;
 
   --flow: 3rem;
+  --avatar-size: 10rem;
+  --avatar-offset: 1rem;
 
   &__title {
     font-size: 3.5em;
@@ -72,12 +82,16 @@ export default {
     padding: 1rem 0;
 
     > :nth-child(1) {
-      transform: translateY(1rem);
+      transform: translateY(calc(var(--avatar-offset)));
     }
 
     > :nth-child(2) {
-      transform: translateY(-1rem);
+      transform: translateY(calc(var(--avatar-offset) * -1));
     }
+  }
+
+  &__avatar {
+    width: var(--avatar-size);
   }
 
   @media (max-width: 1200px) {
@@ -90,6 +104,8 @@ export default {
     font-size: 1rem;
 
     --flow: 2rem;
+    --avatar-offset: 0.5rem;
+    --avatar-size: 7rem;
   }
 }
 </style>
