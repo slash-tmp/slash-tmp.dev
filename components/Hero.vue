@@ -24,10 +24,18 @@ export default {
 
 .hero {
   background-color: $color-purple;
+  margin-bottom: 5rem;
 
   &__content {
     color: $color-white;
     margin: 0 auto;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: inherit;
+    }
   }
 }
 </style>
