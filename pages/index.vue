@@ -1,6 +1,8 @@
 <template>
   <div>
-    <PresentationSection class="index__presentation" />
+    <Hero tag="section">
+      <PresentationSection class="index__presentation" />
+    </Hero>
 
     <QualitySection />
 

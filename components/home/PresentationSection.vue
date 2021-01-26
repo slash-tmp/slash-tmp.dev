@@ -1,34 +1,30 @@
 <template>
-  <div class="presentation-section">
-    <section
-      class="presentation-section__section container container--medium flow"
-    >
-      <h1 class="presentation-section__title">
-        <!-- &shy; => This is a soft hyphen, only appearing when the word is wrapped. -->
-        Dévelop&shy;pement et qualité&nbsp;web
-      </h1>
-      <p>
-        Bonjour ! Nous c’est Adrien et Quentin. On est 2 développeurs web très
-        attachés à la qualité web et à l’expérience utilisateur.
-      </p>
-      <p>
-        Et c’est pour ça qu’on a créé “/tmp” (ça se prononce “slash tmp”) : un
-        petit studio de développement où on code des sites et on fait de la
-        qualité web.
-      </p>
-      <div class="presentation-section__avatars">
-        <img
-          class="presentation-section__avatar"
-          src="https://i.pravatar.cc?img=50"
-          alt="Adrien"
-        />
-        <img
-          class="presentation-section__avatar"
-          src="https://i.pravatar.cc?img=69"
-          alt="Quentin"
-        />
-      </div>
-    </section>
+  <div class="presentation-section flow">
+    <h1 class="presentation-section__title">
+      <!-- &shy; => This is a soft hyphen, only appearing when the word is wrapped. -->
+      Dévelop&shy;pement et qualité&nbsp;web
+    </h1>
+    <p>
+      Bonjour ! Nous c’est Adrien et Quentin. On est 2 développeurs web très
+      attachés à la qualité web et à l’expérience utilisateur.
+    </p>
+    <p>
+      Et c’est pour ça qu’on a créé “/tmp” (ça se prononce “slash tmp”) : un
+      petit studio de développement où on code des sites et on fait de la
+      qualité web.
+    </p>
+    <div class="presentation-section__avatars">
+      <img
+        class="presentation-section__avatar"
+        src="https://i.pravatar.cc?img=50"
+        alt="Adrien"
+      />
+      <img
+        class="presentation-section__avatar"
+        src="https://i.pravatar.cc?img=69"
+        alt="Quentin"
+      />
+    </div>
   </div>
 </template>
 
@@ -39,20 +35,11 @@ export default {
 </script>
 
 <style lang="scss">
-.presentation-section {
-  margin: auto;
-}
-</style>
-
-<style lang="scss">
 @import '@/assets/scss/variables';
 
 .presentation-section {
-  color: $color-white;
   font-size: 1.5rem;
-  margin-bottom: 5rem;
   position: relative;
-  background-color: $color-purple;
 
   --flow: 3rem;
   --avatar-size: 10rem;
