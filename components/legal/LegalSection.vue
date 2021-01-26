@@ -1,7 +1,5 @@
 <template>
-  <section class="legal container--small">
-    <h1>Mentions légales</h1>
-
+  <section class="legal container container--small">
     <p>
       <strong>/tmp</strong> est une SARL (Société à Responsabilité Limitée) au
       capital social de XXX€ domiciliée au XXXX, 33000 Bordeaux.

@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <article>
+    <Hero tag="header">
+      <h1>Mentions légales</h1>
+    </Hero>
     <LegalSection />
-  </div>
+  </article>
 </template>
 
 <script>
