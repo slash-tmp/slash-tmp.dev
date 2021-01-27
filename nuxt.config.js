@@ -1,10 +1,7 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
   modern: 'client',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  srcDir: 'src/',
   head: {
     title: 'slash-tmp.dev.two',
     htmlAttrs: {
@@ -17,37 +14,10 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/scss/index'],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module'
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/sitemap'
-  ],
-
-  // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap'],
   sitemap: {
     hostname: 'https://slash-tmp.netlify.app'
   }
