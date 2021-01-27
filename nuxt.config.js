@@ -16,8 +16,13 @@ export default {
   },
   css: ['@/assets/scss/index'],
   components: true,
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/style-resources'
+  ],
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
+  styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
     hostname: 'https://slash-tmp.netlify.app'
   }
