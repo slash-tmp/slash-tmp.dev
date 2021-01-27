@@ -13,8 +13,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/variables';
-
 .site-header {
   --outline-color: #{$color-white};
   --header-font-size: 2.5rem;
