@@ -1,8 +1,8 @@
 @import 'variables';
 
 :root {
-  font-size: 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  font-family: $font-family-body;
   background-color: $color-background;
   color: $color-text;
   line-height: 1.5;
@@ -16,20 +16,45 @@ h5,
 h6 {
   font-family: $font-family-heading;
   color: $color-text-heading;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
+
+  @media (max-width: 900px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.8rem;
+  }
 }
 
 h3 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 900px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.4rem;
+  }
 }
 
 blockquote {

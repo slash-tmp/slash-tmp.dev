@@ -47,17 +47,7 @@ export default {
   --avatar-border-width: 0.5rem;
 
   &__title {
-    font-size: 3.5em;
     color: inherit;
-    line-height: 1.2;
-
-    @media (max-width: 1200px) {
-      font-size: 3em;
-    }
-
-    @media (max-width: 900px) {
-      font-size: 2.5em;
-    }
   }
 
   &__section {
