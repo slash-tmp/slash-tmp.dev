@@ -19,7 +19,10 @@
 export default {
   name: 'ErrorSection',
   props: {
-    code: Number
+    code: {
+      type: Number,
+      default: 404
+    }
   }
 }
 </script>

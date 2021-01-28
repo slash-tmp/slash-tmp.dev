@@ -12,7 +12,12 @@
 export default {
   name: 'Error',
   props: {
-    error: Object
+    error: {
+      type: Object,
+      default: () => {
+        return { statusCode: 404 }
+      }
+    }
   }
 }
 </script>
