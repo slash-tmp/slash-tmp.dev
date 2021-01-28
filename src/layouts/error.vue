@@ -1,7 +1,7 @@
 <template>
   <article>
     <Hero tag="header">
-      <h1>Page introuvable</h1>
+      <h1>{{ error.statusCode === 404 ? 'Page introuvable' : 'Erreur' }}</h1>
     </Hero>
 
     <ErrorSection :code="error.statusCode" />
