@@ -32,8 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/variables';
-
 .footer {
   --outline-color: #{$color-white};
 

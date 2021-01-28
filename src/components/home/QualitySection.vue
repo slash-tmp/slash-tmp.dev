@@ -69,8 +69,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/variables';
-
 .manifesto {
   display: grid;
   margin: 0 auto;

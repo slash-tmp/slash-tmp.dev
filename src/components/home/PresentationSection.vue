@@ -35,8 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/variables';
-
 .presentation-section {
   font-size: 1.5rem;
   position: relative;

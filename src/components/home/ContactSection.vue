@@ -55,8 +55,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/variables';
-
 .contact {
   margin: 0 auto;
 

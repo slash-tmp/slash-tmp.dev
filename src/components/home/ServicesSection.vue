@@ -76,8 +76,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/variables';
-
 .services-section {
   margin: 0 auto;
 }

@@ -20,8 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/variables';
-
 .hero {
   background-color: $color-purple;
   margin-bottom: 5rem;
