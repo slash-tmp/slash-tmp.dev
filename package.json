@@ -24,7 +24,6 @@
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "core-js": "^3.8.2",
-    "node-sass": "^5.0.0",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
