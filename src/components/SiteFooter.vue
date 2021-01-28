@@ -5,21 +5,19 @@
         /tmp est un petit studio de développement où on code des sites et on
         fait de la qualité web.
       </p>
+
       <nuxt-link class="footer__legal" :to="{ name: 'mentions-legales' }">
         Mentions légales
       </nuxt-link>
+
       <span class="footer__hello">
-        Passez une bonne
-        <span id="js-hello-span"
-          >journée <span role="img" aria-label="soleil">☀️</span></span
-        >
+        Passez une bonne {{ isNight ? 'nuit' : 'journée' }}
+        <span role="img" :aria-label="isNight ? 'lune' : 'soleil'">
+          {{ isNight ? '🌙' : '☀️' }}
+        </span>
       </span>
     </div>
-    <div
-      id="js-hello-background"
-      class="footer__background background-text"
-      aria-hidden="true"
-    >
+    <div class="footer__background background-text" aria-hidden="true">
       bonjour
     </div>
   </footer>
@@ -27,7 +25,17 @@
 
 <script>
 export default {
-  name: 'SiteFooter'
+  name: 'SiteFooter',
+  data() {
+    return {
+      time: new Date().getHours()
+    }
+  },
+  computed: {
+    isNight() {
+      return this.time > 22 || this.time < 7
+    }
+  }
 }
 </script>
 
