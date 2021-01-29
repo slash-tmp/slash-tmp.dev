@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero tag="section">
-      <PresentationSection class="index__presentation" />
+      <PresentationSection />
     </Hero>
 
     <QualitySection />
@@ -14,6 +14,16 @@
 
 <script>
 export default {
-  name: 'Index'
+  name: 'Index',
+  data() {
+    return {
+      title: 'Petit studio de développement et de qualité web',
+      description:
+        "/tmp c'est deux développeurs : Adrien et Quentin. On code des sites web sur mesure et on fait de la qualité web."
+    }
+  },
+  head() {
+    return setPageMeta(this.title, this.description, this.$route.path)
+  }
 }
 </script>
