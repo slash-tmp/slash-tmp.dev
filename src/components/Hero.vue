@@ -3,6 +3,7 @@
     <div class="hero__content container container--medium">
       <slot />
     </div>
+    <Wave />
   </component>
 </template>
 
