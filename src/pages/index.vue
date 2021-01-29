@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import setPageMeta from '@/helpers/setPageMeta.js'
+
 export default {
   name: 'Index',
   data() {
