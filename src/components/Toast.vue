@@ -43,10 +43,7 @@ export default {
     background-color: transparent;
     border: none;
     cursor: pointer;
-
-    &:active {
-      translate: 0;
-    }
+    padding: 0.5rem;
   }
 }
 </style>

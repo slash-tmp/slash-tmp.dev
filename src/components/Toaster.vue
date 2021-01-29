@@ -27,12 +27,12 @@ export default {
 <style lang="scss">
 @keyframes slidein {
   0% {
-    translate: 0 100%;
+    transform: translateY(100%);
     opacity: 0;
   }
 
   100% {
-    translate: none;
+    transform: none;
     opacity: 1;
   }
 }
