@@ -22,7 +22,7 @@ export default function setPageMeta(title, description, path) {
       {
         hid: 'og:url',
         name: 'og:url',
-        content: `https://slash-tmp.dev${path}`
+        content: `${process.env.baseUrl}${path}`
       }
     ]
   }

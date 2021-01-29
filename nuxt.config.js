@@ -1,8 +1,12 @@
+const baseUrl = 'https://slash-tmp.netlify.app'
 const title = 'Petit studio de développement et de qualité web'
 const description =
   "/tmp c'est deux développeurs : Adrien et Quentin. On code des sites web sur mesure et on fait de la qualité web."
 
 export default {
+  env: {
+    baseUrl
+  },
   target: 'static',
   modern: 'client',
   srcDir: 'src/',
@@ -22,7 +26,7 @@ export default {
         name: 'og:description',
         content: description
       },
-      { hid: 'og:url', name: 'og:url', content: 'https://slash-tmp.dev' },
+      { hid: 'og:url', name: 'og:url', content: baseUrl },
       { hid: 'og:image', name: 'og:image', content: '/og.jpg' },
       { hid: 'twitter:title', name: 'twitter:title', content: title },
       {
