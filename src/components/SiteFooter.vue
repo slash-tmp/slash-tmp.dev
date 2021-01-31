@@ -18,9 +18,6 @@
         </span>
       </span>
     </div>
-    <div class="footer__background background-text" aria-hidden="true">
-      bonjour
-    </div>
   </footer>
 </template>
 
@@ -98,18 +95,6 @@ export default {
       grid-row: auto;
       grid-column: auto;
       justify-self: initial;
-    }
-  }
-
-  &__background {
-    right: 0;
-    position: absolute;
-    text-align: right;
-    top: 6rem;
-    transform: translateY(-100%);
-
-    @media (max-width: 1200px) {
-      display: none;
     }
   }
 }
