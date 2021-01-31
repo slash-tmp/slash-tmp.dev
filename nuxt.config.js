@@ -5,7 +5,7 @@ const description =
 
 export default {
   env: {
-    baseUrl
+    baseUrl: process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
   },
   target: 'static',
   modern: 'client',
