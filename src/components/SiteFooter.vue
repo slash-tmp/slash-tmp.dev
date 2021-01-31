@@ -1,6 +1,7 @@
 <template>
-  <footer class="footer container container--full">
-    <div class="footer__wrapper">
+  <footer class="footer">
+    <Wave reversed />
+    <div class="footer__wrapper container">
       <p class="footer__description">
         /tmp est un petit studio de développement où on code des sites et on
         fait de la qualité web.
@@ -43,13 +44,7 @@ export default {
 .footer {
   --outline-color: #{$color-white};
 
-  background-image: url('~assets/img/footer-bg.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  margin-top: 5rem;
-  padding-top: 8rem;
-  position: relative;
+  background: $color-purple;
 
   &__wrapper {
     color: $color-white;
@@ -58,7 +53,7 @@ export default {
     grid-template-rows: 1fr auto;
     gap: 1rem;
     max-width: $container-medium;
-    margin: 3rem auto 0;
+    margin: 0 auto;
 
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
