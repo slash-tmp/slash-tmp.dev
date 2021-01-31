@@ -16,12 +16,12 @@
     <div class="presentation-section__avatars">
       <img
         class="presentation-section__avatar"
-        src="https://i.pravatar.cc?img=50"
+        :src="require('@/assets/img/adrien.jpg?resize&size=200')"
         alt="Adrien"
       />
       <img
         class="presentation-section__avatar"
-        src="https://i.pravatar.cc?img=69"
+        :src="require('@/assets/img/quentin.jpg?resize&size=200')"
         alt="Quentin"
       />
     </div>

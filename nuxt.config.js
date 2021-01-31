@@ -48,10 +48,13 @@ export default {
   },
   css: ['@/assets/scss/index'],
   components: true,
-  buildModules: ['@nuxtjs/style-resources'],
+  buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
   styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
     hostname: 'https://slash-tmp.netlify.app'
+  },
+  optimizedImages: {
+    optimizeImages: true
   }
 }
