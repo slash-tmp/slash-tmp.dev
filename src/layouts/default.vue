@@ -24,16 +24,24 @@ export default {
   },
   data: () => ({
     nextNotificationId: 0,
-    notifications: []
+    notifications: [],
+    automaticDismissTimeoutId: null
   }),
   methods: {
     notify(text) {
+      clearTimeout(this.automaticDismissTimeoutId)
+
       this.dismissNotification()
       this.notifications.push({
         id: this.nextNotificationId,
         text
       })
       this.nextNotificationId++
+
+      this.automaticDismissTimeoutId = setTimeout(
+        this.dismissNotification,
+        8000
+      )
     },
     dismissNotification() {
       this.notifications.splice(0, this.notifications.length)
