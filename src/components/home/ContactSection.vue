@@ -19,7 +19,10 @@
           </a>
         </li>
         <li class="contact__social">
-          <a class="contact__link" href="#">
+          <a
+            class="contact__link"
+            href="https://www.linkedin.com/company/slash-tmp"
+          >
             <LinkedinIcon class="contact__icon" />
             LinkedIn
           </a>
