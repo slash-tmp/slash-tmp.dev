@@ -1,5 +1,5 @@
 <template>
-  <div class="toaster" role="log" aria-live="polite">
+  <div class="toaster" role="alert" aria-live="polite">
     <transition name="slide">
       <Toast
         v-if="lastNotification"
