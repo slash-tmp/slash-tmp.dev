@@ -14,6 +14,9 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  generate: {
+    fallback: true
+  },
   css: ['@/assets/scss/index'],
   components: true,
   buildModules: ['@nuxtjs/style-resources'],
