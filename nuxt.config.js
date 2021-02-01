@@ -16,11 +16,7 @@ export default {
   },
   css: ['@/assets/scss/index'],
   components: true,
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources'
-  ],
+  buildModules: ['@nuxtjs/style-resources'],
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
   styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
