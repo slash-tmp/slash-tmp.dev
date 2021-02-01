@@ -16,36 +16,32 @@
     <div class="presentation-section__avatars">
       <picture>
         <source
-          :srcSet="
-            require('@/assets/img/adrien.jpg?resize&size=200&format=webp')
-          "
+          srcset="@/assets/img/adrien.jpg?resize&size=200&format=webp"
           type="image/webp"
         />
         <source
-          :srcSet="require('@/assets/img/adrien.jpg?resize&size=200')"
+          srcset="@/assets/img/adrien.jpg?resize&size=200"
           type="image/jpeg"
         />
         <img
           class="presentation-section__avatar"
-          :src="require('@/assets/img/adrien.jpg?resize&size=200')"
+          src="@/assets/img/adrien.jpg?resize&size=200"
           alt="Adrien"
         />
       </picture>
 
       <picture>
         <source
-          :srcSet="
-            require('@/assets/img/quentin.jpg?resize&size=200&format=webp')
-          "
+          srcset="@/assets/img/quentin.jpg?resize&size=200&format=webp"
           type="image/webp"
         />
         <source
-          :srcSet="require('@/assets/img/quentin.jpg?resize&size=200')"
+          srcset="@/assets/img/quentin.jpg?resize&size=200"
           type="image/jpeg"
         />
         <img
           class="presentation-section__avatar"
-          :src="require('@/assets/img/quentin.jpg?resize&size=200')"
+          src="@/assets/img/quentin.jpg?resize&size=200"
           alt="Quentin"
         />
       </picture>
