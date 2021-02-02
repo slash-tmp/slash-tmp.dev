@@ -45,5 +45,9 @@ export default {
     cursor: pointer;
     padding: 0.5rem;
   }
+
+  @media (max-width: 400px) {
+    padding: 0.5rem 0.5rem;
+  }
 }
 </style>

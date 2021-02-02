@@ -14,16 +14,37 @@
       qualité web.
     </p>
     <div class="presentation-section__avatars">
-      <img
-        class="presentation-section__avatar"
-        src="https://i.pravatar.cc?img=50"
-        alt="Adrien"
-      />
-      <img
-        class="presentation-section__avatar"
-        src="https://i.pravatar.cc?img=69"
-        alt="Quentin"
-      />
+      <picture>
+        <source
+          srcset="@/assets/img/adrien.jpg?resize&size=200&format=webp"
+          type="image/webp"
+        />
+        <source
+          srcset="@/assets/img/adrien.jpg?resize&size=200"
+          type="image/jpeg"
+        />
+        <img
+          class="presentation-section__avatar"
+          src="@/assets/img/adrien.jpg?resize&size=200"
+          alt="Adrien"
+        />
+      </picture>
+
+      <picture>
+        <source
+          srcset="@/assets/img/quentin.jpg?resize&size=200&format=webp"
+          type="image/webp"
+        />
+        <source
+          srcset="@/assets/img/quentin.jpg?resize&size=200"
+          type="image/jpeg"
+        />
+        <img
+          class="presentation-section__avatar"
+          src="@/assets/img/quentin.jpg?resize&size=200"
+          alt="Quentin"
+        />
+      </picture>
     </div>
   </div>
 </template>
