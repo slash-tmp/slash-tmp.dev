@@ -1,12 +1,8 @@
 <template>
   <div>
     <Hero tag="header">
-      <h1>Blog</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-        recusandae cum minus voluptatem incidunt dolores nostrum, ipsam maiores
-        dolore aut eaque autem sed vel! Odio magni fuga soluta. Odio, ut!
-      </p>
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
     </Hero>
 
     <div class="container container--small">
@@ -23,6 +19,8 @@
 </template>
 
 <script>
+import setPageMeta from '@/helpers/setPageMeta'
+
 export default {
   name: 'Blog',
   async asyncData({ $content }) {
@@ -31,6 +29,16 @@ export default {
     return {
       articles
     }
+  },
+  data() {
+    return {
+      title: 'Blog',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae cum minus voluptatem incidunt dolores nostrum, ipsam maiores dolore aut eaque autem sed vel! Odio magni fuga soluta. Odio, ut!'
+    }
+  },
+  head() {
+    return setPageMeta(this.title, this.description, this.$route.path)
   }
 }
 </script>

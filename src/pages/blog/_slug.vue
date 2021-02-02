@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import setPageMeta from '@/helpers/setPageMeta'
+
 export default {
   name: 'Blog',
   async asyncData({ $content, params }) {
@@ -18,6 +20,13 @@ export default {
     return {
       article
     }
+  },
+  head() {
+    return setPageMeta(
+      this.article.title,
+      this.article.description,
+      this.$route.path
+    )
   }
 }
 </script>

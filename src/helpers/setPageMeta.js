@@ -14,6 +14,7 @@ export default function setPageMeta(title, description, path) {
         content: description
       },
       { hid: 'og:title', name: 'og:title', content: title },
+      { hid: 'twitter:title', name: 'twitter:title', content: title },
       {
         hid: 'og:description',
         name: 'og:description',
