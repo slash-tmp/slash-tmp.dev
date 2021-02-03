@@ -40,7 +40,11 @@ export default {
   margin: 0 auto;
 
   &__list {
-    --flow: 5rem;
+    --flow: 4rem;
+
+    @media (max-width: 600px) {
+      --flow: 2rem;
+    }
   }
 }
 </style>
