@@ -19,7 +19,7 @@ import setPageMeta from '@/helpers/setPageMeta'
 import formatDate from '@/helpers/formatDate'
 
 export default {
-  name: 'Blog',
+  name: 'BlogSlug',
   async asyncData({ $content, params }) {
     const slug = params.slug
     const article = await $content('blog', slug).fetch()
