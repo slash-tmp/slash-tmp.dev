@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SiteHeader class="default-layout__header" />
+    <SiteHeader />
 
     <main>
       <Nuxt />

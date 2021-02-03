@@ -1,20 +1,11 @@
 <template>
-  <div>
+  <div class="blog">
     <Hero tag="header">
-      <h1>{{ title }}</h1>
+      <h1 class="blog__title">{{ title }}</h1>
       <p>{{ description }}</p>
     </Hero>
 
-    <div class="container container--small">
-      <ul v-for="article in articles" :key="article.slug">
-        <li>
-          <h2>
-            <NuxtLink :to="article.path">{{ article.title }}</NuxtLink>
-          </h2>
-          Écrit le <time>{{ article.createdAt }}</time>
-        </li>
-      </ul>
-    </div>
+    <Articles :articles="articles" />
   </div>
 </template>
 
@@ -42,3 +33,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.blog {
+  &__title {
+    margin-bottom: 2rem;
+  }
+}
+</style>
