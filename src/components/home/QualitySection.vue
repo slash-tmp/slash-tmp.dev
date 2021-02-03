@@ -10,9 +10,17 @@
         class="manifesto__paper-background background-text"
         aria-hidden="true"
       >
-        <div class="manifesto__paper-background-text">qua</div>
-        <div class="manifesto__paper-background-text">lité</div>
-        <div class="manifesto__paper-background-text">web</div>
+        <div
+          v-for="text in animatedTexts"
+          :key="text.content"
+          ref="animatedText"
+          :class="[
+            'manifesto__paper-background-text',
+            { 'manifesto__paper-background-text--hidden': text.isHidden }
+          ]"
+        >
+          {{ text.content }}
+        </div>
       </div>
 
       <!-- Manifest paper -->
@@ -67,33 +75,42 @@
 <script>
 export default {
   name: 'QualitySection',
+  data() {
+    return {
+      animatedTexts: [
+        { content: 'qua', isHidden: false },
+        { content: 'lité', isHidden: false },
+        { content: 'web', isHidden: false }
+      ],
+      observer: null,
+      threshold: [0.5]
+    }
+  },
   mounted() {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(function (entry) {
-          // Set class and stop observing element
-          if (entry.intersectionRatio > 0.5) {
-            entry.target.classList.remove(
-              'manifesto__paper-background-text--hidden'
-            )
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      {
-        threshold: [0.5]
-      }
-    )
-
-    // Assign elements to observe
-    const observables = document.querySelectorAll(
-      '.manifesto__paper-background-text'
-    )
-
-    observables.forEach(observable => {
-      observable.classList.add('manifesto__paper-background-text--hidden')
-      observer.observe(observable)
+    // Declare observer
+    this.observer = new IntersectionObserver(this.onElementObserve, {
+      threshold: this.threshold
     })
+
+    // Observe elements and hide them
+    this.$refs.animatedText.forEach((observable, index) => {
+      this.animatedTexts[index].isHidden = true
+      this.observer.observe(observable)
+    })
+  },
+  methods: {
+    /**
+     * Show elements and stop observing them if ratio is > 0.5
+     */
+    onElementObserve(entries) {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0.5) {
+          const index = this.animatedTexts.findIndex(t => t.isHidden)
+          this.animatedTexts[index].isHidden = false
+          this.observer.unobserve(entry.target)
+        }
+      })
+    }
   }
 }
 </script>
