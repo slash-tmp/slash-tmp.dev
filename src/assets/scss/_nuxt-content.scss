@@ -1,0 +1,54 @@
+.nuxt-content {
+  --flow: 1.5rem;
+
+  @extend .flow;
+
+  margin: 0 auto;
+
+  h2 {
+    margin-top: 4rem;
+  }
+
+  h3 {
+    margin-top: 2.5rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  ul > li {
+    list-style-type: initial;
+
+    &::marker {
+      color: $color-purple;
+    }
+  }
+
+  ol > li {
+    list-style-type: decimal;
+
+    &::marker {
+      color: $color-purple;
+    }
+  }
+
+  a {
+    color: $color-purple;
+  }
+
+  // Only inline `code` elements
+  :not(pre) > code {
+    color: $color-purple;
+    background-color: rgba($color-purple, 0.05);
+    border-radius: 2px;
+    padding: 0.1rem 0.2rem;
+  }
+
+  hr {
+    border: 0;
+    border-top: 2px inset $color-purple;
+    margin: 2.5rem 0;
+  }
+}
