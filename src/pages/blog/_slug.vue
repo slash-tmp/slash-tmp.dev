@@ -3,7 +3,7 @@
     <Hero tag="header">
       <h1 class="blog-slug__title">{{ article.title }}</h1>
       <div class="blog-slug__date">
-        Écrit le <time>{{ article.createdAt }}</time>
+        Écrit le <time>{{ formattedDate }}</time>
       </div>
       <NuxtLink class="blog-slug__back" :to="{ name: 'blog' }">
         <ArrowLeftIcon class="blog-slug__backIcon" />
@@ -16,6 +16,7 @@
 
 <script>
 import setPageMeta from '@/helpers/setPageMeta'
+import formatDate from '@/helpers/formatDate'
 
 export default {
   name: 'Blog',
@@ -25,6 +26,11 @@ export default {
 
     return {
       article
+    }
+  },
+  computed: {
+    formattedDate() {
+      return formatDate(this.article.createdAt)
     }
   },
   head() {
