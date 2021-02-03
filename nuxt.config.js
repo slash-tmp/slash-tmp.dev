@@ -50,6 +50,9 @@ export default {
   components: true,
   buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
+  content: {
+    liveEdit: false
+  },
   styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
     hostname: 'https://slash-tmp.netlify.app'
