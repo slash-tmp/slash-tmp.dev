@@ -10,7 +10,9 @@
         class="manifesto__paper-background background-text"
         aria-hidden="true"
       >
-        qua<br />lité<br />web
+        <div class="manifesto__paper-background-text">qua</div>
+        <div class="manifesto__paper-background-text">lité</div>
+        <div class="manifesto__paper-background-text">web</div>
       </div>
 
       <!-- Manifest paper -->
@@ -64,7 +66,35 @@
 
 <script>
 export default {
-  name: 'QualitySection'
+  name: 'QualitySection',
+  mounted() {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(function (entry) {
+          // Set class and stop observing element
+          if (entry.intersectionRatio > 0.5) {
+            entry.target.classList.remove(
+              'manifesto__paper-background-text--hidden'
+            )
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: [0.5]
+      }
+    )
+
+    // Assign elements to observe
+    const observables = document.querySelectorAll(
+      '.manifesto__paper-background-text'
+    )
+
+    observables.forEach(observable => {
+      observable.classList.add('manifesto__paper-background-text--hidden')
+      observer.observe(observable)
+    })
+  }
 }
 </script>
 
@@ -93,6 +123,15 @@ export default {
 
     @media (max-width: 1200px) {
       display: none;
+    }
+  }
+
+  &__paper-background-text {
+    transition: opacity 1s, transform 1s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(-3rem);
     }
   }
 
