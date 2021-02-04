@@ -13,7 +13,7 @@
         <div
           v-for="text in animatedTexts"
           :key="text.content"
-          ref="animatedText"
+          ref="animatedTextRefs"
           :class="[
             'manifesto__paper-background-text',
             { 'manifesto__paper-background-text--hidden': text.isHidden }
@@ -83,7 +83,7 @@ export default {
         { content: 'web', isHidden: false }
       ],
       observer: null,
-      threshold: [0.5]
+      threshold: 0.5
     }
   },
   mounted() {
@@ -93,7 +93,7 @@ export default {
     })
 
     // Observe elements and hide them
-    this.$refs.animatedText.forEach((observable, index) => {
+    this.$refs.animatedTextRefs.forEach((observable, index) => {
       this.animatedTexts[index].isHidden = true
       this.observer.observe(observable)
     })
@@ -102,12 +102,12 @@ export default {
     /**
      * Show elements and stop observing them if ratio is > 0.5
      */
-    onElementObserve(entries) {
+    onElementObserve(entries, observer) {
       entries.forEach(entry => {
         if (entry.intersectionRatio > 0.5) {
           const index = this.animatedTexts.findIndex(t => t.isHidden)
           this.animatedTexts[index].isHidden = false
-          this.observer.unobserve(entry.target)
+          observer.unobserve(entry.target)
         }
       })
     }
