@@ -44,12 +44,16 @@
 
       <p class="audit-section__paragraph">
         Nous sommes tous les deux certifiés Opquast (<a
+          class="audit-section__link"
           href="https://directory.opquast.com/fr/certificat/D6S7X2/"
         >
           <span class="visually-hidden">Certification Opquast d'</span>Adrien</a
         >
         et
-        <a href="https://directory.opquast.com/fr/certificat/OE1Y9D/">
+        <a
+          class="audit-section__link"
+          href="https://directory.opquast.com/fr/certificat/OE1Y9D/"
+        >
           <span class="visually-hidden">Certification Opquast de</span>
           Quentin</a
         >) et nous avons une grande sensibilité pour la qualité web et
@@ -137,6 +141,10 @@ export default {
         display: none;
       }
     }
+  }
+
+  &__link {
+    color: $color-purple;
   }
 
   .illustration {
