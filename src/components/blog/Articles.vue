@@ -7,7 +7,9 @@
         :key="article.slug"
       >
         <h2>
-          <NuxtLink :to="article.path">{{ article.title }}</NuxtLink>
+          <NuxtLink class="articles__itemLink" :to="article.path">
+            {{ article.title }}
+          </NuxtLink>
         </h2>
         Écrit le <time>{{ formatDate(article.createdAt) }}</time>
       </li>
@@ -45,6 +47,10 @@ export default {
     @media (max-width: 600px) {
       --flow: 2rem;
     }
+  }
+
+  &__itemLink {
+    color: $color-purple;
   }
 }
 </style>
