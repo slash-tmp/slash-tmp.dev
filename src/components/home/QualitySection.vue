@@ -10,7 +10,17 @@
         class="manifesto__paper-background background-text"
         aria-hidden="true"
       >
-        qua<br />lité<br />web
+        <div
+          v-for="text in animatedTexts"
+          :key="text.content"
+          ref="animatedTextRefs"
+          :class="[
+            'manifesto__paper-background-text',
+            { 'manifesto__paper-background-text--hidden': text.isHidden }
+          ]"
+        >
+          {{ text.content }}
+        </div>
       </div>
 
       <!-- Manifest paper -->
@@ -64,7 +74,44 @@
 
 <script>
 export default {
-  name: 'QualitySection'
+  name: 'QualitySection',
+  data() {
+    return {
+      animatedTexts: [
+        { content: 'qua', isHidden: false },
+        { content: 'lité', isHidden: false },
+        { content: 'web', isHidden: false }
+      ],
+      observer: null,
+      threshold: 0.5
+    }
+  },
+  mounted() {
+    // Declare observer
+    this.observer = new IntersectionObserver(this.onElementObserve, {
+      threshold: this.threshold
+    })
+
+    // Observe elements and hide them
+    this.$refs.animatedTextRefs.forEach((observable, index) => {
+      this.animatedTexts[index].isHidden = true
+      this.observer.observe(observable)
+    })
+  },
+  methods: {
+    /**
+     * Show elements and stop observing them if ratio is > 0.5
+     */
+    onElementObserve(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0.5) {
+          const index = this.animatedTexts.findIndex(t => t.isHidden)
+          this.animatedTexts[index].isHidden = false
+          observer.unobserve(entry.target)
+        }
+      })
+    }
+  }
 }
 </script>
 
@@ -93,6 +140,15 @@ export default {
 
     @media (max-width: 1200px) {
       display: none;
+    }
+  }
+
+  &__paper-background-text {
+    transition: opacity 1s, transform 1s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(-3rem);
     }
   }
 
