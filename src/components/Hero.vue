@@ -23,7 +23,6 @@ export default {
 <style lang="scss">
 .hero {
   background-color: $color-purple;
-  margin-bottom: 5rem;
 
   &__content {
     color: $color-white;
