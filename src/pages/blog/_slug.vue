@@ -20,9 +20,11 @@ import formatDate from '@/helpers/formatDate'
 
 export default {
   name: 'BlogSlug',
-  async asyncData({ $content, params }) {
+  async asyncData({ $content, params, error }) {
     const slug = params.slug
-    const article = await $content('blog', slug).fetch()
+    const article = await $content('blog', slug)
+      .fetch()
+      .catch(() => error({ statusCode: 404 }))
 
     return {
       article
