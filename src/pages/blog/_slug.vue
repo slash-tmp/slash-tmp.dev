@@ -28,17 +28,17 @@ export default {
       article
     }
   },
-  computed: {
-    formattedDate() {
-      return formatDate(this.article.createdAt)
-    }
-  },
   head() {
     return setPageMeta(
       this.article.title,
       this.article.description,
       this.$route.path
     )
+  },
+  computed: {
+    formattedDate() {
+      return formatDate(this.article.createdAt)
+    }
   }
 }
 </script>

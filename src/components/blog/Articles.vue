@@ -2,9 +2,9 @@
   <div class="articles container container--small">
     <ul class="articles__list flow">
       <li
-        class="articles__item"
         v-for="article in articles"
         :key="article.slug"
+        class="articles__item"
       >
         <h2>
           <NuxtLink class="articles__itemLink" :to="article.path">
