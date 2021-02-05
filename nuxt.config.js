@@ -51,7 +51,19 @@ export default {
   buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
   content: {
-    liveEdit: false
+    liveEdit: false,
+    markdown: {
+      // Override headings links rendering
+      remarkAutolinkHeadings: {
+        linkProperties: {},
+        content: {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['visually-hidden'] },
+          children: [{ type: 'text', value: 'Lien vers la section' }]
+        }
+      }
+    }
   },
   styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
