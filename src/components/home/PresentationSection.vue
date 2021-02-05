@@ -19,7 +19,7 @@
       >
       et
       <span
-        :data-highlight="`Et${'\xa0'}la${'\xa0'}Quentin`"
+        :data-highlight="`Là${'\xa0'}c'est${'\xa0'}Quentin`"
         :class="[
           'presentation-section__name',
           {
@@ -155,7 +155,7 @@ export default {
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      transition: opacity 0.4s, transform 0.4s;
+      transition: opacity 0.2s, transform 0.2s;
       z-index: 1;
     }
 
