@@ -15,7 +15,7 @@ import setPageMeta from '@/helpers/setPageMeta'
 export default {
   name: 'Blog',
   async asyncData({ $content }) {
-    const articles = await $content('blog').fetch()
+    const articles = await $content('blog').sortBy('date', 'desc').fetch()
 
     return {
       articles

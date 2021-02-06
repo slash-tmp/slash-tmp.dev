@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     formattedDate() {
-      return formatDate(this.article.createdAt)
+      return formatDate(this.article.date)
     }
   }
 }

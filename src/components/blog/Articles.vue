@@ -11,7 +11,7 @@
             {{ article.title }}
           </NuxtLink>
         </h2>
-        Écrit le <time>{{ formatDate(article.createdAt) }}</time>
+        Écrit le <time>{{ formatDate(article.date) }}</time>
       </li>
     </ul>
   </div>
