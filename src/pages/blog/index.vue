@@ -2,7 +2,24 @@
   <div class="blog">
     <Hero tag="header">
       <h1 class="blog__title">{{ title }}</h1>
-      <p>{{ description }}</p>
+      <p>
+        {{ description }} Comme on ne vous promet pas une fréquence régulière,
+        vous pouvez vous abonner au flux RSS sous différents formats :
+        <nuxt-link to="/feed.xml">
+          <span class="visually-hidden">flux RSS au format</span
+          ><code>.xml</code>
+        </nuxt-link>
+        ,
+        <nuxt-link to="/feed.atom">
+          <span class="visually-hidden">flux RSS au format</span
+          ><code>.atom</code>
+        </nuxt-link>
+        et
+        <nuxt-link to="/feed.json">
+          <span class="visually-hidden">flux RSS au format</span
+          ><code>.json</code> </nuxt-link
+        >.
+      </p>
     </Hero>
 
     <Articles :articles="articles" />
@@ -25,7 +42,7 @@ export default {
     return {
       title: 'Blog',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae cum minus voluptatem incidunt dolores nostrum, ipsam maiores dolore aut eaque autem sed vel! Odio magni fuga soluta. Odio, ut!'
+        "Bienvenue sur notre blog ! On y écrit des articles pour parler du studio, de développement web, de code et d'accessibilité de qualité web."
     }
   },
   head() {
