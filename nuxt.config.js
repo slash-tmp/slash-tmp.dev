@@ -14,36 +14,67 @@ async function getSitemapRoutes() {
 }
 
 /**
- * Nuxt config
+ * Configure `@nuxtjs/feed`
+ * @returns A config object for `@nuxtjs/feed`
  */
-async function createFeed(feed) {
-  // channel options
-  feed.options = {
-    id: baseUrl,
-    title: '/tmp - Blog',
-    link: baseUrl,
-    description,
-    language: 'fr-FR',
-    image: `${baseUrl}/og.jpg`,
-    favicon: `${baseUrl}/favicon.png`
-  }
-
-  // fetch blog posts
+async function configureFeed() {
+  // we fetch blog posts outside of the feed creation function to avoid
+  // "fetching" the same thing 3 times
   const { $content } = require('@nuxt/content')
   const blogs = await $content('blog').sortBy('createdAt', 'desc').fetch()
 
-  // add items to channel
-  blogs.forEach(blog => {
-    feed.addItem({
-      id: blog.slug,
-      link: `${baseUrl}/blog/${blog.slug}`,
-      title: blog.title,
-      description: blog.description,
-      date: new Date(blog.createdAt)
+  /** Configure a single feed object. */
+  function createFeed(feed) {
+    // channel options
+    feed.options = {
+      id: baseUrl,
+      title: '/tmp - Blog',
+      link: baseUrl,
+      description,
+      language: 'fr-FR',
+      image: `${baseUrl}/og.jpg`,
+      favicon: `${baseUrl}/favicon.png`
+    }
+
+    // add articles to the feed
+    blogs.forEach(blog => {
+      feed.addItem({
+        id: blog.slug,
+        link: `${baseUrl}/blog/${blog.slug}`,
+        title: blog.title,
+        description: blog.description,
+        date: new Date(blog.createdAt)
+      })
     })
-  })
+  }
+
+  const cacheTime = 1000 * 60 * 60 * 24 // 24 hours cache
+
+  return [
+    {
+      type: 'rss2',
+      path: '/feed.xml',
+      create: createFeed,
+      cacheTime
+    },
+    {
+      type: 'atom1',
+      path: '/feed.atom',
+      create: createFeed,
+      cacheTime
+    },
+    {
+      type: 'json1',
+      path: '/feed.json',
+      create: createFeed,
+      cacheTime
+    }
+  ]
 }
 
+/**
+ * Nuxt config
+ */
 export default {
   env: {
     baseUrl
@@ -102,7 +133,7 @@ export default {
         rel: 'alternate',
         title: 'Flux ATOM du blog /tmp',
         type: 'application/atom+xml',
-        href: '/atom10.xml'
+        href: '/feed.atom'
       }
     ]
   },
@@ -148,24 +179,5 @@ export default {
   optimizedImages: {
     optimizeImages: true
   },
-  feed: [
-    {
-      path: '/feed.xml',
-      create: createFeed,
-      cacheTime: 1000 * 60 * 60 * 24, // 24 hours cache
-      type: 'rss2'
-    },
-    {
-      path: '/feed.atom',
-      create: createFeed,
-      cacheTime: 1000 * 60 * 60 * 24, // 24 hours cache
-      type: 'atom1'
-    },
-    {
-      path: '/feed.json',
-      create: createFeed,
-      cacheTime: 1000 * 60 * 60 * 24, // 24 hours cache
-      type: 'json1'
-    }
-  ]
+  feed: configureFeed
 }
