@@ -36,7 +36,17 @@
       </ul>
     </div>
     <div class="contact__actions">
-      <a class="button" href="mailto:contact@slash-tmp.dev">Nous écrire</a>
+      <a
+        ref="mailToRef"
+        :class="[
+          'button',
+          'contact__mailto',
+          { 'contact__mailto--hidden': hideMailTo }
+        ]"
+        href="mailto:contact@slash-tmp.dev"
+      >
+        Nous écrire
+      </a>
       <button type="button" class="contact__clipboard" @click="copyEmail">
         Copier l'adresse email
       </button>
@@ -48,10 +58,35 @@
 export default {
   name: 'ContactSection',
   inject: ['notify'],
+  data() {
+    return {
+      hideMailTo: false,
+      observer: null,
+      threshold: 0.8
+    }
+  },
+  mounted() {
+    // Declare observer
+    this.observer = new IntersectionObserver(this.onElementObserve, {
+      threshold: this.threshold
+    })
+
+    // Observe element
+    this.observer.observe(this.$refs.mailToRef)
+    this.hideMailTo = true
+  },
   methods: {
     copyEmail() {
       navigator.clipboard.writeText('contact@slash-tmp.dev')
       this.notify("L'adresse email a été copiée dans le presse-papier.")
+    },
+    onElementObserve(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0.8) {
+          this.hideMailTo = false
+          observer.unobserve(entry.target)
+        }
+      })
     }
   }
 }
@@ -103,6 +138,15 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: stretch;
+    }
+  }
+
+  &__mailto {
+    transition: opacity 1s, transform 1s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateY(3rem);
     }
   }
 
