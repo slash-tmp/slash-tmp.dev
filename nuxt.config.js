@@ -156,7 +156,7 @@ export default {
       type: 'rss2'
     },
     {
-      path: '/atom10.xml',
+      path: '/feed.atom',
       create: createFeed,
       cacheTime: 1000 * 60 * 60 * 24, // 24 hours cache
       type: 'atom1'
