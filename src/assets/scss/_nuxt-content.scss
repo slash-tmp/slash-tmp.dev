@@ -83,6 +83,10 @@
     padding: 0.1rem 0.2rem;
   }
 
+  pre > code {
+    font-size: 0.9rem;
+  }
+
   hr {
     border: 0;
     border-top: 2px inset $color-purple;
