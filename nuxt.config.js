@@ -143,13 +143,7 @@ export default {
   css: ['@/assets/scss/index'],
   components: true,
   buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],
-<<<<<<< HEAD
-  modules: ['@nuxt/content', '@nuxtjs/sitemap'],
-<<<<<<< HEAD
-=======
-=======
   modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/feed'],
->>>>>>> feat: add RSS, JSON and ATOM feeds
   content: {
     liveEdit: false,
     markdown: {
@@ -165,10 +159,6 @@ export default {
       }
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> dc13c84... feat: add RSS, JSON and ATOM feeds
->>>>>>> feat: add RSS, JSON and ATOM feeds
   styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
     hostname: baseUrl,
