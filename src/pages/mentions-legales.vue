@@ -1,9 +1,10 @@
 <template>
   <article>
     <Hero tag="header">
-      <h1>{{ title }}</h1>
+      <h1>{{ page.title }}</h1>
     </Hero>
-    <LegalSection />
+
+    <nuxt-content :document="page" class="container container--small" />
   </article>
 </template>
 
@@ -12,15 +13,15 @@ import setPageMeta from '@/helpers/setPageMeta'
 
 export default {
   name: 'Legal',
-  data() {
+  async asyncData({ $content }) {
+    const page = await $content('mentions-legales').fetch()
+
     return {
-      title: 'Mentions légales',
-      description:
-        "Informations concernant l'identité et les coordonnées de /tmp ainsi que celles de l'hébergeur du site."
+      page
     }
   },
   head() {
-    return setPageMeta(this.title, this.description, this.$route.path)
+    return setPageMeta(this.page.title, this.page.description, this.$route.path)
   }
 }
 </script>

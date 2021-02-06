@@ -1,8 +1,23 @@
+/**
+ * Global variables
+ */
 const baseUrl = 'https://slash-tmp.netlify.app'
 const title = 'Petit studio de développement et de qualité web'
 const description =
   "/tmp c'est deux développeurs : Adrien et Quentin. On code des sites web sur mesure et on fait de la qualité web."
 
+/**
+ * Generate dynamic routes for sitemap
+ */
+async function getSitemapRoutes() {
+  const { $content } = require('@nuxt/content')
+  const files = await $content('blog').only(['path']).fetch()
+  return files.map(file => file.path)
+}
+
+/**
+ * Nuxt config
+ */
 export default {
   env: {
     baseUrl: process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
@@ -50,9 +65,27 @@ export default {
   components: true,
   buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],
   modules: ['@nuxt/content', '@nuxtjs/sitemap'],
+  content: {
+    liveEdit: false,
+    markdown: {
+      // Override headings links rendering
+      remarkAutolinkHeadings: {
+        linkProperties: {},
+        content: {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['visually-hidden'] },
+          children: [{ type: 'text', value: 'Lien vers la section' }]
+        }
+      }
+    }
+  },
   styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
-    hostname: 'https://slash-tmp.netlify.app'
+    hostname: baseUrl,
+    routes() {
+      return getSitemapRoutes()
+    }
   },
   optimizedImages: {
     optimizeImages: true

@@ -1,0 +1,95 @@
+.nuxt-content {
+  --flow: 1.5rem;
+
+  @extend .flow;
+
+  margin: 0 auto;
+
+  a {
+    color: $color-purple;
+  }
+
+  h2 {
+    margin-top: 4rem;
+  }
+
+  h3 {
+    margin-top: 2.5rem;
+  }
+
+  h2,
+  h3 {
+    align-items: center;
+    display: flex;
+
+    a {
+      margin-left: 1rem;
+      order: 1;
+    }
+
+    a::after {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%234f448f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" ></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" ></path></svg>');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      height: 0.6em;
+      opacity: 0;
+      transform: translateX(-0.5rem);
+      transition: opacity 0.2s, transform 0.2s;
+      width: 0.6em;
+    }
+  }
+
+  :is(h2, h3):hover > a::after {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  :is(h2, h3) > a:focus::after {
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
+  }
+
+  ul,
+  ol {
+    padding-left: 1rem;
+  }
+
+  ul > li {
+    list-style-type: initial;
+
+    &::marker {
+      color: $color-purple;
+    }
+  }
+
+  ol > li {
+    list-style-type: decimal;
+
+    &::marker {
+      color: $color-purple;
+    }
+  }
+
+  // Only inline `code` elements
+  :not(pre) > code {
+    color: $color-purple;
+    background-color: rgba($color-purple, 0.05);
+    border-radius: 2px;
+    padding: 0.1rem 0.2rem;
+  }
+
+  pre > code {
+    font-size: 0.9rem;
+  }
+
+  hr {
+    border: 0;
+    border-top: 2px inset $color-purple;
+    margin: 2.5rem 0;
+  }
+}

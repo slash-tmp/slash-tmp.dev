@@ -22,6 +22,8 @@ export default {
 
 <style lang="scss">
 .hero {
+  --outline-color: #{$color-white};
+
   background-color: $color-purple;
 
   &__content {

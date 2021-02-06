@@ -2,6 +2,7 @@
 @import 'typography';
 @import 'variables';
 @import 'utilities';
+@import 'nuxt-content';
 
 *:focus {
   outline: 3px solid var(--outline-color, #{$color-purple});
