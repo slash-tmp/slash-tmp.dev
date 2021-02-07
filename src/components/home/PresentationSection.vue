@@ -38,59 +38,54 @@
     </p>
 
     <div class="presentation-section__avatars">
-      <button
-        :class="[
-          'presentation-section__button',
-          {
-            'presentation-section__button--highlighted':
-              highlightedName === 'adrien'
-          }
-        ]"
-        @click="highlightName('adrien')"
+      <picture
+        @mouseover="highlightName('adrien')"
+        @mouseleave="resetHighlight"
       >
-        <picture>
-          <source
-            srcset="@/assets/img/adrien.jpg?resize&size=200&format=webp"
-            type="image/webp"
-          />
-          <source
-            srcset="@/assets/img/adrien.jpg?resize&size=200"
-            type="image/jpeg"
-          />
-          <img
-            class="presentation-section__avatar"
-            src="@/assets/img/adrien.jpg?resize&size=200"
-            alt="Adrien"
-          />
-        </picture>
-      </button>
-
-      <button
-        :class="[
-          'presentation-section__button',
-          {
-            'presentation-section__button--highlighted':
-              highlightedName === 'quentin'
-          }
-        ]"
-        @click="highlightName('quentin')"
+        <source
+          srcset="@/assets/img/adrien.jpg?resize&size=200&format=webp"
+          type="image/webp"
+        />
+        <source
+          srcset="@/assets/img/adrien.jpg?resize&size=200"
+          type="image/jpeg"
+        />
+        <img
+          :class="[
+            'presentation-section__avatar',
+            {
+              'presentation-section__avatar--highlighted':
+                highlightedName === 'adrien'
+            }
+          ]"
+          src="@/assets/img/adrien.jpg?resize&size=200"
+          alt="Adrien"
+        />
+      </picture>
+      <picture
+        @mouseover="highlightName('quentin')"
+        @mouseleave="resetHighlight"
       >
-        <picture>
-          <source
-            srcset="@/assets/img/quentin.jpg?resize&size=200&format=webp"
-            type="image/webp"
-          />
-          <source
-            srcset="@/assets/img/quentin.jpg?resize&size=200"
-            type="image/jpeg"
-          />
-          <img
-            class="presentation-section__avatar"
-            src="@/assets/img/quentin.jpg?resize&size=200"
-            alt="Quentin"
-          />
-        </picture>
-      </button>
+        <source
+          srcset="@/assets/img/quentin.jpg?resize&size=200&format=webp"
+          type="image/webp"
+        />
+        <source
+          srcset="@/assets/img/quentin.jpg?resize&size=200"
+          type="image/jpeg"
+        />
+        <img
+          :class="[
+            'presentation-section__avatar',
+            {
+              'presentation-section__avatar--highlighted':
+                highlightedName === 'quentin'
+            }
+          ]"
+          src="@/assets/img/quentin.jpg?resize&size=200"
+          alt="Quentin"
+        />
+      </picture>
     </div>
   </div>
 </template>
@@ -100,23 +95,15 @@ export default {
   name: 'PresentationSection',
   data() {
     return {
-      highlightedName: null,
-      highlightTimeOutId: null
+      highlightedName: null
     }
   },
   methods: {
     highlightName(name) {
-      clearTimeout(this.highlightTimeOutId)
-
-      if (this.highlightedName === name) {
-        this.highlightedName = null
-        return
-      }
       this.highlightedName = name
-
-      this.highlightTimeOutId = setTimeout(() => {
-        this.highlightedName = null
-      }, 4000)
+    },
+    resetHighlight() {
+      this.highlightedName = null
     }
   }
 }
@@ -175,34 +162,22 @@ export default {
     display: flex;
     justify-content: space-evenly;
     padding: 1rem 0;
-  }
 
-  &__button {
-    border: var(--avatar-border-width) solid $color-white;
-    border-radius: 50%;
-    height: var(--avatar-size);
-    overflow: hidden;
-    padding: 0;
-    transform: translateY(var(--avatar-offset));
-    transition: transform 0.2s;
-    width: var(--avatar-size);
-
-    &:nth-child(2) {
+    > *:last-child {
       transform: translateY(calc(var(--avatar-offset) * -1));
-    }
-
-    &--highlighted {
-      transform: translateY(var(--avatar-offset)) scale(1.2) rotate(10deg);
-
-      &:nth-child(2) {
-        transform: translateY(calc(var(--avatar-offset) * -1)) scale(1.2)
-          rotate(10deg);
-      }
     }
   }
 
   &__avatar {
-    width: 100%;
+    border: var(--avatar-border-width) solid $color-white;
+    border-radius: 50%;
+    height: var(--avatar-size);
+    transition: transform 0.2s;
+    width: var(--avatar-size);
+
+    &--highlighted {
+      transform: scale(1.2) rotate(10deg);
+    }
   }
 
   @media (max-width: 1200px) {
