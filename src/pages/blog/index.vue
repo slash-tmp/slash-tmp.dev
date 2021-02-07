@@ -4,20 +4,19 @@
       <h1 class="blog__title">{{ title }}</h1>
       <p>
         {{ description }} Comme on ne vous promet pas une fréquence régulière,
-        vous pouvez vous abonner au flux RSS sous différents formats :
+        vous pouvez vous abonner au flux de syndication aux différents formats :
         <nuxt-link to="/feed.xml">
-          <span class="visually-hidden">flux RSS au format</span
-          ><code>.xml</code>
-        </nuxt-link>
-        ,
+          <span class="visually-hidden">flux de syndication au format</span
+          >RSS</nuxt-link
+        >,
         <nuxt-link to="/feed.atom">
-          <span class="visually-hidden">flux RSS au format</span
-          ><code>.atom</code>
-        </nuxt-link>
+          <span class="visually-hidden">flux de syndication au format</span
+          >Atom</nuxt-link
+        >
         et
         <nuxt-link to="/feed.json">
-          <span class="visually-hidden">flux RSS au format</span
-          ><code>.json</code> </nuxt-link
+          <span class="visually-hidden">flux de syndication au format</span
+          >JSON </nuxt-link
         >.
       </p>
     </Hero>
