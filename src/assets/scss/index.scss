@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'utilities';
 @import 'nuxt-content';
+@import 'highlightjs-theme';
 
 *:focus {
   outline: 3px solid var(--outline-color, #{$color-purple});
