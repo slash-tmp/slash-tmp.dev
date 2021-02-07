@@ -21,7 +21,7 @@ async function configureFeed() {
   // we fetch blog posts outside of the feed creation function to avoid
   // "fetching" the same thing 3 times
   const { $content } = require('@nuxt/content')
-  const blogs = await $content('blog').sortBy('createdAt', 'desc').fetch()
+  const articles = await $content('blog').sortBy('createdAt', 'desc').fetch()
 
   /** Configure a single feed object. */
   function createFeed(feed) {
@@ -37,13 +37,13 @@ async function configureFeed() {
     }
 
     // add articles to the feed
-    blogs.forEach(blog => {
+    articles.forEach(article => {
       feed.addItem({
-        id: blog.slug,
-        link: `${baseUrl}/blog/${blog.slug}`,
-        title: blog.title,
-        description: blog.description,
-        date: new Date(blog.createdAt)
+        id: article.slug,
+        link: `${baseUrl}/blog/${article.slug}`,
+        title: article.title,
+        description: article.description,
+        date: new Date(article.createdAt)
       })
     })
   }
