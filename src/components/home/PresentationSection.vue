@@ -6,8 +6,10 @@
     </h1>
     <p>
       Bonjour ! Nous c’est
+      <!-- '\xa0' => JS non-breaking space -->
       <span
         :data-highlight="`Là${'\xa0'}c'est${'\xa0'}Adrien`"
+        data-hightlight-short="Adrien"
         :class="[
           'presentation-section__name',
           {
@@ -20,6 +22,7 @@
       et
       <span
         :data-highlight="`Là${'\xa0'}c'est${'\xa0'}Quentin`"
+        data-hightlight-short="Quentin"
         :class="[
           'presentation-section__name',
           {
@@ -144,6 +147,10 @@ export default {
       transform: translate(-50%, -50%);
       transition: opacity 0.2s, transform 0.2s;
       z-index: 1;
+
+      @media (max-width: 600px) {
+        content: attr(data-hightlight-short);
+      }
     }
 
     &--highlighted {
