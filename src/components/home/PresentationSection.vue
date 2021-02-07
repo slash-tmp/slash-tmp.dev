@@ -42,6 +42,7 @@
 
     <div class="presentation-section__avatars">
       <picture
+        @click="highlightName('adrien', true)"
         @mouseover="highlightName('adrien')"
         @mouseleave="resetHighlight"
       >
@@ -66,6 +67,7 @@
         />
       </picture>
       <picture
+        @click="highlightName('quentin', true)"
         @mouseover="highlightName('quentin')"
         @mouseleave="resetHighlight"
       >
@@ -98,11 +100,24 @@ export default {
   name: 'PresentationSection',
   data() {
     return {
-      highlightedName: null
+      highlightedName: null,
+      highlightTimeoutId: null
     }
   },
   methods: {
-    highlightName(name) {
+    highlightName(name, clear = false) {
+      if (clear) {
+        clearTimeout(this.highlightTimeoutId)
+        this.highlightTimeoutId = setTimeout(() => {
+          this.resetHighlight()
+        }, 3000)
+      }
+
+      if (this.highlightedName === name) {
+        this.resetHighlight()
+        return
+      }
+
       this.highlightedName = name
     },
     resetHighlight() {
