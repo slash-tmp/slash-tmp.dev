@@ -36,6 +36,10 @@ export default {
     h4 {
       color: inherit;
     }
+
+    a {
+      color: $color-white;
+    }
   }
 }
 </style>

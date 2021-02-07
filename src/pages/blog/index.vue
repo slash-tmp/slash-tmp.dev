@@ -2,7 +2,23 @@
   <div class="blog">
     <Hero tag="header">
       <h1 class="blog__title">{{ title }}</h1>
-      <p>{{ description }}</p>
+      <p>
+        {{ description }} Comme on ne vous promet pas une fréquence régulière,
+        vous pouvez vous abonner au flux de syndication aux différents formats :
+        <nuxt-link to="/feed.xml">
+          <span class="visually-hidden">flux de syndication au format</span
+          >RSS</nuxt-link
+        >,
+        <nuxt-link to="/feed.atom">
+          <span class="visually-hidden">flux de syndication au format</span
+          >Atom</nuxt-link
+        >
+        et
+        <nuxt-link to="/feed.json">
+          <span class="visually-hidden">flux de syndication au format</span
+          >JSON </nuxt-link
+        >.
+      </p>
     </Hero>
 
     <Articles :articles="articles" />
@@ -25,7 +41,7 @@ export default {
     return {
       title: 'Blog',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae cum minus voluptatem incidunt dolores nostrum, ipsam maiores dolore aut eaque autem sed vel! Odio magni fuga soluta. Odio, ut!'
+        "Bienvenue sur notre blog ! On y écrit des articles pour parler du studio, de développement web, de code et d'accessibilité de qualité web."
     }
   },
   head() {
