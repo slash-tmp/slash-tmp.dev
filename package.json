@@ -11,7 +11,7 @@
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.{css,vue,scss}": "stylelint"
   },
   "husky": {
     "hooks": {
@@ -50,6 +50,7 @@
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
     "webp-loader": "^0.6.0"
   }
 }
