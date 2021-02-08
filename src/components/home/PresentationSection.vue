@@ -4,9 +4,9 @@
       <!-- &shy; => This is a soft hyphen, only appearing when the word is wrapped. -->
       Dévelop&shy;pement et qualité&nbsp;web
     </h1>
+    <!-- '\xa0' => JS non-breaking space to prevent wrapping content -->
     <p>
       Bonjour ! Nous c’est
-      <!-- '\xa0' => JS non-breaking space -->
       <span
         :data-highlight="`Là${'\xa0'}c'est${'\xa0'}Adrien`"
         data-hightlight-short="Adrien"
