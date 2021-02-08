@@ -39,10 +39,18 @@ export default {
 
 .slide-enter-active {
   animation: slidein 0.25s ease-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
 .slide-leave-active {
   animation: slidein 0.25s ease-out reverse;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
 .toaster {
