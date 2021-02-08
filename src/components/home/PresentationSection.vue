@@ -106,16 +106,14 @@ export default {
   },
   methods: {
     highlightName(name, clear = false) {
-      if (clear) {
+      if (this.highlightTimeoutId) {
         clearTimeout(this.highlightTimeoutId)
+      }
+
+      if (clear) {
         this.highlightTimeoutId = setTimeout(() => {
           this.resetHighlight()
         }, 3000)
-      }
-
-      if (this.highlightedName === name) {
-        this.resetHighlight()
-        return
       }
 
       this.highlightedName = name
