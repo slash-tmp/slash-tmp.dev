@@ -61,14 +61,18 @@ export default {
   data() {
     return {
       hideMailTo: false,
-      observer: null,
-      threshold: 0.8
+      observer: null
+    }
+  },
+  computed: {
+    threshold() {
+      return getComputedStyle(this.$el).getPropertyValue('--threshold')
     }
   },
   mounted() {
     // Declare observer
     this.observer = new IntersectionObserver(this.onElementObserve, {
-      threshold: this.threshold
+      threshold: parseFloat(this.threshold)
     })
 
     // Observe element
@@ -82,7 +86,7 @@ export default {
     },
     onElementObserve(entries, observer) {
       entries.forEach(entry => {
-        if (entry.intersectionRatio > 0.8) {
+        if (entry.intersectionRatio > parseFloat(this.threshold)) {
           this.hideMailTo = false
           observer.unobserve(entry.target)
         }
@@ -94,9 +98,13 @@ export default {
 
 <style lang="scss">
 .contact {
+  --threshold: 0.8;
+
   margin: 0 auto;
 
   @media (max-width: 600px) {
+    --threshold: 0.2;
+
     margin-bottom: 2rem;
   }
 
