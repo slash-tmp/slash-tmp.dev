@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div tabindex="-1">
     <SiteHeader />
 
     <main>
@@ -17,6 +17,12 @@ import ToastProviderMixin from '@/mixins/toast-provider'
 
 export default {
   name: 'DefaultLayout',
-  mixins: [ToastProviderMixin]
+  mixins: [ToastProviderMixin],
+  watch: {
+    // reset page focus on route change
+    $route() {
+      this.$el.focus()
+    }
+  }
 }
 </script>
