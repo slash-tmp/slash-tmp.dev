@@ -1,12 +1,6 @@
 <template>
   <div tabindex="-1">
-    <router-link
-      class="skip-link"
-      to="#main-content"
-      @click.native="scrollFix('#main-content')"
-    >
-      Aller au contenu principal
-    </router-link>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <SiteHeader />
 
     <main id="main-content">
@@ -27,14 +21,11 @@ export default {
   mixins: [ToastProviderMixin],
   watch: {
     // reset page focus on route change
-    $route(to) {
-      this.$el.focus()
-    }
-  },
-  methods: {
-    // in some cases, the page doesnt scroll to the content, this fixes it
-    scrollFix(hash) {
-      window.location.hash = hash
+    $route(to, from) {
+      if (from.path !== to.path) {
+        // only reset focus on page change (not when going to an anchor on the same page)
+        this.$el.focus()
+      }
     }
   }
 }
@@ -47,9 +38,11 @@ export default {
   padding: 1rem;
   background-color: $color-white;
   opacity: 0;
+  top: -100%;
 
   &:focus {
     opacity: 1;
+    top: initial;
   }
 }
 </style>
