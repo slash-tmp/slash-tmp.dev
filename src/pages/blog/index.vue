@@ -27,9 +27,11 @@
 
 <script>
 import setPageMeta from '@/helpers/setPageMeta'
+import AnnouncedPageMixin from '@/mixins/announced-page'
 
 export default {
   name: 'Blog',
+  mixins: [AnnouncedPageMixin],
   async asyncData({ $content }) {
     const articles = await $content('blog').sortBy('date', 'desc').fetch()
 

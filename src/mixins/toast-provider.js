@@ -17,13 +17,18 @@ const ToastProviderMixin = {
     automaticDismissTimeoutId: null
   }),
   methods: {
-    notify(text) {
+    /**
+     * @param {string} text Notification text
+     * @param {boolean} visuallyHidden Should the notification be hidden (only read by screen readers)
+     */
+    notify(text, visuallyHidden = false) {
       clearTimeout(this.automaticDismissTimeoutId)
 
       this.dismissNotification()
       this.notifications.push({
         id: this.nextNotificationId,
-        text
+        text,
+        visuallyHidden
       })
       this.nextNotificationId++
 
