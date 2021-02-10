@@ -155,6 +155,11 @@ export default {
     &--hidden {
       opacity: 0;
       transform: translateY(3rem);
+
+      @media (prefers-reduced-motion: reduce) {
+        opacity: 1;
+        transform: initial;
+      }
     }
   }
 
