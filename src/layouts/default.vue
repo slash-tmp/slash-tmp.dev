@@ -39,6 +39,7 @@ export default {
   background-color: $color-white;
   opacity: 0;
   top: -100%;
+  color: $color-purple;
 
   &:focus {
     opacity: 1;
