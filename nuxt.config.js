@@ -1,3 +1,5 @@
+import highlightjs from 'highlight.js'
+
 /* Global variables */
 const baseUrl = process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
 const title = 'Petit studio de développement et de qualité web'
@@ -157,6 +159,12 @@ export default {
           properties: { className: ['visually-hidden'] },
           children: [{ type: 'text', value: 'Lien vers la section' }]
         }
+      },
+      // Custom highlight.js theme
+      highlighter(rawCode, lang) {
+        const highlightedCode = highlightjs.highlight(lang, rawCode).value
+
+        return `<pre><code tabindex="0" class="hljs ${lang}">${highlightedCode}</code></pre>`
       }
     }
   },
