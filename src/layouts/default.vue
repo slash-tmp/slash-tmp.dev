@@ -27,7 +27,7 @@ export default {
   mixins: [ToastProviderMixin],
   watch: {
     // reset page focus on route change
-    $route() {
+    $route(to) {
       this.$el.focus()
     }
   },

@@ -2,12 +2,18 @@
   <div class="toaster" role="alert" aria-live="polite">
     <transition name="slide">
       <Toast
-        v-if="lastNotification"
+        v-if="lastNotification && !lastNotification.visuallyHidden"
         :key="lastNotification.id"
         @dismiss="dismissNotification"
       >
         {{ lastNotification.text }}
       </Toast>
+      <p
+        v-else-if="lastNotification && lastNotification.visuallyHidden"
+        class="visually-hidden"
+      >
+        {{ lastNotification.text }}
+      </p>
     </transition>
   </div>
 </template>

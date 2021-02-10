@@ -17,9 +17,11 @@
 <script>
 import setPageMeta from '@/helpers/setPageMeta'
 import formatDate from '@/helpers/formatDate'
+import AnnouncedPageMixin from '@/mixins/announced-page'
 
 export default {
   name: 'BlogSlug',
+  mixins: [AnnouncedPageMixin],
   async asyncData({ $content, params, error }) {
     const slug = params.slug
     const article = await $content('blog', slug)
@@ -27,7 +29,8 @@ export default {
       .catch(() => error({ statusCode: 404 }))
 
     return {
-      article
+      article,
+      title: article.title
     }
   },
   head() {

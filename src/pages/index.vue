@@ -14,9 +14,11 @@
 
 <script>
 import setPageMeta from '@/helpers/setPageMeta.js'
+import AnnouncedPageMixin from '@/mixins/announced-page'
 
 export default {
   name: 'Index',
+  mixins: [AnnouncedPageMixin],
   data() {
     return {
       title: 'Petit studio de développement et de qualité web',
