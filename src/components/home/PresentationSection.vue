@@ -170,10 +170,6 @@ export default {
       &::after {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.2) rotate(-10deg);
-
-        @media (prefers-reduced-motion: reduce) {
-          opacity: 0;
-        }
       }
 
       &:nth-child(2)::after {
@@ -201,10 +197,6 @@ export default {
 
     &--highlighted {
       transform: scale(1.2) rotate(10deg);
-
-      @media (prefers-reduced-motion: reduce) {
-        transform: none;
-      }
     }
   }
 
