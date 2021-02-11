@@ -5,18 +5,18 @@
       <p>
         {{ description }} Comme on ne vous promet pas une fréquence régulière,
         vous pouvez vous abonner au flux de syndication aux différents formats :
-        <nuxt-link to="/feed.xml">
-          <span class="visually-hidden">flux de syndication au format</span
-          >RSS</nuxt-link
+        <a href="/feed.xml" rel="alternate" type="application/rss+xml"
+          ><span class="visually-hidden">flux de syndication au format</span
+          >RSS</a
         >,
-        <nuxt-link to="/feed.atom">
-          <span class="visually-hidden">flux de syndication au format</span
-          >Atom</nuxt-link
+        <a href="/feed.atom" rel="alternate" type="application/atom+xml"
+          ><span class="visually-hidden">flux de syndication au format</span
+          >Atom</a
         >
         et
-        <nuxt-link to="/feed.json">
-          <span class="visually-hidden">flux de syndication au format</span
-          >JSON </nuxt-link
+        <a href="/feed.json" rel="alternate" type="application/json"
+          ><span class="visually-hidden">flux de syndication au format</span
+          >JSON</a
         >.
       </p>
     </Hero>
