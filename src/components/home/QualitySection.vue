@@ -130,6 +130,10 @@ export default {
     justify-content: flex-end;
     justify-self: flex-end;
     position: relative;
+
+    @media (max-width: 1200px) {
+      justify-self: flex-start;
+    }
   }
 
   &__paper-background {
@@ -160,7 +164,6 @@ export default {
   &__paper {
     background-color: $color-white;
     border-radius: 1rem;
-    border: 1px solid #bdbdbd;
     box-shadow: 1rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     display: grid;
