@@ -172,10 +172,34 @@ export default {
     max-width: 45rem;
     padding: 5rem 2.5rem;
     position: relative;
+    z-index: 1;
 
     @media (max-width: 800px) {
       font-size: 1rem;
       padding: 2rem 0.5rem;
+    }
+
+    &::before,
+    &::after {
+      background: $color-white;
+      bottom: 0;
+      border: 1px solid rgba($color-black, 0.08);
+      border-radius: 1rem;
+      box-shadow: 0 0 0.6rem 0 rgba($color-black, 0.1);
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      transform: rotate(-1deg);
+    }
+
+    &::after {
+      transform: rotate(1deg);
     }
   }
 
