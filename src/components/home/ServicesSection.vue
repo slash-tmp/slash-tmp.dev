@@ -21,7 +21,7 @@
 
       <img
         src="@/assets/img/webdev.svg"
-        alt="illustration de 2 personnes en train de parler devant des maquettes graphiques "
+        alt="illustration d'un homme assis et d'une femme debout en train de parler devant des maquettes de sites web sur un tableau"
         class="illustration"
       />
 
@@ -72,7 +72,7 @@
 
       <img
         src="@/assets/img/quality.svg"
-        alt="illustration de 2 personnes en train de parler devant des croquis et des esquisses"
+        alt="illustration d'une femme et d'un homme debouts en train de parler devant des croquis et des esquisses"
         class="illustration"
       />
     </section>
