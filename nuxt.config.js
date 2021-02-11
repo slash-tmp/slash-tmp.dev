@@ -11,7 +11,10 @@ const description =
  */
 async function getSitemapRoutes() {
   const { $content } = require('@nuxt/content')
-  const files = await $content('blog').only(['path']).fetch()
+  const files = await $content('blog')
+    .where({ draft: false })
+    .only(['path'])
+    .fetch()
   return files.map(file => file.path)
 }
 
@@ -23,7 +26,10 @@ async function configureFeed() {
   // we fetch blog posts outside of the feed creation function to avoid
   // "fetching" the same thing 3 times
   const { $content } = require('@nuxt/content')
-  const articles = await $content('blog').sortBy('createdAt', 'desc').fetch()
+  const articles = await $content('blog')
+    .where({ draft: false })
+    .sortBy('createdAt', 'desc')
+    .fetch()
 
   /** Configure a single feed object. */
   function createFeed(feed) {
