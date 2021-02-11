@@ -39,7 +39,7 @@ export default {
       articles = await $content('blog').sortBy('date', 'desc').fetch()
     } else {
       articles = await $content('blog')
-        .where({ draft: false })
+        .where({ published: true })
         .sortBy('date', 'desc')
         .fetch()
     }

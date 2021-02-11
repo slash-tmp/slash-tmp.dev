@@ -2,7 +2,7 @@
 title: Premier article test
 description: Premier article et style guide
 date: 2021-02-02
-draft: false
+published: true
 ---
 
 ## Titres

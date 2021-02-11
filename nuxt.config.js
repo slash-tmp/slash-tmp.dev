@@ -12,7 +12,7 @@ const description =
 async function getSitemapRoutes() {
   const { $content } = require('@nuxt/content')
   const files = await $content('blog')
-    .where({ draft: false })
+    .where({ published: true })
     .only(['path'])
     .fetch()
   return files.map(file => file.path)
@@ -27,7 +27,7 @@ async function configureFeed() {
   // "fetching" the same thing 3 times
   const { $content } = require('@nuxt/content')
   const articles = await $content('blog')
-    .where({ draft: false })
+    .where({ published: true })
     .sortBy('createdAt', 'desc')
     .fetch()
 
