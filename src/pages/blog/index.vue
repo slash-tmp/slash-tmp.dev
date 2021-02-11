@@ -33,7 +33,16 @@ export default {
   name: 'Blog',
   mixins: [AnnouncedPageMixin],
   async asyncData({ $content }) {
-    const articles = await $content('blog').sortBy('date', 'desc').fetch()
+    let articles
+
+    if (process.env.NODE_ENV === 'development') {
+      articles = await $content('blog').sortBy('date', 'desc').fetch()
+    } else {
+      articles = await $content('blog')
+        .where({ draft: false })
+        .sortBy('date', 'desc')
+        .fetch()
+    }
 
     return {
       articles
