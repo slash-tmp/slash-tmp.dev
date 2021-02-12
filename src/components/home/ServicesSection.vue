@@ -19,8 +19,11 @@
         <strong>site web fonctionnel, accessible et utilisable</strong>.
       </p>
 
-      <!-- TODO: alt text -->
-      <img src="@/assets/img/webdev.svg" alt="" class="illustration" />
+      <img
+        src="@/assets/img/webdev.svg"
+        alt="illustration d'un homme assis et d'une femme debout en train de parler devant des maquettes de sites web sur un tableau"
+        class="illustration"
+      />
 
       <p>
         D’un point de vue pratique : on
@@ -67,8 +70,11 @@
         >.
       </p>
 
-      <!-- TODO: alt text -->
-      <img src="@/assets/img/webdev.svg" alt="" class="illustration" />
+      <img
+        src="@/assets/img/quality.svg"
+        alt="illustration d'une femme et d'un homme debouts en train de parler devant des croquis et des esquisses"
+        class="illustration"
+      />
     </section>
   </section>
 </template>
