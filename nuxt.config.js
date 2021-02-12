@@ -100,6 +100,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'theme-color', content: '#4f448f' },
+
       { hid: 'description', name: 'description', content: description },
       { hid: 'og:title', name: 'og:title', content: title },
       {
