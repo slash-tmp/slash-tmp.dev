@@ -52,7 +52,7 @@ export default {
     return {
       title: 'Blog',
       description:
-        "Bienvenue sur notre blog ! On y écrit des articles pour parler du studio, de développement web, de code et d'accessibilité de qualité web."
+        "Bienvenue sur notre blog ! On y écrit des articles pour parler du studio, de développement web, de code, d'accessibilité et de qualité web."
     }
   },
   head() {
