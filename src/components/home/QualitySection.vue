@@ -141,6 +141,7 @@ export default {
     position: absolute;
     top: 50%;
     transform: translateX(-90%) translateY(-50%);
+    z-index: -1;
 
     @media (max-width: 1200px) {
       display: none;
@@ -172,7 +173,6 @@ export default {
     max-width: 45rem;
     padding: 5rem 2.5rem;
     position: relative;
-    z-index: 1;
 
     @media (max-width: 800px) {
       font-size: 1rem;
