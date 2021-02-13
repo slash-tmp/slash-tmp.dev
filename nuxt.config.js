@@ -126,7 +126,14 @@ export default {
     ],
     link: [
       { rel: 'icon', href: '/favicon.ico' },
-      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href:
+          process.env.NODE_ENV === 'development'
+            ? '/favicon-dev.svg'
+            : '/favicon.svg'
+      },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       { rel: 'manifest', href: '/manifest.json' },
 
