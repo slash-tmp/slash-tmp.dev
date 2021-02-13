@@ -47,11 +47,11 @@
         @mouseleave="resetHighlight"
       >
         <source
-          srcset="@/assets/img/adrien.jpg?resize&size=200&format=webp"
+          srcset="@/assets/img/adrien.jpg?resize&size=250&format=webp"
           type="image/webp"
         />
         <source
-          srcset="@/assets/img/adrien.jpg?resize&size=200"
+          srcset="@/assets/img/adrien.jpg?resize&size=250"
           type="image/jpeg"
         />
         <img
@@ -62,7 +62,7 @@
                 highlightedName === 'adrien'
             }
           ]"
-          src="@/assets/img/adrien.jpg?resize&size=200"
+          src="@/assets/img/adrien.jpg?resize&size=250"
           alt="Adrien"
         />
       </picture>
@@ -72,11 +72,11 @@
         @mouseleave="resetHighlight"
       >
         <source
-          srcset="@/assets/img/quentin.jpg?resize&size=200&format=webp"
+          srcset="@/assets/img/quentin.jpg?resize&size=250&format=webp"
           type="image/webp"
         />
         <source
-          srcset="@/assets/img/quentin.jpg?resize&size=200"
+          srcset="@/assets/img/quentin.jpg?resize&size=250"
           type="image/jpeg"
         />
         <img
@@ -87,7 +87,7 @@
                 highlightedName === 'quentin'
             }
           ]"
-          src="@/assets/img/quentin.jpg?resize&size=200"
+          src="@/assets/img/quentin.jpg?resize&size=250"
           alt="Quentin"
         />
       </picture>
