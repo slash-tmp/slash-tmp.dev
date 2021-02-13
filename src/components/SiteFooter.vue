@@ -74,7 +74,6 @@ export default {
     grid-column: 1;
     grid-row: 2;
     color: $color-white;
-    justify-self: start;
 
     &:hover {
       text-decoration: none;
