@@ -130,6 +130,10 @@ export default {
     justify-content: flex-end;
     justify-self: flex-end;
     position: relative;
+
+    @media (max-width: 1200px) {
+      justify-self: flex-start;
+    }
   }
 
   &__paper-background {
@@ -137,6 +141,7 @@ export default {
     position: absolute;
     top: 50%;
     transform: translateX(-90%) translateY(-50%);
+    z-index: -1;
 
     @media (max-width: 1200px) {
       display: none;
@@ -160,7 +165,6 @@ export default {
   &__paper {
     background-color: $color-white;
     border-radius: 1rem;
-    border: 1px solid #bdbdbd;
     box-shadow: 1rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     display: grid;
@@ -173,6 +177,29 @@ export default {
     @media (max-width: 800px) {
       font-size: 1rem;
       padding: 2rem 0.5rem;
+    }
+
+    &::before,
+    &::after {
+      background: $color-white;
+      bottom: 0;
+      border: 1px solid rgba($color-black, 0.08);
+      border-radius: 1rem;
+      box-shadow: 0 0 0.6rem 0 rgba($color-black, 0.1);
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      transform: rotate(-1deg);
+    }
+
+    &::after {
+      transform: rotate(1deg);
     }
   }
 
