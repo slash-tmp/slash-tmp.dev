@@ -100,6 +100,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'theme-color', content: '#4f448f' },
+
       { hid: 'description', name: 'description', content: description },
       { hid: 'og:title', name: 'og:title', content: title },
       {
@@ -123,7 +125,17 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'icon', href: '/favicon.ico' },
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href:
+          process.env.NODE_ENV === 'development'
+            ? '/favicon-dev.svg'
+            : '/favicon.svg'
+      },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+      { rel: 'manifest', href: '/manifest.json' },
 
       // Links to the blog feeds (RSS, ATOM and JSON)
       {

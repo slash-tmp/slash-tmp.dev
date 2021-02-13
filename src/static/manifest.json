@@ -1,0 +1,11 @@
+{
+  "name": "/tmp",
+  "icons": [
+    { "src": "/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "start_url": "/",
+  "background_color": "#4f448f",
+  "theme_color": "#4f448f",
+  "description": "Petit studio de développement et de qualité web"
+}
