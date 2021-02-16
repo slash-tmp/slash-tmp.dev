@@ -33,16 +33,16 @@ export default {
   name: 'Blog',
   mixins: [AnnouncedPageMixin],
   async asyncData({ $content }) {
-    let articles
+    // hide unpublished articles only on the production netlify deploy
+    // see: https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
+    const filterUnpublished = process.env.CONTEXT === 'production'
 
-    if (process.env.NODE_ENV === 'development') {
-      articles = await $content('blog').sortBy('date', 'desc').fetch()
-    } else {
-      articles = await $content('blog')
-        .where({ published: true })
-        .sortBy('date', 'desc')
-        .fetch()
-    }
+    const articles = await $content('blog')
+      .where({
+        ...(filterUnpublished && { published: true })
+      })
+      .sortBy('date', 'desc')
+      .fetch()
 
     return {
       articles
