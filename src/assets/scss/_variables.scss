@@ -1,0 +1,41 @@
+$color-text-light: #fff;
+$color-text-dark: #1c1c1c;
+
+$color-accent-one: #ffdf96;
+$color-accent-two: #ffa99f;
+$color-accent-three: #ff719a;
+
+$gradient-background-dark: linear-gradient(
+  90deg,
+  #37343a 0%,
+  rgba(34, 27, 43, 0.99) 50%,
+  rgba(3, 1, 6, 0.92) 100%
+);
+$gradient-accent: linear-gradient(
+  90deg,
+  $color-accent-one 0%,
+  rgba($color-accent-two, 0.8) 50%,
+  $color-accent-three 100%
+);
+
+$spacing: 0.625rem;
+$opacity-background-text: 0.03;
+
+$font-family-sans-serif: 'Tahoma', sans-serif;
+$font-family-serif: 'Georgia', serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-size-normal: 1.25rem; // 20px
+$font-size-medium: 2rem; // 32px
+$font-size-large: 3.125rem; // 50px
+
+// $font-size-one: 50px;
+// $font-size-two: 32px;
+// $font-size-three: 48px;
+// $font-size-four: 18px, 20px;
+// $font-size-six: 27px, 29px;
+// $font-size-seven: 94px; // a tres bientot
+// $font-size-nine: 174px; // conseils
+// $font-size-height: 176px; // background text "inte web"

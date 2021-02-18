@@ -162,6 +162,9 @@ export default {
     fallback: true
   },
   css: ['@/assets/scss/index'],
+  styleResources: {
+    scss: ['@/assets/scss/_variables.scss']
+  },
   components: true,
   buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],
   modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/feed'],
