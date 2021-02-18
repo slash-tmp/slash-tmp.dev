@@ -1,5 +1,5 @@
 <template>
-  <div>Pipou</div>
+  <Hero />
 </template>
 
 <script>
