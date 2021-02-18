@@ -163,7 +163,7 @@ export default {
   },
   css: ['@/assets/scss/index'],
   styleResources: {
-    scss: ['@/assets/scss/_variables.scss']
+    scss: ['@/assets/scss/_variables.scss', '@/assets/scss/_mixins.scss']
   },
   components: true,
   buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],

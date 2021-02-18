@@ -19,6 +19,9 @@ $gradient-accent: linear-gradient(
 );
 
 $spacing: 0.625rem;
+$container-width-medium: $spacing * 90;
+$container-width-large: $spacing * 130;
+
 $opacity-background-text: 0.03;
 
 $font-family-sans-serif: 'Tahoma', sans-serif;

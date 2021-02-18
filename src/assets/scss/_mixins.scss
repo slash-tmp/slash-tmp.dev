@@ -1,0 +1,8 @@
+@mixin text-gradient {
+  background-image: $gradient-accent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -moz-background-clip: text;
+}
