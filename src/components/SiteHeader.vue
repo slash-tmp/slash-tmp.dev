@@ -50,7 +50,7 @@ export default {
 <style lang="scss">
 .site-header {
   background: $gradient-background-dark;
-  padding: $spacing * 8.5;
+  padding: $spacing * 8.5 $spacing * 2 $spacing * 17;
   color: $color-text-light;
 
   a,
