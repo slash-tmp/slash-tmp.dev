@@ -18,22 +18,31 @@
       </nav>
 
       <ul class="site-header__socials">
-        <li class="site-header__social-icon">
-          <a href="https://twitter.com/slash_tmp_dev">
+        <li class="site-header__social-item">
+          <a
+            class="site-header__social-link"
+            href="https://twitter.com/slash_tmp_dev"
+          >
             <VisuallyHidden>Twitter</VisuallyHidden>
-            <TwitterIcon />
+            <TwitterIcon class="site-header__social-icon" />
           </a>
         </li>
-        <li class="site-header__social-icon">
-          <a href="https://linkedin.com/company/slash-tmp">
+        <li class="site-header__social-item">
+          <a
+            class="site-header__social-link"
+            href="https://linkedin.com/company/slash-tmp"
+          >
             <VisuallyHidden>LinkedIn</VisuallyHidden>
-            <TwitterIcon />
+            <LinkedInIcon class="site-header__social-icon" />
           </a>
         </li>
-        <li class="site-header__social-icon">
-          <a href="https://github.com/slash-tmp">
+        <li class="site-header__social-item">
+          <a
+            class="site-header__social-link"
+            href="https://github.com/slash-tmp"
+          >
             <VisuallyHidden>GitHub</VisuallyHidden>
-            <TwitterIcon />
+            <GitHubIcon class="site-header__social-icon" />
           </a>
         </li>
       </ul>
@@ -104,12 +113,22 @@ export default {
     display: flex;
   }
 
-  &__social-icon {
+  &__social-item {
+    align-items: center;
+    display: flex;
     height: $spacing * 3;
 
     & + & {
       margin-left: $spacing * 2;
     }
+  }
+
+  &__social-link {
+    display: flex;
+  }
+
+  &__social-icon {
+    height: $spacing * 3;
   }
 }
 </style>
