@@ -1,5 +1,5 @@
 <template>
-  <div tabindex="-1">
+  <div class="default-layout" tabindex="-1">
     <!-- <a class="skip-link" href="#main-content">Aller au contenu principal</a> -->
     <!-- <main id="main-content"> -->
     <Nuxt />
@@ -24,3 +24,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+:root {
+  font-family: $font-family-serif;
+}
+</style>
