@@ -186,7 +186,6 @@ export default {
       }
     }
   },
-  styleResources: { scss: '@/assets/scss/_variables.scss' },
   sitemap: {
     hostname: baseUrl,
     routes() {

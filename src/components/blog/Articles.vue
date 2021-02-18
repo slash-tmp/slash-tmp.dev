@@ -36,21 +36,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.articles {
-  margin: 0 auto;
-
-  &__list {
-    --flow: 4rem;
-
-    @media (max-width: 600px) {
-      --flow: 2rem;
-    }
-  }
-
-  &__itemLink {
-    color: $color-purple;
-  }
-}
-</style>

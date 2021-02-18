@@ -1,28 +1,5 @@
 <template>
-  <div class="blog">
-    <Hero tag="header">
-      <h1 class="blog__title">{{ title }}</h1>
-      <p>
-        {{ description }} Comme on ne vous promet pas une fréquence régulière,
-        vous pouvez vous abonner au flux de syndication aux différents formats :
-        <a href="/feed.xml" rel="alternate" type="application/rss+xml"
-          ><span class="visually-hidden">flux de syndication au format</span
-          >RSS</a
-        >,
-        <a href="/feed.atom" rel="alternate" type="application/atom+xml"
-          ><span class="visually-hidden">flux de syndication au format</span
-          >Atom</a
-        >
-        et
-        <a href="/feed.json" rel="alternate" type="application/json"
-          ><span class="visually-hidden">flux de syndication au format</span
-          >JSON</a
-        >.
-      </p>
-    </Hero>
-
-    <Articles :articles="articles" />
-  </div>
+  <div class="blog">Blog</div>
 </template>
 
 <script>
@@ -60,11 +37,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.blog {
-  &__title {
-    margin-bottom: 2rem;
-  }
-}
-</style>

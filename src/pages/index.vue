@@ -1,15 +1,5 @@
 <template>
-  <div>
-    <Hero tag="section">
-      <PresentationSection />
-    </Hero>
-
-    <QualitySection />
-
-    <ServicesSection />
-
-    <ContactSection />
-  </div>
+  <div>Pipou</div>
 </template>
 
 <script>

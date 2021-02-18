@@ -1,11 +1,5 @@
 <template>
-  <article>
-    <Hero tag="header">
-      <h1>{{ page.title }}</h1>
-    </Hero>
-
-    <nuxt-content :document="page" class="container container--small" />
-  </article>
+  <article>Mentions légales</article>
 </template>
 
 <script>
