@@ -15,8 +15,8 @@
         <span class="home-hero__description-name">Adrien</span> &
         <span class="home-hero__description-name">Quentin</span>, deux
         développeurs web très attachés à la qualité web et à l’expérience
-        utilisateur. C’est pour ça qu’on a créé <strong>/tmp</strong> (ça se
-        prononce "<strong>slash tmp</strong>").
+        utilisateur.<br />C’est pour ça qu’on a créé <strong>/tmp</strong> — ça
+        se prononce "<strong>slash tmp</strong>".
       </p>
     </Container>
   </section>
@@ -48,11 +48,6 @@ export default {
 
   &__description {
     font-size: $font-size-medium;
-
-    strong {
-      font-family: $font-family-sans-serif;
-      font-size: $font-size-medium * 0.9;
-    }
   }
 
   &__description-name {
