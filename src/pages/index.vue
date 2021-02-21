@@ -1,5 +1,9 @@
 <template>
-  <div>Pipou</div>
+  <div class="home-page">
+    <div class="home-page__section--dark">
+      <HomeHero class="home-page__hero" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -21,3 +25,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.home-page {
+  &__section {
+    &--dark {
+      background: $gradient-background-dark;
+    }
+  }
+
+  &__hero {
+    margin-bottom: $spacing * 17;
+  }
+}
+</style>
