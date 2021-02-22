@@ -27,7 +27,8 @@
         en qualité web
       </h2>
       <p>
-        Nous sommes <strong>certifiés</strong> Opquast et nous avons une grande
+        Nous sommes <strong>certifiés</strong>
+        <a href="https://www.opquast.com">Opquast</a> et nous avons une grande
         sensibilité pour la qualité web et l’expérience utilisateur.
       </p>
       <p>
