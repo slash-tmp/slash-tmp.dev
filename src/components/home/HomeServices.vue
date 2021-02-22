@@ -17,6 +17,7 @@
         que notre code est bien structuré, documenté, testé et performant pour
         assurer la <strong>qualité du produit</strong> livré.
       </p>
+      <span class="home-services__bg-text" aria-hidden="true">inté web</span>
     </section>
 
     <section class="home-services__section home-services__section--quality">
@@ -37,6 +38,7 @@
         Nous pouvons aussi former votre équipe projet de développement pour une
         montée en compétence.
       </p>
+      <span class="home-services__bg-text" aria-hidden="true">conseils</span>
     </section>
   </Container>
 </template>
@@ -54,8 +56,9 @@ export default {
   &__section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: $spacing * 3;
-    column-gap: $spacing * 4;
+    column-gap: $spacing * 3;
+    row-gap: $spacing * 4;
+    position: relative;
 
     & + & {
       margin-top: $spacing * 22;
@@ -77,6 +80,18 @@ export default {
 
   p {
     grid-row: 3;
+  }
+
+  &__bg-text {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-normal * 8;
+    font-weight: $font-weight-bold;
+    left: 0;
+    opacity: $opacity-background-text;
+    position: absolute;
+    text-transform: uppercase;
+    top: 75%;
+    z-index: -1;
   }
 }
 </style>
