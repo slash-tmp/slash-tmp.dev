@@ -3,6 +3,7 @@
     <div class="home-page__section--dark">
       <HomeHero class="home-page__hero" />
     </div>
+    <HomeServices class="home-page__services" />
   </div>
 </template>
 
@@ -36,6 +37,10 @@ export default {
 
   &__hero {
     margin-bottom: $spacing * 17;
+  }
+
+  &__services {
+    margin-bottom: $spacing * 23;
   }
 }
 </style>
