@@ -52,6 +52,7 @@ export default {
 
 <style lang="scss">
 .home-services {
+  color: $color-text-dark;
   padding: 0 $spacing * 2;
 
   &__section {
