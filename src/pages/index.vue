@@ -2,6 +2,7 @@
   <div class="home-page">
     <div class="home-page__section--dark">
       <HomeHero class="home-page__hero" />
+      <HomeQuality />
     </div>
     <HomeServices class="home-page__services" />
   </div>
@@ -32,6 +33,8 @@ export default {
   &__section {
     &--dark {
       background: $gradient-background-dark;
+      margin-bottom: $spacing * 15;
+      padding: $spacing * 8 0 $spacing * 15;
     }
   }
 
