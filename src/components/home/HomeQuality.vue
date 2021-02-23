@@ -60,7 +60,7 @@ export default {
   &__definition {
     align-items: end;
     display: grid;
-    gap: $spacing * 2 $spacing * 4;
+    gap: $spacing * 2 $spacing * 5;
     grid-template-columns: 1fr 1fr;
     margin-bottom: $spacing * 20;
     position: relative;
