@@ -1,6 +1,9 @@
 <template>
   <article class="blog-slug">
     <BlogArticleHero :title="title" :date="formattedDate" />
+    <Container size="small">
+      <NuxtContent class="blog-slug__content" :document="article" />
+    </Container>
   </article>
 </template>
 
@@ -37,3 +40,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.blog-slug {
+  &__content {
+    padding: $spacing * 10 $spacing * 2;
+  }
+}
+</style>
