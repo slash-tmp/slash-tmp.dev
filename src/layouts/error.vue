@@ -1,9 +1,6 @@
 <template>
   <article>
-    <Hero tag="header">
-      <h1>{{ title }}</h1>
-    </Hero>
-
+    <ErrorHero :title="title" />
     <ErrorSection :code="error.statusCode" />
   </article>
 </template>
