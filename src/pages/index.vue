@@ -33,6 +33,7 @@ export default {
   &__section {
     &--dark {
       background: $gradient-background-dark;
+      margin-bottom: $spacing * 15;
       padding: $spacing * 8 0 $spacing * 15;
     }
   }
