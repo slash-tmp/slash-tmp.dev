@@ -1,5 +1,5 @@
 <template>
-  <article>Mentions légales</article>
+  <LegalHero />
 </template>
 
 <script>
