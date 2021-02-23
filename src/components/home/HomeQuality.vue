@@ -38,7 +38,7 @@
           <span class="home-quality__quote-author">Élie Sloïm</span>,
           <a
             href="https://www.opquast.com/rendre-le-web-meilleur/qualite-web-le-livre/"
-            >livre Opquast</a
+            ><cite>livre Opquast</cite></a
           >
         </figcaption>
       </figure>
