@@ -1,6 +1,7 @@
 <template>
   <div>
     <BlogHero />
+    <BlogArticles :articles="articles" />
   </div>
 </template>
 
