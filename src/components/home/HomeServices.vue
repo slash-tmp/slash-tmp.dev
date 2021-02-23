@@ -58,8 +58,7 @@ export default {
   &__section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: $spacing * 3;
-    row-gap: $spacing * 4;
+    gap: $spacing * 4 $spacing * 5;
     position: relative;
 
     & + & {
@@ -81,6 +80,7 @@ export default {
   }
 
   p {
+    line-height: 1.9;
     grid-row: 3;
   }
 
