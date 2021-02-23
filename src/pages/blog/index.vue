@@ -1,5 +1,7 @@
 <template>
-  <div class="blog">Blog</div>
+  <div>
+    <BlogHero />
+  </div>
 </template>
 
 <script>
