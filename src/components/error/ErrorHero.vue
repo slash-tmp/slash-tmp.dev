@@ -12,7 +12,8 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Page introuvable'
+      default: 'Page introuvable',
+      required: false
     }
   }
 }

@@ -1,0 +1,45 @@
+<template>
+  <section class="blog-article-hero">
+    <Container>
+      <h1 class="blog-article-hero__title">{{ title }}</h1>
+      <div class="blog-article-hero__date">
+        Écrit le <time>{{ date }}</time>
+      </div>
+      <NuxtLink :to="{ name: 'blog' }">
+        Retour à la liste des articles
+      </NuxtLink>
+    </Container>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'BlogArticleHero',
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    date: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.blog-article-hero {
+  background: $gradient-background-dark;
+  color: $color-text-light;
+  padding: $spacing * 8 $spacing * 2 $spacing * 15;
+
+  &__title {
+    margin-bottom: $spacing * 4;
+  }
+
+  &__date {
+    margin-bottom: $spacing * 2;
+  }
+}
+</style>
