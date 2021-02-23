@@ -10,7 +10,7 @@ export default {
   props: {
     size: {
       type: String,
-      validator: value => ['large', 'medium'].includes(value),
+      validator: value => ['large', 'medium', 'small'].includes(value),
       default: 'medium'
     }
   }
@@ -20,6 +20,10 @@ export default {
 <style lang="scss">
 .container {
   margin: 0 auto;
+
+  &--small {
+    max-width: $container-width-small;
+  }
 
   &--medium {
     max-width: $container-width-medium;
