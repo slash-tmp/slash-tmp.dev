@@ -25,9 +25,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-:root {
-  font-family: $font-family-serif;
-}
-</style>
