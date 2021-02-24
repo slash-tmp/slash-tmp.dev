@@ -46,6 +46,8 @@ export default {
 <style lang="scss">
 .blog-slug {
   &__content {
+    --outline-color: #{$color-text-dark};
+
     padding: $spacing * 10 $spacing * 2;
   }
 }
