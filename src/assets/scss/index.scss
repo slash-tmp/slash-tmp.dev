@@ -3,6 +3,11 @@
 @import 'typography';
 @import 'highlightjs-theme';
 
+*:focus {
+  outline: 3px dashed var(--outline-color, #{$color-text-light});
+  outline-offset: 3px;
+}
+
 /* Disable animations when requested. */
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
   *,

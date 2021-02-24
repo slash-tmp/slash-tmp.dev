@@ -39,6 +39,8 @@ export default {
 
 <style lang="scss">
 .error-section {
+  --outline-color: #{$color-text-dark};
+
   padding: $spacing * 10 $spacing * 2;
 
   &__description {
