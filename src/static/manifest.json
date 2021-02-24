@@ -5,7 +5,7 @@
     { "src": "/512.png", "type": "image/png", "sizes": "512x512" }
   ],
   "start_url": "/",
-  "background_color": "#ffdf96",
-  "theme_color": "#ffdf96",
+  "background_color": "#221B2B",
+  "theme_color": "#221B2B",
   "description": "Petit studio de développement et de qualité web"
 }
