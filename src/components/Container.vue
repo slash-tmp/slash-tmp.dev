@@ -36,6 +36,10 @@ export default {
     max-width: $container-width-small;
   }
 
+  &--small {
+    max-width: $container-width-small;
+  }
+
   &--medium {
     max-width: $container-width-medium;
   }
