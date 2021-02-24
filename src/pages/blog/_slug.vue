@@ -1,6 +1,7 @@
 <template>
   <article class="blog-slug">
     <BlogArticleHero :title="title" :date="formattedDate" />
+    <BlogArticle :article="article" />
   </article>
 </template>
 
