@@ -12,7 +12,8 @@
               {{ article.title }}
             </NuxtLink>
           </h2>
-          Écrit le <time :datetime="article.date">{{ formatDate(article.date) }}</time>
+          Écrit le
+          <time :datetime="article.date">{{ formatDate(article.date) }}</time>
         </li>
       </ul>
     </Container>
@@ -41,6 +42,8 @@ export default {
 
 <style lang="scss">
 .blog-articles {
+  --outline-color: #{$color-text-dark};
+
   padding: $spacing * 10 $spacing * 2;
 
   &__item {

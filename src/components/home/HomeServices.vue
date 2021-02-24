@@ -52,6 +52,8 @@ export default {
 
 <style lang="scss">
 .home-services {
+  --outline-color: #{$color-text-dark};
+
   color: $color-text-dark;
   padding: 0 $spacing * 2;
 
