@@ -1,8 +1,10 @@
 <template>
   <article class="blog-slug">
     <BlogArticleHero :title="title" :date="formattedDate" />
-    <Container size="small">
-      <NuxtContent class="blog-slug__content" :document="article" />
+    <Container>
+      <Container size="small" alignment="left">
+        <NuxtContent class="blog-slug__content" :document="article" />
+      </Container>
     </Container>
   </article>
 </template>
