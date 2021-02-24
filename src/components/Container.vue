@@ -1,5 +1,5 @@
 <template>
-  <div :class="['container', `container--${size}`]">
+  <div :class="['container', `container--${size}`, `container--${alignment}`]">
     <slot />
   </div>
 </template>
@@ -8,9 +8,14 @@
 export default {
   name: 'Container',
   props: {
+    alignment: {
+      type: String,
+      validator: value => ['left', 'center'].includes(value),
+      default: 'center'
+    },
     size: {
       type: String,
-      validator: value => ['large', 'medium'].includes(value),
+      validator: value => ['large', 'medium', 'small'].includes(value),
       default: 'medium'
     }
   }
@@ -19,7 +24,17 @@ export default {
 
 <style lang="scss">
 .container {
-  margin: 0 auto;
+  &--left {
+    margin: 0;
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--small {
+    max-width: $container-width-small;
+  }
 
   &--medium {
     max-width: $container-width-medium;
