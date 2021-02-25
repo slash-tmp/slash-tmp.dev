@@ -18,11 +18,11 @@ $gradient-accent: linear-gradient(
   $color-accent-three 100%
 );
 
-$spacing: 0.625rem;
+$spacing: 0.625rem; // 10px
 
-$container-width-small: $spacing * 60;
-$container-width-medium: $spacing * 90;
-$container-width-large: $spacing * 130;
+$container-width-small: $spacing * 60; // 600px
+$container-width-medium: $spacing * 90; // 900px
+$container-width-large: $spacing * 130; // 1300px
 
 $opacity-background-text: 0.03;
 

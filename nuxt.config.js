@@ -5,6 +5,7 @@ const baseUrl = process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
 const title = 'Petit studio de développement et de qualité web'
 const description =
   "/tmp c'est deux développeurs : Adrien et Quentin. On code des sites web sur mesure et on fait de la qualité web."
+const email = 'contact@slash-tmp.dev'
 
 /**
  * Generate dynamic routes for sitemap
@@ -86,7 +87,8 @@ async function configureFeed() {
  */
 export default {
   env: {
-    baseUrl
+    baseUrl,
+    email
   },
   target: 'static',
   modern: process.env.NODE_ENV === 'production' && 'client',
