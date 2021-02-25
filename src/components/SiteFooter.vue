@@ -6,8 +6,12 @@
         Vous souhaitez nous contacter pour — discuter de nos services, dire
         bonjour ou échanger autour du web, n’hésitez pas : soit par email via
         l’adresse
-        <a :href="`mailto:${email}`">contact@slash-tmp.dev</a> ou sur les
-        réseaux sociaux.
+        <strong
+          ><a :href="`mailto:${email}`" class="site-footer__email"
+            >contact@slash-tmp.dev<span
+              class="site-footer__email-underline" /></a
+        ></strong>
+        ou sur les réseaux sociaux.
       </p>
 
       <div class="site-footer__actions">
@@ -62,6 +66,36 @@ export default {
   &__contact-text {
     font-size: 1.8125rem;
     line-height: 1.7;
+  }
+
+  /* 
+  It seems that chrome/firefox do not handle underlined text with `background-clip: text` well.
+  ie. : the underline is either not included in the background clip or does not appear at all.
+
+  This is an "articifical" underline.
+  */
+  &__email-underline {
+    position: absolute;
+    bottom: -0.1em;
+    left: 0;
+    right: 0;
+    height: 0.115em;
+    background: $gradient-accent;
+    pointer-events: none;
+  }
+
+  &__email {
+    text-decoration: none;
+    position: relative;
+
+    @include text-gradient;
+
+    &:hover,
+    &:focus {
+      .site-footer__email-underline {
+        opacity: 0;
+      }
+    }
   }
 
   &__ruler {
