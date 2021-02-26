@@ -191,6 +191,10 @@ export default {
     bottom: -2rem;
     text-align: center;
     margin: 0;
+
+    @media (max-width: $breakpoint-medium) {
+      display: none;
+    }
   }
 }
 </style>
