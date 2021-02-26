@@ -51,6 +51,7 @@ export default {
 
     @media (max-width: $breakpoint-medium) {
       font-size: $font-size-normal;
+      line-height: 1.7;
     }
   }
 

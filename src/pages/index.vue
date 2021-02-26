@@ -35,11 +35,20 @@ export default {
       background: $gradient-background-dark;
       margin-bottom: $spacing * 15;
       padding: $spacing * 8 0 $spacing * 15;
+
+      @media (max-width: $breakpoint-medium) {
+        margin-bottom: $spacing * 10;
+        padding: $spacing * 8 0 $spacing * 10;
+      }
     }
   }
 
   &__hero {
     margin-bottom: $spacing * 17;
+
+    @media (max-width: $breakpoint-medium) {
+      margin-bottom: $spacing * 10;
+    }
   }
 
   &__services {
