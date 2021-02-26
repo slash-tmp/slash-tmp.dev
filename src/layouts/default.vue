@@ -5,6 +5,8 @@
     <!-- <main id="main-content"> -->
     <Nuxt />
     <!-- </main> -->
+
+    <SiteFooter />
   </div>
 </template>
 
