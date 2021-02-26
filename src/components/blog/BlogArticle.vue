@@ -2,7 +2,7 @@
   <div class="blog-article">
     <Container>
       <Container size="small" alignment="left">
-        <NuxtContent class="blog-article__content" :document="article" />
+        <NuxtContent :document="article" />
       </Container>
     </Container>
   </div>
@@ -23,9 +23,5 @@ export default {
 <style lang="scss">
 .blog-article {
   padding: $spacing * 10 $spacing * 2;
-
-  &__content {
-    --outline-color: #{$color-text-dark};
-  }
 }
 </style>
