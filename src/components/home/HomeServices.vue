@@ -1,8 +1,13 @@
 <template>
   <Container class="home-services">
-    <section class="home-services__section">
+    <section
+      class="home-services__section"
+      aria-describedby="webdev-section-title"
+    >
       <WebDevIcon class="home-services__icon" />
-      <h2 class="home-services__title">Développement<br />& intégration web</h2>
+      <h2 id="webdev-section-title" class="home-services__title">
+        Développement<br />& intégration web
+      </h2>
       <p>
         Nous prenons en charge toute la phase de
         <strong>développement</strong> de votre projet web quelle que soit sa
@@ -21,9 +26,12 @@
       <span class="home-services__bg-text" aria-hidden="true">inté web</span>
     </section>
 
-    <section class="home-services__section home-services__section--quality">
+    <section
+      class="home-services__section home-services__section--quality"
+      aria-describedby="audit-section-title"
+    >
       <WebDevIcon class="home-services__icon" />
-      <h2 class="home-services__title">
+      <h2 id="audit-section-title" class="home-services__title">
         Audits & conseils<br />
         en qualité web
       </h2>
