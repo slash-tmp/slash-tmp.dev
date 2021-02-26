@@ -64,17 +64,17 @@ export default {
 .site-footer {
   background: $gradient-background-dark;
   color: $color-text-light;
-  padding: 15 * $spacing 0;
+  padding: $spacing * 15 0;
   position: relative;
   overflow: hidden;
 
   & > * + * {
-    margin-top: 4 * $spacing;
+    margin-top: $spacing * 4;
   }
 
   &__container {
     display: grid;
-    gap: 5 * $spacing;
+    gap: $spacing * 5;
   }
 
   &__title {
@@ -117,12 +117,12 @@ export default {
   }
 
   &__copy-email {
-    padding: 2 * $spacing;
+    padding: $spacing * 2;
     border: none;
     font-family: $font-family-serif;
     font-size: $font-size-normal;
     background: none;
-    margin-left: 2 * $spacing;
+    margin-left: $spacing * 2;
     color: $color-text-light;
     text-decoration: underline;
 
@@ -142,7 +142,7 @@ export default {
   &__informations {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 3 * $spacing;
+    gap: $spacing * 3;
   }
 
   &__socials {

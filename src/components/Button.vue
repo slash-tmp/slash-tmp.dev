@@ -22,7 +22,7 @@ $border: 0.0625rem;
 
 .button {
   /* TODO: make the button border a gradient */
-  padding: 2 * $spacing;
+  padding: $spacing * 2;
   border: 0.0625rem solid $color-accent-two;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -36,7 +36,7 @@ $border: 0.0625rem;
   &:hover {
     background: $gradient-accent;
     border: none;
-    padding: 2 * $spacing + 0.0625rem;
+    padding: $spacing * 2 + 0.0625rem;
   }
 
   &:not(:hover) #{&}__content {
