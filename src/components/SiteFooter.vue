@@ -76,10 +76,6 @@ export default {
     gap: $spacing * 5;
     padding: 0 $spacing * 2;
     position: relative;
-
-    @media (max-width: $breakpoint-medium) {
-      padding: 0 $spacing;
-    }
   }
 
   &__contact-text {
@@ -139,6 +135,7 @@ export default {
     margin-left: $spacing * 2;
     color: $color-text-light;
     text-decoration: underline;
+    text-align: left;
 
     @media (max-width: $breakpoint-medium) {
       margin-left: $spacing * -2;

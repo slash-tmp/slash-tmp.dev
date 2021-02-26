@@ -35,7 +35,7 @@ export default {
   color: $color-text-light;
 
   @media (max-width: $breakpoint-medium) {
-    padding: $spacing * 2 $spacing;
+    padding: $spacing * 2;
   }
 
   a,

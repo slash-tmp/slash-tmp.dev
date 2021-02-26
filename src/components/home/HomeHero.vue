@@ -48,6 +48,10 @@ export default {
 
   &__description {
     font-size: $font-size-medium;
+
+    @media (max-width: $breakpoint-medium) {
+      font-size: $font-size-normal;
+    }
   }
 
   &__description-name {
