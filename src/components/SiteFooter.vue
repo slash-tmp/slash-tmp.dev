@@ -1,5 +1,5 @@
 <template>
-  <footer class="site-footer">
+  <footer id="contact" class="site-footer">
     <Container class="site-footer__container">
       <h2 class="site-footer__title">Contactez /tmp</h2>
       <p class="site-footer__contact-text">
