@@ -53,6 +53,10 @@ export default {
 
   &__services {
     margin-bottom: $spacing * 23;
+
+    @media (max-width: $breakpoint-medium) {
+      margin-bottom: $spacing * 10;
+    }
   }
 }
 </style>
