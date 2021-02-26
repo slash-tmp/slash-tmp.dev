@@ -1,4 +1,6 @@
 .nuxt-content {
+  --outline-color: #{$color-text-dark};
+
   > * + * {
     margin-top: $spacing * 2;
   }

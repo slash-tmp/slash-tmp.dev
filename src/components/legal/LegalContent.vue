@@ -1,8 +1,8 @@
 <template>
-  <div class="blog-article">
+  <div class="legal-content">
     <Container>
       <Container size="small" alignment="left">
-        <NuxtContent :document="article" />
+        <NuxtContent :document="content" />
       </Container>
     </Container>
   </div>
@@ -10,9 +10,9 @@
 
 <script>
 export default {
-  name: 'BlogArticle',
+  name: 'LegalContent',
   props: {
-    article: {
+    content: {
       type: Object,
       required: true
     }
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-.blog-article {
+.legal-content {
   padding: $spacing * 10 $spacing * 2;
 }
 </style>
