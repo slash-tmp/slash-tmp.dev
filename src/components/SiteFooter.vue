@@ -16,9 +16,11 @@
 
       <div class="site-footer__actions">
         <Button as="a" :href="`mailto:${email}`">Nous écrire un email</Button>
-        <button>
-          <span aria-hidden="true">→</span>
-          Copier notre adresse email
+        <button class="site-footer__copy-email">
+          <span class="site-footer__copy-email-gradient">
+            <span aria-hidden="true">→</span>
+            Copier notre adresse email
+          </span>
           <span aria-hidden="true">💌</span>
         </button>
       </div>
@@ -95,6 +97,25 @@ export default {
       .site-footer__email-underline {
         opacity: 0;
       }
+    }
+  }
+
+  &__copy-email {
+    padding: 2 * $spacing;
+    border: none;
+    font-family: $font-family-serif;
+    font-size: $font-size-normal;
+    background: none;
+    margin-left: 2 * $spacing;
+    color: $color-text-light;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:hover #{&}-gradient {
+      @include text-gradient;
     }
   }
 
