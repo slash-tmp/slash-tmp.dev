@@ -10,6 +10,10 @@ h2 {
   font-family: $font-family-sans-serif;
   font-size: $font-size-large;
   line-height: 1.2;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: $font-size-medium;
+  }
 }
 
 strong {

@@ -1,5 +1,6 @@
 <template>
   <footer id="contact" class="site-footer">
+    <div class="site-footer__background-text">à très bientôt ;)</div>
     <Container class="site-footer__container">
       <h2 class="site-footer__title">Contactez /tmp</h2>
       <p class="site-footer__contact-text">
@@ -41,8 +42,6 @@
         </p>
       </div>
     </Container>
-
-    <div class="site-footer__background-text">à très bientôt ;)</div>
   </footer>
 </template>
 
@@ -64,29 +63,44 @@ export default {
 .site-footer {
   background: $gradient-background-dark;
   color: $color-text-light;
-  padding: $spacing * 15 0;
+  padding: $spacing * 15 $spacing * 2;
   position: relative;
   overflow: hidden;
 
-  & > * + * {
-    margin-top: $spacing * 4;
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 8 0;
   }
 
   &__container {
     display: grid;
     gap: $spacing * 5;
-  }
+    padding: 0 $spacing * 2;
+    position: relative;
 
-  &__title {
-    font-size: $font-size-large;
+    @media (max-width: $breakpoint-medium) {
+      padding: 0 $spacing;
+    }
   }
 
   &__contact-text {
     font-size: 1.8125rem;
     line-height: 1.7;
+
+    @media (max-width: $breakpoint-medium) {
+      font-size: $font-size-normal;
+    }
   }
 
-  /* 
+  &__actions {
+    @media (max-width: $breakpoint-medium) {
+      display: grid;
+      gap: $spacing;
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  }
+
+  /*
   It seems that chrome/firefox do not handle underlined text with `background-clip: text` well.
   ie. : the underline is either not included in the background clip or does not appear at all.
 
@@ -126,6 +140,10 @@ export default {
     color: $color-text-light;
     text-decoration: underline;
 
+    @media (max-width: $breakpoint-medium) {
+      margin-left: $spacing * -2;
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -145,11 +163,19 @@ export default {
     display: grid;
     grid-template-columns: auto auto;
     gap: $spacing * 3;
+
+    @media (max-width: $breakpoint-medium) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__socials {
     justify-self: end;
     align-self: center;
+
+    @media (max-width: $breakpoint-medium) {
+      justify-self: initial;
+    }
   }
 
   &__legal-link:hover {
