@@ -42,7 +42,7 @@
       </div>
     </Container>
 
-    <div class="site-footer__background-text">À TRÈS BIENTOT ;)</div>
+    <div class="site-footer__background-text">à très bientôt ;)</div>
   </footer>
 </template>
 
