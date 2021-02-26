@@ -7,13 +7,15 @@
           :key="article.slug"
           class="blog-articles__item"
         >
-          <h2 class="blog-articles__title">
-            <NuxtLink :to="article.path">
-              {{ article.title }}
-            </NuxtLink>
-          </h2>
-          Écrit le
-          <time :datetime="article.date">{{ formatDate(article.date) }}</time>
+          <article>
+            <h2 class="blog-articles__title">
+              <NuxtLink :to="article.path">
+                {{ article.title }}
+              </NuxtLink>
+            </h2>
+            Écrit le
+            <time :datetime="article.date">{{ formatDate(article.date) }}</time>
+          </article>
         </li>
       </ul>
     </Container>
