@@ -15,7 +15,7 @@
       </p>
 
       <div class="site-footer__actions">
-        <a :href="`mailto:${email}`">Nous écrire un email</a>
+        <Button as="a" :href="`mailto:${email}`">Nous écrire un email</Button>
         <button>
           <span aria-hidden="true">→</span>
           Copier notre adresse email
