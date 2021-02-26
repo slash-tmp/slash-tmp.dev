@@ -29,11 +29,16 @@
 
       <div class="site-footer__informations">
         <p>
-          /tmp est un petit studio Bordelais<br />
+          <strong>/tmp</strong> est un petit studio Bordelais<br />
           qui fait du développement et de la qualité web.
         </p>
         <SocialLinks class="site-footer__socials" />
-        <p>© 2021 - Mentions légales</p>
+        <p>
+          © 2021 -
+          <nuxt-link to="/mentions-legales" class="site-footer__legal-link">
+            Mentions légales
+          </nuxt-link>
+        </p>
       </div>
     </Container>
 
@@ -143,6 +148,10 @@ export default {
   &__socials {
     justify-self: end;
     align-self: center;
+  }
+
+  &__legal-link:hover {
+    text-decoration: none;
   }
 
   &__background-text {
