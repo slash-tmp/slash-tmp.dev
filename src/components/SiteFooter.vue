@@ -163,6 +163,10 @@ export default {
 
     @media (max-width: $breakpoint-medium) {
       grid-template-columns: 1fr;
+
+      br {
+        display: none;
+      }
     }
   }
 
