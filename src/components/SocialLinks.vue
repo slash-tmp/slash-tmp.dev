@@ -57,6 +57,10 @@
 
   &__social-icon {
     height: $spacing * 3;
+
+    @media (max-width: $breakpoint-medium) {
+      height: $spacing * 2;
+    }
   }
 }
 </style>

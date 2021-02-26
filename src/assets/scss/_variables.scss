@@ -24,6 +24,8 @@ $container-width-small: $spacing * 60; // 600px
 $container-width-medium: $spacing * 90; // 900px
 $container-width-large: $spacing * 130; // 1300px
 
+$breakpoint-medium: $spacing * 90;
+
 $opacity-background-text: 0.03;
 
 $font-family-sans-serif: 'Tahoma', sans-serif;
@@ -32,6 +34,7 @@ $font-family-serif: 'Georgia', serif;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
+$font-size-small: 1rem; // 16px
 $font-size-normal: 1.25rem; // 20px
 $font-size-medium: 2rem; // 32px
 $font-size-large: 3.125rem; // 50px

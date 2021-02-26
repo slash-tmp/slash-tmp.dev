@@ -34,6 +34,10 @@ export default {
   padding: $spacing * 8.5 $spacing * 2;
   color: $color-text-light;
 
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 2 $spacing;
+  }
+
   a,
   a:visited {
     color: inherit;
@@ -43,6 +47,11 @@ export default {
     align-items: center;
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: $breakpoint-medium) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   &__home-link {
@@ -51,6 +60,12 @@ export default {
     font-size: $font-size-medium * 1.25;
     text-decoration: none;
     margin-right: auto;
+
+    @media (max-width: $breakpoint-medium) {
+      font-size: $font-size-medium;
+      flex-basis: 100%;
+      margin-bottom: $spacing;
+    }
 
     &:hover {
       @include text-gradient;
@@ -61,6 +76,10 @@ export default {
     font-family: $font-family-sans-serif;
     font-size: $font-size-medium;
     margin-right: $spacing * 4;
+
+    @media (max-width: $breakpoint-medium) {
+      font-size: $font-size-normal;
+    }
   }
 
   &__nav-menu {
