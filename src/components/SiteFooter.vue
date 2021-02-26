@@ -25,7 +25,7 @@
         </button>
       </div>
 
-      <div class="site-footer__ruler" />
+      <hr class="site-footer__ruler" />
 
       <div class="site-footer__informations">
         <p>
@@ -136,7 +136,9 @@ export default {
   }
 
   &__ruler {
+    border: none;
     border-top: 1px solid change-color($color-text-light, $alpha: 0.3);
+    width: 100%;
   }
 
   &__informations {
