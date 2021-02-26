@@ -16,7 +16,7 @@
 
       <div class="site-footer__actions">
         <Button as="a" :href="`mailto:${email}`">Nous écrire un email</Button>
-        <button class="site-footer__copy-email">
+        <button class="site-footer__copy-email" @click="copyEmail">
           <span class="site-footer__copy-email-gradient">
             <span aria-hidden="true">→</span>
             Copier notre adresse email
@@ -46,6 +46,11 @@ export default {
   name: 'SiteFooter',
   created() {
     this.email = process.env.email
+  },
+  methods: {
+    copyEmail() {
+      navigator.clipboard.writeText(this.email)
+    }
   }
 }
 </script>
