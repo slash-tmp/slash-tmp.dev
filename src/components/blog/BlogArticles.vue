@@ -46,9 +46,17 @@ export default {
 
   padding: $spacing * 10 $spacing * 2;
 
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 6 $spacing * 2;
+  }
+
   &__item {
     & + & {
       margin-top: $spacing * 10;
+
+      @media (max-width: $breakpoint-medium) {
+        margin-top: $spacing * 6;
+      }
     }
   }
 
