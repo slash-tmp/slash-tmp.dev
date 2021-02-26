@@ -1,5 +1,8 @@
 <template>
-  <LegalHero />
+  <div>
+    <LegalHero />
+    <LegalContent :content="page" />
+  </div>
 </template>
 
 <script>
