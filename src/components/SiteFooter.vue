@@ -27,13 +27,17 @@
 
       <div class="site-footer__ruler" />
 
-      <p>
-        /tmp est un petit studio Bordelais<br />
-        qui fait du développement et de la qualité web.
-      </p>
-      <p>© 2021 - Mentions légales</p>
-      <!-- Add icons -->
+      <div class="site-footer__informations">
+        <p>
+          /tmp est un petit studio Bordelais<br />
+          qui fait du développement et de la qualité web.
+        </p>
+        <SocialLinks class="site-footer__socials" />
+        <p>© 2021 - Mentions légales</p>
+      </div>
     </Container>
+
+    <div class="site-footer__background-text">À TRÈS BIENTOT ;)</div>
   </footer>
 </template>
 
@@ -51,6 +55,8 @@ export default {
   background: $gradient-background-dark;
   color: $color-text-light;
   padding: 15 * $spacing 0;
+  position: relative;
+  overflow: hidden;
 
   & > * + * {
     margin-top: 4 * $spacing;
@@ -121,6 +127,31 @@ export default {
 
   &__ruler {
     border-top: 1px solid change-color($color-text-light, $alpha: 0.3);
+  }
+
+  &__informations {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3 * $spacing;
+  }
+
+  &__socials {
+    justify-self: end;
+    align-self: center;
+  }
+
+  &__background-text {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-normal * 4.7;
+    font-weight: $font-weight-bold;
+    left: 0;
+    right: 0;
+    opacity: $opacity-background-text;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: -2rem;
+    text-align: center;
+    margin: 0;
   }
 }
 </style>
