@@ -24,5 +24,9 @@ export default {
   background: $gradient-background-dark;
   color: $color-text-light;
   padding: $spacing * 8 $spacing * 2 $spacing * 15;
+
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 8 $spacing * 2 $spacing * 10;
+  }
 }
 </style>
