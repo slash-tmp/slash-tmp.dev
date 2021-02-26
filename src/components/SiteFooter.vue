@@ -2,35 +2,45 @@
   <footer id="contact" class="site-footer">
     <div class="site-footer__background-text">à très bientôt</div>
     <Container class="site-footer__container">
-      <h2 class="site-footer__title">Contactez /tmp</h2>
-      <p class="site-footer__contact-text">
-        Vous souhaitez nous contacter pour discuter de nos services, dire
-        bonjour ou échanger autour du web, n’hésitez pas : par email via
-        l’adresse
-        <strong
-          ><a :href="`mailto:${email}`" class="site-footer__email"
-            ><span class="site-footer__email-text"
-              >contact@slash-tmp.dev</span
-            ></a
-          ></strong
-        >
-        ou sur les réseaux sociaux.
-      </p>
+      <section
+        aria-describedby="contact-title"
+        class="site-footer__contact-section"
+      >
+        <h2 id="contact-title" class="site-footer__title">Contactez /tmp</h2>
 
-      <div class="site-footer__actions">
-        <Button as="a" :href="`mailto:${email}`">Nous écrire un email</Button>
-        <button class="site-footer__copy-email" @click="copyEmail">
-          <span class="site-footer__copy-email-gradient">
-            <span aria-hidden="true">→</span>
-            Copier notre adresse email
-          </span>
-          <span aria-hidden="true">💌</span>
-        </button>
-      </div>
+        <p class="site-footer__contact-text">
+          Vous souhaitez nous contacter pour discuter de nos services, dire
+          bonjour ou échanger autour du web, n’hésitez pas : par email via
+          l’adresse
+          <strong
+            ><a :href="`mailto:${email}`" class="site-footer__email"
+              >contact@slash-tmp.dev<span
+                class="site-footer__email-underline" /></a
+          ></strong>
+          ou sur les réseaux sociaux.
+        </p>
+
+        <div class="site-footer__actions">
+          <Button as="a" :href="`mailto:${email}`">Nous écrire un email</Button>
+          <button class="site-footer__copy-email" @click="copyEmail">
+            <span class="site-footer__copy-email-gradient">
+              <span aria-hidden="true">→</span>
+              Copier notre adresse email
+            </span>
+            <span aria-hidden="true">💌</span>
+          </button>
+        </div>
+      </section>
 
       <hr class="site-footer__ruler" />
 
-      <div class="site-footer__informations">
+      <section
+        aria-describedby="additional-info-title"
+        class="site-footer__informations"
+      >
+        <h2 id="additional-info-title" class="visually-hidden">
+          Informations supplémentaires
+        </h2>
         <p>
           <strong>/tmp</strong> est un petit studio web<br />
           qui fait du développement et de la qualité.
@@ -40,7 +50,7 @@
           © 2021 -
           <nuxt-link to="/mentions-legales">Mentions légales</nuxt-link>
         </p>
-      </div>
+      </section>
     </Container>
   </footer>
 </template>
@@ -71,7 +81,8 @@ export default {
     padding: $spacing * 8 0 $spacing * 2;
   }
 
-  &__container {
+  &__container,
+  &__contact-section {
     display: grid;
     gap: $spacing * 5;
     padding: 0 $spacing * 2;
