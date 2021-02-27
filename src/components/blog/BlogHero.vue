@@ -4,9 +4,8 @@
       <h1 class="blog-hero__title">Blog</h1>
       <p>
         On y écrit des articles pour parler du studio, de développement web, de
-        code, d'accessibilité et de qualité web. Comme on ne vous promet pas une
-        fréquence régulière, vous pouvez vous abonner au flux de syndication aux
-        différents formats :
+        code, d'accessibilité et de qualité web. Vous pouvez vous abonner au
+        flux de syndication aux différents formats :
         <a href="/feed.xml"
           ><span class="visually-hidden">flux de syndication au format</span
           >RSS</a

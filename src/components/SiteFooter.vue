@@ -1,10 +1,10 @@
 <template>
   <footer id="contact" class="site-footer">
-    <div class="site-footer__background-text">à très bientôt ;)</div>
+    <div class="site-footer__background-text">à très bientôt</div>
     <Container class="site-footer__container">
       <h2 class="site-footer__title">Contactez /tmp</h2>
       <p class="site-footer__contact-text">
-        Vous souhaitez nous contacter pour — discuter de nos services, dire
+        Vous souhaitez nous contacter pour discuter de nos services, dire
         bonjour ou échanger autour du web, n’hésitez pas : par email via
         l’adresse
         <strong
