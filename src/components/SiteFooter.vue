@@ -66,7 +66,7 @@ export default {
   overflow: hidden;
 
   @media (max-width: $breakpoint-medium) {
-    padding: $spacing * 8 0;
+    padding: $spacing * 8 0 $spacing * 2;
   }
 
   &__container {
