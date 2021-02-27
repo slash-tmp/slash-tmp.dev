@@ -111,6 +111,7 @@ export default {
     @media (max-width: $breakpoint-medium) {
       grid-row: initial;
       grid-column: initial;
+      line-height: 1.7;
     }
   }
 
