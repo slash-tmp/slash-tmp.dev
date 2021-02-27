@@ -39,15 +39,16 @@ export default {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  background-color: white;
+  background-color: $color-text-light;
   top: $spacing;
-  left: $spacing;
+  left: -999rem;
   padding: $spacing * 2;
   color: $color-text-dark;
   font-family: $font-family-sans-serif;
 
   &:focus {
     opacity: 1;
+    left: $spacing;
   }
 }
 </style>
