@@ -12,19 +12,55 @@
 
       <p class="home-hero__description">
         Bonjour ! Nous c’est
-        <span class="home-hero__description-name">Adrien</span> &
-        <span class="home-hero__description-name">Quentin</span>, deux
-        développeurs web très attachés à la qualité web et à l’expérience
-        utilisateur.<br />C’est pour ça qu’on a créé <strong>/tmp</strong> — ça
-        se prononce "<strong>slash tmp</strong>".
+        <span
+          class="home-hero__description-name"
+          @click="highlight('adrien', true)"
+          @mouseover="highlight('adrien')"
+          @mouseleave="resetHighlight"
+          >Adrien</span
+        >
+        &
+        <span
+          class="home-hero__description-name"
+          @click="highlight('quentin', true)"
+          @mouseover="highlight('quentin')"
+          @mouseleave="resetHighlight"
+          >Quentin</span
+        >, deux développeurs web très attachés à la qualité web et à
+        l’expérience utilisateur.<br />C’est pour ça qu’on a créé
+        <strong>/tmp</strong> — ça se prononce "<strong>slash tmp</strong>".
       </p>
+      <p v-if="highlighted === 'adrien'">ADRIEN</p>
+      <p v-if="highlighted === 'quentin'">QUENTIN</p>
     </Container>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'HomeHero'
+  name: 'HomeHero',
+  data() {
+    return {
+      highlighted: null,
+      highlightTimeout: null
+    }
+  },
+  methods: {
+    highlight(name, clear = false) {
+      if (this.highlightTimeout) {
+        clearTimeout(this.highlightTimeout)
+      }
+      if (clear) {
+        this.highlightTimeout = setTimeout(() => {
+          this.resetHighlight()
+        }, 3000)
+      }
+      this.highlighted = name
+    },
+    resetHighlight() {
+      this.highlighted = null
+    }
+  }
 }
 </script>
 
