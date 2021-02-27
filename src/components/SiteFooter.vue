@@ -14,8 +14,11 @@
           l’adresse
           <strong
             ><a :href="`mailto:${email}`" class="site-footer__email"
-              >{{ email }}<span class="site-footer__email-underline" /></a
-          ></strong>
+              ><span class="site-footer__email-text"
+                >contact@slash-tmp.dev</span
+              ></a
+            ></strong
+          >
           ou sur les réseaux sociaux.
         </p>
 
