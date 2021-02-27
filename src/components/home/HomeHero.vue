@@ -30,43 +30,53 @@
         l’expérience utilisateur.<br />C’est pour ça qu’on a créé
         <strong>/tmp</strong> — ça se prononce "<strong>slash tmp</strong>".
       </p>
-      <picture>
-        <source
-          srcset="@/assets/img/adrien.jpg?resize&size=250&format=webp"
-          type="image/webp"
-        />
-        <source
-          srcset="@/assets/img/adrien.jpg?resize&size=250"
-          type="image/jpeg"
-        />
-        <transition name="zoom">
-          <img
-            v-if="highlighted === 'adrien'"
-            class="home-hero__avatar home-hero__avatar--adrien"
-            src="@/assets/img/adrien.jpg?resize&size=250"
-            alt="Adrien"
-          />
-        </transition>
-      </picture>
+      <transition name="zoom">
+        <div
+          v-if="highlighted === 'adrien'"
+          class="home-hero__avatar-container home-hero__avatar-container--adrien"
+        >
+          <div class="home-hero__avatar-background" />
+          <picture>
+            <source
+              srcset="@/assets/img/adrien.jpg?resize&size=250&format=webp"
+              type="image/webp"
+            />
+            <source
+              srcset="@/assets/img/adrien.jpg?resize&size=250"
+              type="image/jpeg"
+            />
+            <img
+              class="home-hero__avatar"
+              src="@/assets/img/adrien.jpg?resize&size=250"
+              alt="Adrien"
+            />
+          </picture>
+        </div>
+      </transition>
 
-      <picture>
-        <source
-          srcset="@/assets/img/quentin.jpg?resize&size=250&format=webp"
-          type="image/webp"
-        />
-        <source
-          srcset="@/assets/img/quentin.jpg?resize&size=250"
-          type="image/jpeg"
-        />
-        <transition name="zoom">
-          <img
-            v-if="highlighted === 'quentin'"
-            class="home-hero__avatar home-hero__avatar--quentin"
-            src="@/assets/img/quentin.jpg?resize&size=250"
-            alt="Quentin"
-          />
-        </transition>
-      </picture>
+      <transition name="zoom">
+        <div
+          v-if="highlighted === 'quentin'"
+          class="home-hero__avatar-container home-hero__avatar-container--quentin"
+        >
+          <div class="home-hero__avatar-background" />
+          <picture>
+            <source
+              srcset="@/assets/img/quentin.jpg?resize&size=250&format=webp"
+              type="image/webp"
+            />
+            <source
+              srcset="@/assets/img/quentin.jpg?resize&size=250"
+              type="image/jpeg"
+            />
+            <img
+              class="home-hero__avatar"
+              src="@/assets/img/quentin.jpg?resize&size=250"
+              alt="Quentin"
+            />
+          </picture>
+        </div>
+      </transition>
     </Container>
   </section>
 </template>
@@ -140,14 +150,15 @@ export default {
     }
   }
 
-  &__avatar {
+  &__avatar-container {
     --avatar-size: #{$spacing * 20};
 
     border: $spacing solid $color-text-light;
     border-radius: 50%;
+    position: absolute;
     height: var(--avatar-size);
     width: var(--avatar-size);
-    position: absolute;
+    overflow: hidden;
     z-index: 1;
     transform: scale(1);
 
@@ -158,6 +169,8 @@ export default {
     }
 
     &--adrien {
+      --avatar-background-color: #{$color-accent-one};
+
       top: $spacing * 22;
       left: $spacing * -8;
 
@@ -176,6 +189,8 @@ export default {
     }
 
     &--quentin {
+      --avatar-background-color: #{$color-accent-three};
+
       top: $spacing * -6;
       left: $spacing * 40;
 
@@ -189,6 +204,19 @@ export default {
         right: $spacing * -1;
       }
     }
+  }
+
+  &__avatar-background {
+    background: var(--avatar-background-color);
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    width: 100%;
   }
 }
 
