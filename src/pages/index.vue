@@ -17,7 +17,7 @@ export default {
   mixins: [AnnouncedPageMixin],
   data() {
     return {
-      title: 'Petit studio de développement et de qualité web',
+      title: 'Petit studio web — développement et qualité',
       description:
         "/tmp c'est deux développeurs : Adrien et Quentin. On code des sites web sur mesure et on fait de la qualité web."
     }
