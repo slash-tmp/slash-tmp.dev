@@ -5,7 +5,7 @@
       <h2 class="site-footer__title">Contactez /tmp</h2>
       <p class="site-footer__contact-text">
         Vous souhaitez nous contacter pour — discuter de nos services, dire
-        bonjour ou échanger autour du web, n’hésitez pas : soit par email via
+        bonjour ou échanger autour du web, n’hésitez pas : par email via
         l’adresse
         <strong
           ><a :href="`mailto:${email}`" class="site-footer__email"
@@ -30,8 +30,8 @@
 
       <div class="site-footer__informations">
         <p>
-          <strong>/tmp</strong> est un petit studio Bordelais<br />
-          qui fait du développement et de la qualité web.
+          <strong>/tmp</strong> est un petit studio web<br />
+          qui fait du développement et de la qualité.
         </p>
         <SocialLinks class="site-footer__socials" />
         <p>

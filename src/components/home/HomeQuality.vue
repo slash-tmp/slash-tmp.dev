@@ -14,8 +14,7 @@
         <p class="home-quality__description-end">
           Cela semble être une évidence de pouvoir consulter et utiliser un site
           de la meilleure des manières possibles. Mais aussi parce qu'un site
-          qui ne respecte pas ces principes peut coûter cher, très cher. On
-          parle de
+          qui ne respecte pas ces principes peut coûter très cher. On parle de
           <strong>non-qualité</strong> et cela représente l'ensemble des coûts
           causés par l'<strong>absence de qualité</strong> dans un projet —
           déréferencement dans les moteurs de recherche, ventes non réalisées
