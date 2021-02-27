@@ -13,7 +13,7 @@
       <p class="home-hero__description">
         Bonjour ! Nous c’est
         <span
-          class="home-hero__description-name"
+          class="home-hero__description-name home-hero__description-name--adrien"
           @click="highlight('adrien', true)"
           @mouseover="highlight('adrien')"
           @mouseleave="resetHighlight"
@@ -21,7 +21,7 @@
         >
         &
         <span
-          class="home-hero__description-name"
+          class="home-hero__description-name home-hero__description-name--quentin"
           @click="highlight('quentin', true)"
           @mouseover="highlight('quentin')"
           @mouseleave="resetHighlight"
@@ -30,7 +30,7 @@
         l’expérience utilisateur.<br />C’est pour ça qu’on a créé
         <strong>/tmp</strong> — ça se prononce "<strong>slash tmp</strong>".
       </p>
-      <picture v-if="highlighted === 'adrien'">
+      <picture>
         <source
           srcset="@/assets/img/adrien.jpg?resize&size=250&format=webp"
           type="image/webp"
@@ -39,14 +39,17 @@
           srcset="@/assets/img/adrien.jpg?resize&size=250"
           type="image/jpeg"
         />
-        <img
-          class="home-hero__avatar home-hero__avatar--adrien"
-          src="@/assets/img/adrien.jpg?resize&size=250"
-          alt="Adrien"
-        />
+        <transition name="zoom">
+          <img
+            v-if="highlighted === 'adrien'"
+            class="home-hero__avatar home-hero__avatar--adrien"
+            src="@/assets/img/adrien.jpg?resize&size=250"
+            alt="Adrien"
+          />
+        </transition>
       </picture>
 
-      <picture v-if="highlighted === 'quentin'">
+      <picture>
         <source
           srcset="@/assets/img/quentin.jpg?resize&size=250&format=webp"
           type="image/webp"
@@ -55,11 +58,14 @@
           srcset="@/assets/img/quentin.jpg?resize&size=250"
           type="image/jpeg"
         />
-        <img
-          class="home-hero__avatar home-hero__avatar--quentin"
-          src="@/assets/img/quentin.jpg?resize&size=250"
-          alt="Quentin"
-        />
+        <transition name="zoom">
+          <img
+            v-if="highlighted === 'quentin'"
+            class="home-hero__avatar home-hero__avatar--quentin"
+            src="@/assets/img/quentin.jpg?resize&size=250"
+            alt="Quentin"
+          />
+        </transition>
       </picture>
     </Container>
   </section>
@@ -125,7 +131,13 @@ export default {
   }
 
   &__description-name {
-    text-decoration: underline;
+    &--adrien {
+      color: $color-accent-one;
+    }
+
+    &--quentin {
+      color: $color-accent-three;
+    }
   }
 
   &__avatar {
@@ -137,6 +149,7 @@ export default {
     width: var(--avatar-size);
     position: absolute;
     z-index: 1;
+    transform: scale(1);
 
     @media (max-width: $breakpoint-medium) {
       --avatar-size: #{$spacing * 10};
@@ -177,5 +190,17 @@ export default {
       }
     }
   }
+}
+
+// Avatar zoom transition
+.zoom-enter-active,
+.zoom-leave-active {
+  transition: opacity 0.2s, transform 0.4s;
+}
+
+.zoom-enter,
+.zoom-leave-to {
+  transform: scale(0);
+  opacity: 0;
 }
 </style>
