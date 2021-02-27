@@ -2,7 +2,7 @@ import highlightjs from 'highlight.js'
 
 /* Global variables */
 const baseUrl = process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
-const title = 'Petit studio de développement et de qualité web'
+const title = 'Petit studio web — développement et qualité'
 const description =
   "/tmp c'est deux développeurs : Adrien et Quentin. On code des sites web sur mesure et on fait de la qualité web."
 const email = 'contact@slash-tmp.dev'
