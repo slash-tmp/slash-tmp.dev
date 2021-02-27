@@ -24,7 +24,9 @@ $container-width-small: $spacing * 60; // 600px
 $container-width-medium: $spacing * 90; // 900px
 $container-width-large: $spacing * 130; // 1300px
 
-$breakpoint-medium: $spacing * 90;
+$breakpoint-small: $spacing * 50; // 500px
+$breakpoint-medium: $spacing * 90; // 900px
+$breakpoint-large: $spacing * 110; // 1100px
 
 $opacity-background-text: 0.03;
 
