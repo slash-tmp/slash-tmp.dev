@@ -3,11 +3,12 @@
     <Container>
       <h1 class="blog-article-hero__title">{{ title }}</h1>
       <div class="blog-article-hero__date">
-        Écrit le <time>{{ date }}</time>
+        Écrit le <time>{{ date }}</time> —
+        <NuxtLink :to="{ name: 'blog' }">
+          Retour à la liste des articles
+        </NuxtLink>
       </div>
-      <NuxtLink :to="{ name: 'blog' }">
-        Retour à la liste des articles
-      </NuxtLink>
+      <p class="blog-article-hero__description">{{ description }}</p>
     </Container>
   </section>
 </template>
@@ -17,6 +18,10 @@ export default {
   name: 'BlogArticleHero',
   props: {
     title: {
+      type: String,
+      required: true
+    },
+    description: {
       type: String,
       required: true
     },
@@ -39,15 +44,19 @@ export default {
   }
 
   &__title {
-    margin-bottom: $spacing * 4;
+    margin-bottom: $spacing * 2;
   }
 
   &__date {
-    margin-bottom: $spacing * 2;
+    margin-bottom: $spacing * 4;
 
     @media (max-width: $breakpoint-medium) {
       margin-bottom: $spacing;
     }
+  }
+
+  &__description {
+    margin-bottom: $spacing * 4;
   }
 }
 </style>
