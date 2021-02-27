@@ -1,17 +1,19 @@
 <template>
   <footer id="contact" class="site-footer">
-    <div class="site-footer__background-text">à très bientôt ;)</div>
+    <div class="site-footer__background-text">à très bientôt</div>
     <Container class="site-footer__container">
       <h2 class="site-footer__title">Contactez /tmp</h2>
       <p class="site-footer__contact-text">
-        Vous souhaitez nous contacter pour — discuter de nos services, dire
-        bonjour ou échanger autour du web, n’hésitez pas : soit par email via
+        Vous souhaitez nous contacter pour discuter de nos services, dire
+        bonjour ou échanger autour du web, n’hésitez pas : par email via
         l’adresse
         <strong
           ><a :href="`mailto:${email}`" class="site-footer__email"
-            >contact@slash-tmp.dev<span
-              class="site-footer__email-underline" /></a
-        ></strong>
+            ><span class="site-footer__email-text"
+              >contact@slash-tmp.dev</span
+            ></a
+          ></strong
+        >
         ou sur les réseaux sociaux.
       </p>
 
@@ -30,8 +32,8 @@
 
       <div class="site-footer__informations">
         <p>
-          <strong>/tmp</strong> est un petit studio Bordelais<br />
-          qui fait du développement et de la qualité web.
+          <strong>/tmp</strong> est un petit studio web<br />
+          qui fait du développement et de la qualité.
         </p>
         <SocialLinks class="site-footer__socials" />
         <p>
@@ -66,7 +68,7 @@ export default {
   overflow: hidden;
 
   @media (max-width: $breakpoint-medium) {
-    padding: $spacing * 8 0;
+    padding: $spacing * 8 0 $spacing * 2;
   }
 
   &__container {
@@ -94,34 +96,22 @@ export default {
     }
   }
 
-  /*
-  It seems that chrome/firefox do not handle underlined text with `background-clip: text` well.
-  ie. : the underline is either not included in the background clip or does not appear at all.
-
-  This is an "articifical" underline.
-  */
-  &__email-underline {
-    position: absolute;
-    bottom: -0.1em;
-    left: 0;
-    right: 0;
-    height: 0.115em;
-    background: $gradient-accent;
-    pointer-events: none;
-  }
-
   &__email {
     text-decoration: none;
-    position: relative;
 
-    @include text-gradient;
+    // This is a "fake" underline using background image.
+    background-image: $gradient-accent;
+    background-size: 100% 0.125rem;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
 
-    &:hover,
-    &:focus {
-      .site-footer__email-underline {
-        opacity: 0;
-      }
+    &:hover {
+      background-size: 100% 0;
     }
+  }
+
+  &__email-text {
+    @include text-gradient;
   }
 
   &__copy-email {

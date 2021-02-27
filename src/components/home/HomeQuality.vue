@@ -8,13 +8,13 @@
           Un site de qualité, c'est un site qui propose une
           <strong>expérience optimale</strong> pour toutes et tous en répondant
           aux <strong>besoins</strong> des utilisateurs et utilisatrices. C'est
-          une compétence pluridisciplinaire qui passe par — le code, le design,
-          la rédaction, la gestion de projet...
+          une compétence pluridisciplinaire qui passe par le code, le design, le
+          contenu ou la gestion de projet.
         </p>
         <p class="home-quality__description-end">
           Cela semble être une évidence de pouvoir consulter et utiliser un site
-          de la meilleure des manières possibles. Mais aussi parce qu'un site
-          qui ne respecte pas ces principes peut coûter cher, très cher. On
+          de la meilleure des manières possibles. Et pourtant, beaucoup de sites
+          web présentent des manques à gagner qui peuvent coûter très cher. On
           parle de
           <strong>non-qualité</strong> et cela représente l'ensemble des coûts
           causés par l'<strong>absence de qualité</strong> dans un projet —
