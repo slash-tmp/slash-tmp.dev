@@ -36,9 +36,7 @@
         <SocialLinks class="site-footer__socials" />
         <p>
           © 2021 -
-          <nuxt-link to="/mentions-legales" class="site-footer__legal-link">
-            Mentions légales
-          </nuxt-link>
+          <nuxt-link to="/mentions-legales">Mentions légales</nuxt-link>
         </p>
       </div>
     </Container>
@@ -177,10 +175,6 @@ export default {
     @media (max-width: $breakpoint-medium) {
       justify-self: initial;
     }
-  }
-
-  &__legal-link:hover {
-    text-decoration: none;
   }
 
   &__background-text {
