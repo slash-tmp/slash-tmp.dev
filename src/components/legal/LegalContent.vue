@@ -23,5 +23,9 @@ export default {
 <style lang="scss">
 .legal-content {
   padding: $spacing * 10 $spacing * 2;
+
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 6 $spacing * 2;
+  }
 }
 </style>
