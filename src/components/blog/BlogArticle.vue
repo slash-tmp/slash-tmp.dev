@@ -23,5 +23,13 @@ export default {
 <style lang="scss">
 .blog-article {
   padding: $spacing * 10 $spacing * 2;
+
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 6 $spacing * 2;
+  }
+
+  &__content {
+    --outline-color: #{$color-text-dark};
+  }
 }
 </style>

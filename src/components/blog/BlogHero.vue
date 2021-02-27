@@ -37,6 +37,10 @@ export default {
   color: $color-text-light;
   padding: $spacing * 8 $spacing * 2 $spacing * 15;
 
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 8 $spacing * 2 $spacing * 10;
+  }
+
   &__title {
     margin-bottom: $spacing * 4;
   }

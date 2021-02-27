@@ -63,27 +63,55 @@ export default {
     gap: $spacing * 4 $spacing * 5;
     position: relative;
 
+    @media (max-width: $breakpoint-medium) {
+      grid-template-columns: 1fr;
+      gap: $spacing * 2;
+    }
+
     & + & {
       margin-top: $spacing * 22;
+
+      @media (max-width: $breakpoint-medium) {
+        margin-top: $spacing * 10;
+      }
     }
 
     &--quality {
       grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: $breakpoint-medium) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
   &__icon {
     grid-row: 1;
+
+    @media (max-width: $breakpoint-medium) {
+      grid-row: initial;
+      grid-column: initial;
+    }
   }
 
   &__title {
     grid-column: 1 / span 2;
     grid-row: 2;
+
+    @media (max-width: $breakpoint-medium) {
+      grid-row: initial;
+      grid-column: initial;
+    }
   }
 
   p {
     line-height: 1.9;
     grid-row: 3;
+
+    @media (max-width: $breakpoint-medium) {
+      grid-row: initial;
+      grid-column: initial;
+    }
   }
 
   &__bg-text {
@@ -96,6 +124,10 @@ export default {
     text-transform: uppercase;
     top: 75%;
     z-index: -1;
+
+    @media (max-width: $breakpoint-medium) {
+      display: none;
+    }
   }
 }
 </style>

@@ -43,6 +43,10 @@ export default {
 
   padding: $spacing * 10 $spacing * 2;
 
+  @media (max-width: $breakpoint-medium) {
+    padding: $spacing * 6 $spacing * 2;
+  }
+
   &__description {
     & + & {
       margin-top: $spacing * 2;

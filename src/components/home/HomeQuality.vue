@@ -38,7 +38,7 @@
           <span class="home-quality__quote-author">Élie Sloïm</span>,
           <a
             href="https://www.opquast.com/rendre-le-web-meilleur/qualite-web-le-livre/"
-            ><cite>livre Opquast</cite></a
+            ><cite class="home-quality__quote-source">livre Opquast</cite></a
           >
         </figcaption>
       </figure>
@@ -65,8 +65,17 @@ export default {
     margin-bottom: $spacing * 20;
     position: relative;
 
+    @media (max-width: $breakpoint-medium) {
+      grid-template-columns: 1fr;
+      margin-bottom: $spacing * 10;
+    }
+
     p {
       line-height: 1.9;
+
+      @media (max-width: $breakpoint-medium) {
+        line-height: 1.7;
+      }
     }
   }
 
@@ -77,13 +86,16 @@ export default {
 
   &__description-start {
     grid-column: 1;
-    line-height: 1.9;
   }
 
   &__description-end {
     grid-column: 2;
     grid-row: 1 / span 3;
-    line-height: 1.9;
+
+    @media (max-width: $breakpoint-medium) {
+      grid-column: initial;
+      grid-row: initial;
+    }
   }
 
   &__bg-text {
@@ -95,6 +107,10 @@ export default {
     position: absolute;
     text-transform: uppercase;
     top: 80%;
+
+    @media (max-width: $breakpoint-medium) {
+      display: none;
+    }
   }
 
   &__quote {
@@ -102,27 +118,37 @@ export default {
     font-size: $font-size-medium;
     font-weight: $font-weight-bold;
     margin-bottom: $spacing * 1.3;
+
+    @media (max-width: $breakpoint-medium) {
+      font-size: $font-size-normal;
+    }
   }
 
   &__quote-author {
     font-weight: $font-weight-bold;
-    padding-left: $spacing * 20 + $spacing * 2;
+    padding-left: $spacing * 4 + $spacing * 2;
     position: relative;
 
     &::before {
       content: '';
       background: $gradient-accent;
       height: 1px;
-      width: $spacing * 20;
+      width: $spacing * 4;
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
     }
+
+    @media (max-width: $breakpoint-medium) {
+      font-size: $font-size-small;
+    }
   }
 
   &__quote-source {
-    font-weight: $font-weight-bold;
+    @media (max-width: $breakpoint-medium) {
+      font-size: $font-size-small;
+    }
   }
 }
 </style>
