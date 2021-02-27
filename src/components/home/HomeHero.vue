@@ -2,16 +2,15 @@
   <section class="home-hero">
     <Container class="home-hero__container">
       <h1 class="home-hero__title">
-        Petit studio —<br />
+        Petit studio web —<br />
         <span class="home-hero__title-highlight"
           >développement
-          <span class="home-hero__title-highlight--skip">&</span> qualité
-          web</span
+          <span class="home-hero__title-highlight--skip">&</span> qualité</span
         >.
       </h1>
 
       <p class="home-hero__description">
-        Bonjour ! Nous c’est
+        Nous c’est
         <span
           class="home-hero__description-name home-hero__description-name--adrien"
           @click="highlight('adrien', true)"
@@ -26,9 +25,9 @@
           @mouseover="highlight('quentin')"
           @mouseleave="resetHighlight"
           >Quentin</span
-        >, deux développeurs web très attachés à la qualité web et à
-        l’expérience utilisateur.<br />C’est pour ça qu’on a créé
-        <strong>/tmp</strong> — ça se prononce "<strong>slash tmp</strong>".
+        >, deux développeurs très attachés à la qualité web et à l’expérience
+        utilisateur.<br />C’est pour ça qu’on a créé <strong>/tmp</strong> — ça
+        se prononce "<strong>slash tmp</strong>".
       </p>
       <transition name="zoom">
         <div

@@ -7,15 +7,16 @@
         Nous prenons en charge toute la phase de
         <strong>développement</strong> de votre projet web quelle que soit sa
         nature : landing page, site vitrine, application web ou site e-commerce.
-        Concrètement, on <strong>transforme</strong> votre cahier des charges et
-        vos maquettes en site web fonctionnel, accessible et utilisable.
+        Concrètement, nous <strong>transformons</strong> votre cahier des
+        charges et vos maquettes en site web fonctionnel et accessible.
       </p>
       <p>
-        On travaille de <strong>manière simple</strong> avec un kanban et on
-        intègre les tâches de manière continue pour que nos clients puissent
-        voir évoluer leur projet au fil du développement. On assure également
-        que notre code est bien structuré, documenté, testé et performant pour
-        assurer la <strong>qualité du produit</strong> livré.
+        Nous allons à l'essentiel en travaillant de manière
+        <strong>itérative et transparente</strong>
+        pour que vous puissiez voir évoluer votre projet au fil du
+        développement. Nous nous assurons également que notre code est bien
+        structuré, documenté, testé et performant pour assurer la
+        <strong>qualité du produit</strong> livré.
       </p>
       <span class="home-services__bg-text" aria-hidden="true">inté web</span>
     </section>
@@ -28,7 +29,7 @@
       </h2>
       <p>
         Nous sommes <strong>certifiés</strong>
-        <a href="https://www.opquast.com">Opquast</a> et nous avons une grande
+        <a href="https://www.opquast.com">Opquast</a> et avons une grande
         sensibilité pour la qualité web et l’expérience utilisateur.
       </p>
       <p>
@@ -36,7 +37,7 @@
         repérer les points d’amélioration sur votre projet.
       </p>
       <p>
-        Nous pouvons aussi former votre équipe projet de développement pour une
+        Nous pouvons aussi former votre équipe à l'accessibilité web pour une
         montée en compétence.
       </p>
       <span class="home-services__bg-text" aria-hidden="true">conseils</span>
@@ -60,7 +61,7 @@ export default {
   &__section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: $spacing * 4 $spacing * 5;
+    gap: $spacing * 4 $spacing * 3;
     position: relative;
 
     @media (max-width: $breakpoint-medium) {

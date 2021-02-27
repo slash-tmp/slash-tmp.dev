@@ -66,12 +66,12 @@ export default {
     font-size: $font-size-medium * 1.25;
     text-decoration: none;
     margin-right: auto;
+    padding-bottom: $spacing; // Prevent text to be cropped with background-clip
 
     @media (max-width: $breakpoint-medium) {
       grid-column: 1;
       grid-row: 1;
       font-size: $font-size-medium;
-      padding-bottom: $spacing; // Prevent text to be cropped with background-clip
     }
 
     &:hover {
