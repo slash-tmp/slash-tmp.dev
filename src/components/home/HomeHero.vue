@@ -26,9 +26,9 @@
           @mouseover="highlight('quentin')"
           @mouseleave="resetHighlight"
           >Quentin</span
-        >, deux développeurs web très attachés à la qualité web et à
-        l’expérience utilisateur.<br />C’est pour ça qu’on a créé
-        <strong>/tmp</strong> — ça se prononce "<strong>slash tmp</strong>".
+        >, deux développeurs très attachés à la qualité web et à l’expérience
+        utilisateur.<br />C’est pour ça qu’on a créé <strong>/tmp</strong> — ça
+        se prononce "<strong>slash tmp</strong>".
       </p>
       <transition name="zoom">
         <div
