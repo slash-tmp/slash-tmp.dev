@@ -107,6 +107,7 @@ export default {
     position: absolute;
     text-transform: uppercase;
     top: 80%;
+    pointer-events: none;
 
     @media (max-width: $breakpoint-medium) {
       display: none;
