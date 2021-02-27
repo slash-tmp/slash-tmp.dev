@@ -17,7 +17,7 @@
         </ul>
       </nav>
 
-      <SocialLinks />
+      <SocialLinks class="site-header__socials" />
     </Container>
   </header>
 </template>
@@ -44,13 +44,19 @@ export default {
   }
 
   &__container {
+    display: grid;
     align-items: center;
-    display: flex;
-    justify-content: flex-end;
+    justify-items: end;
+    gap: $spacing * 4;
+    grid-template-columns: auto 1fr auto;
+    line-height: 1;
 
     @media (max-width: $breakpoint-medium) {
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      justify-items: start;
+      gap: $spacing $spacing * 4;
     }
   }
 
@@ -62,9 +68,10 @@ export default {
     margin-right: auto;
 
     @media (max-width: $breakpoint-medium) {
+      grid-column: 1;
+      grid-row: 1;
       font-size: $font-size-medium;
-      flex-basis: 100%;
-      margin-bottom: $spacing;
+      padding-bottom: $spacing; // Prevent text to be cropped with background-clip
     }
 
     &:hover {
@@ -75,10 +82,11 @@ export default {
   &__nav {
     font-family: $font-family-sans-serif;
     font-size: $font-size-medium;
-    margin-right: $spacing * 4;
 
     @media (max-width: $breakpoint-medium) {
       font-size: $font-size-normal;
+      grid-column: 1;
+      grid-row: 2;
     }
   }
 
@@ -97,6 +105,13 @@ export default {
 
     &:hover {
       @include text-gradient;
+    }
+  }
+
+  &__socials {
+    @media (max-width: $breakpoint-medium) {
+      grid-column: 2;
+      grid-row: 2;
     }
   }
 }
