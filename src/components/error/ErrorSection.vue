@@ -18,7 +18,7 @@
         <p class="error-section__description">
           Si vous ne trouvez pas le contenu que vous cherchez, n’hésitez pas à
           nous écrire :
-          <a href="mailto:contact@slash-tmp.dev">contact@slash-tmp.dev</a>.
+          <a :href="`mailto:${email}`">contact@slash-tmp.dev</a>.
         </p>
       </Container>
     </Container>
@@ -33,6 +33,9 @@ export default {
       type: Number,
       default: 404
     }
+  },
+  created() {
+    this.email = process.env.email
   }
 }
 </script>
