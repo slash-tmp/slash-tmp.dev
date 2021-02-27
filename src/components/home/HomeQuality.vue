@@ -127,22 +127,27 @@ export default {
 
   &__quote-author {
     font-weight: $font-weight-bold;
-    padding-left: $spacing * 4 + $spacing * 2;
+    padding-left: $spacing * 20 + $spacing * 2;
     position: relative;
 
     &::before {
       content: '';
       background: $gradient-accent;
       height: 1px;
-      width: $spacing * 4;
+      width: $spacing * 20;
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+
+      @media (max-width: $breakpoint-medium) {
+        width: $spacing * 4;
+      }
     }
 
     @media (max-width: $breakpoint-medium) {
       font-size: $font-size-small;
+      padding-left: $spacing * 4 + $spacing * 2;
     }
   }
 
