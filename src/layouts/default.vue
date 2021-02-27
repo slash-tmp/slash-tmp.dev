@@ -1,10 +1,12 @@
 <template>
   <div class="default-layout" tabindex="-1">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
     <SiteHeader />
-    <!-- <a class="skip-link" href="#main-content">Aller au contenu principal</a> -->
-    <!-- <main id="main-content"> -->
-    <Nuxt />
-    <!-- </main> -->
+
+    <main id="main-content">
+      <Nuxt />
+    </main>
 
     <SiteFooter />
   </div>
@@ -27,3 +29,26 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.default-layout {
+  position: relative;
+}
+
+.skip-link {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  background-color: $color-text-light;
+  top: $spacing;
+  left: -999rem;
+  padding: $spacing * 2;
+  color: $color-text-dark;
+  font-family: $font-family-sans-serif;
+
+  &:focus {
+    opacity: 1;
+    left: $spacing;
+  }
+}
+</style>

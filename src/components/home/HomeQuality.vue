@@ -1,9 +1,11 @@
 <template>
-  <section class="home-quality">
+  <section class="home-quality" aria-describedby="quality-section-title">
     <Container>
       <div class="home-quality__definition">
         <QualityIcon />
-        <h2 class="home-quality__title">Qualité web ?</h2>
+        <h2 id="quality-section-title" class="home-quality__title">
+          Qualité web ?
+        </h2>
         <p class="home-quality__description-start">
           Un site de qualité, c'est un site qui propose une
           <strong>expérience optimale</strong> pour toutes et tous en répondant
