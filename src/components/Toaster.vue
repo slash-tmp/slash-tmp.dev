@@ -58,5 +58,9 @@ export default {
   right: 0;
   display: flex;
   justify-content: center;
+
+  > * {
+    margin-bottom: $spacing * 1.5;
+  }
 }
 </style>
