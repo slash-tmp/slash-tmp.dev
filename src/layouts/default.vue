@@ -9,6 +9,8 @@
     </main>
 
     <SiteFooter />
+
+    <Toaster />
   </div>
 </template>
 
