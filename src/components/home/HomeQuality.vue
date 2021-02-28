@@ -154,6 +154,17 @@ export default {
   }
 
   &__quote-source {
+    transition-property: -webkit-text-fill-color, -moz-text-fill-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing;
+
+    @include text-gradient(currentColor);
+
+    &:hover {
+      text-decoration: none;
+      @include text-fill-color(transparent);
+    }
+
     @media (max-width: $breakpoint-medium) {
       font-size: $font-size-small;
     }

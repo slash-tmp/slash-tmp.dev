@@ -146,8 +146,16 @@ export default {
       text-decoration: none;
     }
 
+    &-gradient {
+      transition-property: -webkit-text-fill-color, -moz-text-fill-color;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-timing;
+
+      @include text-gradient(currentColor);
+    }
+
     &:hover #{&}-gradient {
-      @include text-gradient;
+      @include text-fill-color(transparent);
     }
   }
 
