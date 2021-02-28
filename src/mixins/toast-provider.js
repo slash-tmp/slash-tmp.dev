@@ -32,10 +32,10 @@ const ToastProviderMixin = {
       })
       this.nextNotificationId++
 
-      // this.automaticDismissTimeoutId = setTimeout(
-      //   this.dismissNotification,
-      //   8000
-      // )
+      this.automaticDismissTimeoutId = setTimeout(
+        this.dismissNotification,
+        8000
+      )
     },
     dismissNotification() {
       this.notifications.splice(0, this.notifications.length)

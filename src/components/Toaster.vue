@@ -60,7 +60,7 @@ export default {
   justify-content: center;
 
   > * {
-    margin-bottom: 1rem;
+    margin-bottom: $spacing * 1.5;
   }
 }
 </style>

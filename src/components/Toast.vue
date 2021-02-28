@@ -1,6 +1,6 @@
 <template>
   <div class="toast">
-    <p class="toast__text">
+    <p>
       <slot />
     </p>
     <button
