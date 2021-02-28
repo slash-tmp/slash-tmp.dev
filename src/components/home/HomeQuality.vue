@@ -156,7 +156,7 @@ export default {
   &__quote-source {
     transition-property: -webkit-text-fill-color, -moz-text-fill-color;
     transition-duration: $transition-duration;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: $transition-timing;
 
     @include text-gradient(currentColor);
 
