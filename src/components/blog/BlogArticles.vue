@@ -13,8 +13,13 @@
                 {{ article.title }}
               </NuxtLink>
             </h2>
-            Écrit le
-            <time :datetime="article.date">{{ formatDate(article.date) }}</time>
+            <div class="blog-articles__date">
+              Écrit le
+              <time :datetime="article.date">{{
+                formatDate(article.date)
+              }}</time>
+            </div>
+            <p>{{ article.description }}</p>
           </article>
         </li>
       </ul>
@@ -64,6 +69,10 @@ export default {
 
   &__title {
     margin-bottom: $spacing * 2;
+  }
+
+  &__date {
+    margin-bottom: $spacing * 4;
   }
 }
 </style>
