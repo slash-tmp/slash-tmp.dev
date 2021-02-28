@@ -7,9 +7,7 @@
       <nav class="site-header__nav">
         <ul class="site-header__nav-menu">
           <li class="site-header__nav-item">
-            <nuxt-link class="site-header__nav-link" to="#contact"
-              >Contact</nuxt-link
-            >
+            <a class="site-header__nav-link" href="#contact">Contact</a>
           </li>
           <li class="site-header__nav-item">
             <nuxt-link class="site-header__nav-link" to="/blog">Blog</nuxt-link>
