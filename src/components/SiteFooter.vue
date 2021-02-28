@@ -60,12 +60,14 @@
 <script>
 export default {
   name: 'SiteFooter',
+  inject: ['notify'],
   created() {
     this.email = process.env.email
   },
   methods: {
     copyEmail() {
       navigator.clipboard.writeText(this.email)
+      this.notify("L'adresse email a été copiée dans le presse-papier.")
     }
   }
 }
