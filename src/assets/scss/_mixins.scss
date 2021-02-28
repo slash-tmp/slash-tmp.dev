@@ -1,8 +1,13 @@
-@mixin text-gradient {
+@mixin text-gradient($defaultFillColor: transparent) {
   background-image: $gradient-accent;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: $defaultFillColor;
   -webkit-background-clip: text;
-  -moz-text-fill-color: transparent;
+  -moz-text-fill-color: $defaultFillColor;
   -moz-background-clip: text;
+}
+
+@mixin text-fill-color($color) {
+  -moz-text-fill-color: $color;
+  -webkit-text-fill-color: $color;
 }

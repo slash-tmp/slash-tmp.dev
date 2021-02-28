@@ -71,10 +71,7 @@ export default {
     transition-duration: $transition-duration;
     transition-timing-function: ease-in-out;
 
-    @include text-gradient;
-
-    -webkit-text-fill-color: currentColor;
-    -moz-text-fill-color: currentColor;
+    @include text-gradient(currentColor);
 
     @media (max-width: $breakpoint-medium) {
       grid-column: 1;
@@ -83,8 +80,7 @@ export default {
     }
 
     &:hover {
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
+      @include text-fill-color(transparent);
     }
   }
 
@@ -111,21 +107,14 @@ export default {
 
   &__nav-link {
     text-decoration: none;
-
-    @include text-gradient;
-
     transition-property: -webkit-text-fill-color, -moz-text-fill-color;
     transition-duration: $transition-duration;
     transition-timing-function: ease-in-out;
 
-    @include text-gradient;
-
-    -webkit-text-fill-color: currentColor;
-    -moz-text-fill-color: currentColor;
+    @include text-gradient(currentColor);
 
     &:hover {
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
+      @include text-fill-color(transparent);
     }
   }
 
