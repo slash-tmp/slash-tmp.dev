@@ -44,14 +44,13 @@
   &__social-link {
     display: flex;
 
-    --gradient-stop-1: #{$color-text-light};
-    --gradient-stop-2: #{$color-text-light};
-    --gradient-stop-3: #{$color-text-light};
+    --gradient-stop-1: #{$color-accent-one};
+    --gradient-stop-2: #{$color-accent-two};
+    --gradient-stop-3: #{$color-accent-three};
+    --icon-gradient-opacity: 0;
 
     &:hover {
-      --gradient-stop-1: #{$color-accent-one};
-      --gradient-stop-2: #{$color-accent-two};
-      --gradient-stop-3: #{$color-accent-three};
+      --icon-gradient-opacity: 1;
     }
   }
 

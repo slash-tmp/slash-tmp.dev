@@ -67,6 +67,11 @@ export default {
     text-decoration: none;
     margin-right: auto;
     padding-bottom: $spacing; // Prevent text to be cropped with background-clip
+    transition-property: -webkit-text-fill-color, -moz-text-fill-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing;
+
+    @include text-gradient(currentColor);
 
     @media (max-width: $breakpoint-medium) {
       grid-column: 1;
@@ -75,7 +80,7 @@ export default {
     }
 
     &:hover {
-      @include text-gradient;
+      @include text-fill-color(transparent);
     }
   }
 
@@ -102,9 +107,14 @@ export default {
 
   &__nav-link {
     text-decoration: none;
+    transition-property: -webkit-text-fill-color, -moz-text-fill-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing;
+
+    @include text-gradient(currentColor);
 
     &:hover {
-      @include text-gradient;
+      @include text-fill-color(transparent);
     }
   }
 
