@@ -30,7 +30,7 @@
       class="home-services__section home-services__section--quality"
       aria-describedby="audit-section-title"
     >
-      <WebDevIcon class="home-services__icon" />
+      <AuditIcon class="home-services__icon" />
       <h2 id="audit-section-title" class="home-services__title">
         Audits & conseils<br />
         en qualité web
