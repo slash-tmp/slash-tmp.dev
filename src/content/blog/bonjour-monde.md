@@ -2,7 +2,7 @@
 title: 'Bonjour monde'
 description: "Ça y est, on se lance et le projet /tmp voit le jour. Au programme : création de sites web et conseils en qualité web."
 date: 2021-03-01
-publishe: true
+published: true
 ---
 
 ## C’est quoi /tmp ?
