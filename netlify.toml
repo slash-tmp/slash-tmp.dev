@@ -1,0 +1,10 @@
+[[plugins]]
+package = "netlify-plugin-submit-sitemap"
+  [plugins.inputs]
+  baseUrl = "https://slash-tmp.dev"
+  sitemapPath = "/sitemap.xml"
+  providers = [
+    "google",
+    "bing",
+    "yandex"
+  ]
