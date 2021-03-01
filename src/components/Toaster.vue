@@ -53,14 +53,11 @@ export default {
 
 .toaster {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: $spacing * 2;
+  left: $spacing * 2;
+  right: $spacing * 2;
   display: flex;
   justify-content: center;
-
-  > * {
-    margin-bottom: $spacing * 1.5;
-  }
+  z-index: 1;
 }
 </style>
