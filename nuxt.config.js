@@ -40,10 +40,10 @@ async function configureFeed() {
       title: '/tmp - Blog',
       link: baseUrl,
       description:
-        "Bienvenue sur notre blog ! On y écrit des articles pour parler du studio, de développement web, de code et d'accessibilité de qualité web.",
+        "On y écrit des articles pour parler du studio, de développement web, de code, d'accessibilité et de qualité web.",
       language: 'fr-FR',
       image: `${baseUrl}/og.jpg`,
-      favicon: `${baseUrl}/favicon.png`
+      favicon: `${baseUrl}/favicon.svg`
     }
 
     // add articles to the feed
@@ -123,7 +123,7 @@ export default {
       {
         hid: 'twitter:image:alt',
         name: 'twitter:image:alt',
-        content: '/tmp écrit en blanc et centré sur un fond violet.'
+        content: '/tmp écrit en jaune et rose et centré sur un fond noir.'
       }
     ],
     link: [
