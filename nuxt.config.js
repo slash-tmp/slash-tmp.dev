@@ -123,7 +123,7 @@ export default {
       {
         hid: 'twitter:image:alt',
         name: 'twitter:image:alt',
-        content: '/tmp écrit en blanc et centré sur un fond violet.'
+        content: '/tmp écrit en jaune et rose et centré sur un fond noir.'
       }
     ],
     link: [
