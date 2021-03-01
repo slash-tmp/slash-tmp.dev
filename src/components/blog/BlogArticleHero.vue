@@ -49,14 +49,6 @@ export default {
 
   &__date {
     margin-bottom: $spacing * 4;
-
-    @media (max-width: $breakpoint-medium) {
-      margin-bottom: $spacing;
-    }
-  }
-
-  &__description {
-    margin-bottom: $spacing * 4;
   }
 }
 </style>
