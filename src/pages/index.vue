@@ -32,7 +32,8 @@ export default {
 .home-page {
   &__section {
     &--dark {
-      background: $gradient-background-dark;
+      @include dark-background;
+
       margin-bottom: $spacing * 15;
       padding: $spacing * 8 0 $spacing * 15;
 

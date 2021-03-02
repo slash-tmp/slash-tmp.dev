@@ -75,7 +75,8 @@ export default {
 
 <style lang="scss">
 .site-footer {
-  background: $gradient-background-dark;
+  @include dark-background;
+
   color: $color-text-light;
   padding: $spacing * 15 $spacing * 2;
   position: relative;
