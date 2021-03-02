@@ -28,9 +28,10 @@ export default {
 
 <style lang="scss">
 .site-header {
-  background: $gradient-background-dark;
   padding: $spacing * 8.5 $spacing * 2;
   color: $color-text-light;
+
+  @include dark-background;
 
   @media (max-width: $breakpoint-medium) {
     padding: $spacing * 2;

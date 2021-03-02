@@ -32,7 +32,8 @@ export default {
 
 <style lang="scss">
 .blog-hero {
-  background: $gradient-background-dark;
+  @include dark-background;
+
   color: $color-text-light;
   padding: $spacing * 8 $spacing * 2 $spacing * 15;
 

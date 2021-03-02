@@ -5,12 +5,7 @@ $color-accent-one: #ffdf96;
 $color-accent-two: #ffa99f;
 $color-accent-three: #ff719a;
 
-$gradient-background-dark: linear-gradient(
-  90deg,
-  #37343a 0%,
-  rgba(34, 27, 43, 0.99) 50%,
-  rgba(3, 1, 6, 0.92) 100%
-);
+$gradient-background-dark: url('~assets/img/bg10.png');
 $gradient-accent: linear-gradient(
   90deg,
   $color-accent-one 0%,
