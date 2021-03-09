@@ -23,7 +23,7 @@
     "@nuxt/content": "^1.14.0",
     "core-js": "^3.8.2",
     "highlight.js": "^10.5.0",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.15.2"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
