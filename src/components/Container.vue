@@ -10,7 +10,7 @@ export default {
   props: {
     alignment: {
       type: String,
-      validator: value => ['left', 'center'].includes(value),
+      validator: value => ['left', 'center', 'right'].includes(value),
       default: 'center'
     },
     size: {
