@@ -1,5 +1,5 @@
 <template>
-  <div class="default-layout" tabindex="-1">
+  <div class="default-layout">
     <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
     <SiteHeader />
@@ -23,9 +23,20 @@ export default {
   watch: {
     // reset page focus on route change
     $route(to, from) {
+      // only reset focus on page change (not when going to an anchor on the same page)
       if (from.path !== to.path) {
-        // only reset focus on page change (not when going to an anchor on the same page)
+        /*
+          Permanently adding `tabindex="-1"` to the element would break the
+          default behaviour of focusing the closest element when clicking anywhere
+          on the page. Instead, the focus would be reset to the top of the page 
+          every time the user clicked anywhere.
+
+          So, we only set the tabindex attribute when we need to reset the focus
+          and then immediately remove it.
+        */
+        this.$el.setAttribute('tabindex', '-1')
         this.$el.focus()
+        this.$el.removeAttribute('tabindex')
       }
     }
   }
