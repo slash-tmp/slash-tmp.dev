@@ -8,3 +8,9 @@ package = "netlify-plugin-submit-sitemap"
     "bing",
     "yandex"
   ]
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload" 
