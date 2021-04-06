@@ -96,6 +96,10 @@ export default {
   target: 'static',
   modern: process.env.NODE_ENV === 'production' && 'client',
   srcDir: 'src/',
+  render: {
+    // add Content-Security-Policy meta to the header
+    csp: true
+  },
   head: {
     title,
     titleTemplate: '%s - /tmp',
