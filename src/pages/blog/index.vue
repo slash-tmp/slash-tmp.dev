@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="blog-index">
     <BlogHero />
     <BlogArticles :articles="articles" />
+    <SubscribeForm class="blog-index__subscribe-form" />
   </div>
 </template>
 
@@ -40,3 +41,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.blog-index {
+  &__subscribe-form {
+    margin-bottom: $spacing * 10;
+  }
+}
+</style>
