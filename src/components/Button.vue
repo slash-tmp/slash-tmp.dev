@@ -1,5 +1,5 @@
 <template>
-  <component :is="as" class="button">
+  <component :is="as" :class="['button', `button--${size}`]">
     <span class="button__content"><slot /></span>
   </component>
 </template>
@@ -12,22 +12,35 @@ export default {
       type: String,
       required: false,
       default: 'button'
+    },
+    size: {
+      type: String,
+      validator: value => ['medium', 'small'].includes(value),
+      default: 'medium'
     }
   }
 }
 </script>
 
 <style lang="scss">
-$border: 0.0625rem;
+$border-width: 0.0625rem;
 
 .button {
+  --button-padding: #{$spacing * 2};
+
   /* TODO: make the button border a gradient */
-  padding: $spacing * 2;
-  border: 0.0625rem solid $color-accent-two;
+  background: none;
+  font: inherit;
+  border: $border-width solid $color-accent-two;
   border-radius: 0.5rem;
   text-decoration: none;
   color: $color-text-light;
   position: relative;
+  padding: var(--button-padding);
+
+  &--small {
+    --button-padding: #{$spacing};
+  }
 
   &__content {
     font-family: $font-family-sans-serif;
@@ -53,7 +66,7 @@ $border: 0.0625rem;
 
   &:hover {
     border: none;
-    padding: $spacing * 2 + 0.0625rem;
+    padding: calc(var(--button-padding) + #{$border-width});
 
     &::after {
       opacity: 1;
