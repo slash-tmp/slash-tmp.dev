@@ -6,6 +6,8 @@
       :date="formattedDate"
     />
     <BlogArticle :article="article" />
+
+    <SubscribeForm class="blog-slug__subscribe-form" />
   </article>
 </template>
 
@@ -42,3 +44,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.blog-slug {
+  &__subscribe-form {
+    margin-bottom: $spacing * 10;
+  }
+}
+</style>
