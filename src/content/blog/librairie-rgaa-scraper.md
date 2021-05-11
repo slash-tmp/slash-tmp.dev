@@ -19,8 +19,8 @@ Une librairie Node.js pour facilement récupérer les données du RGAA.
 
 On a souhaité ajouter la possibilité de filtrer les résultats. Les résultats sont donc filtrables selon plusieurs éléments :
 
-- Une thématique : `"1"`.
-- Un critère : `"2.4"`
+- Un identifiant de thématique : `"1"`.
+- Un identifiant de critère : `"2.4"`
 - Une recherche textuelle : `"images"`.
 - Un niveau de conformité WCAG (Web Content Accessibility Guidelines, l’équivalent américain du RGAA) : `"AA"`.
 
