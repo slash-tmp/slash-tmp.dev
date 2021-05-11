@@ -11,7 +11,7 @@ En bref : on a créé une librairie open source qui permet de récupérer et de 
 
 [Comme on vient de se lancer](/blog/bonjour-monde), on a besoin d’outils pour travailler ! En l'occurrence, il nous fallait une grille d’audit de qualité et d’accessibilité web basée, entre autres, sur les critères et tests du RGAA. On a donc cherché un moyen de récupérer de manière automatique l’ensemble des données du RGAA (à savoir : les thématiques, les critères et les tests) pour la création de notre outil (on a d’ailleurs prévu d’écrire un article technique à ce sujet).
 
-Il existe déjà [le repository GitHub de la Direction Interministérielle du Numérique (DINUM)](https://github.com/DISIC/RGAA) qui met à disposition les critères en JSON mais le repository n’est pas toujours à jour et on souhaitait avoir la possibilité de filtrer les résultats.
+Il existe déjà [le dépôt GitHub de la Direction Interministérielle du Numérique (DINUM)](https://github.com/DISIC/RGAA) qui met à disposition les critères en JSON mais le dépôt n’est pas toujours à jour et on souhaitait avoir la possibilité de filtrer les résultats.
 
 ## Le résultat
 
@@ -45,7 +45,7 @@ scrapeRgaa().then(async data => {
 })
 ```
 
-Pour plus de détails, un [projet d’exemple est disponible sur le repository](https://github.com/slash-tmp/rgaa-scraper/tree/main/examples).
+Pour plus de détails, un [projet d’exemple est disponible sur le dépôt](https://github.com/slash-tmp/rgaa-scraper/tree/main/examples).
 
 ---
 
