@@ -3,16 +3,19 @@ title: 'Mentions légales'
 description: "Informations concernant l'identité et les coordonnées de /tmp ainsi que celles de l'hébergeur du site."
 ---
 
-**/tmp** étant en cours de création, le contenu de cette page l'est également !
+## À propos de /tmp
 
-<!--
-**/tmp** est une SARL (Société à Responsabilité Limitée) au capital social de XXX€ domiciliée au XXXX, 33000 Bordeaux. **/tmp** est enregistrée au registre des commerces et des sociétés de Bordeaux sous le numéro XXX XXX XXX et sous le numéro d'identification fiscale XXX XXX XXX.
--->
+- Statut : SARL (Société à Responsabilité Limitée).
+- Capital social : 1&nbsp;000&nbsp;€.
+- SIRET : 899 233 894 00018.
+- RCS : Bordeaux.
+- TVA intracommunautaire : FR 65 899 233 894.
 
 ## Coordonnées
 
+- Adresse du siège social : 75 rue Mandron, 33000 Bordeaux
 - Email : [contact@slash-tmp.dev](mailto:contact@slash-tmp.dev)
-- Téléphone : 06 42 01 13 33
+- Téléphone : +33 6 42 01 13 33
 
 ## Hébergement
 
