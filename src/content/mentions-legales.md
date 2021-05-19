@@ -15,7 +15,7 @@ description: "Informations concernant l'identité et les coordonnées de /tmp ai
 
 - Adresse du siège social : 75 rue Mandron, 33000 Bordeaux
 - Email : [contact@slash-tmp.dev](mailto:contact@slash-tmp.dev)
-- Téléphone : +33 6 42 01 13 33
+- Téléphone : [+33 6 42 01 13 33](tel:+33642011333)
 
 ## Hébergement
 
