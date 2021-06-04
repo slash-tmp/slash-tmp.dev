@@ -4,6 +4,8 @@ body {
   font-family: $font-family-serif;
   font-size: $font-size-normal;
   letter-spacing: 0.15px;
+
+  --gradient-background-dark: url('~assets/img/bg10.png?inline');
 }
 
 h1,
