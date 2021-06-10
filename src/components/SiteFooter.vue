@@ -36,6 +36,34 @@
 
       <hr class="site-footer__ruler" />
 
+      <form action="/.netlify/functions/free-audit" method="POST">
+        <div>
+          <label for="form-email">Email</label>
+          <input
+            id="form-email"
+            type="email"
+            autocomplete="email"
+            required
+            name="email"
+          />
+        </div>
+
+        <div>
+          <label for="form-url">URL</label>
+          <input
+            id="form-url"
+            type="url"
+            autocomplete="url"
+            required
+            name="url"
+          />
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
       <section
         aria-describedby="additional-info-title"
         class="site-footer__informations"

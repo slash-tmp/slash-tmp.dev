@@ -15,10 +15,10 @@
         <div class="subscribe-form__form-group">
           <label for="firstName">Prénom</label>
           <input
+            id="firstName"
             class="subscribe-form__field"
             type="text"
             name="FIRST_NAME"
-            id="firstName"
           />
         </div>
 
@@ -27,10 +27,10 @@
         >
           <label for="email">Email (requis)</label>
           <input
+            id="email"
             class="subscribe-form__field"
             type="email"
             name="EMAIL"
-            id="email"
             required
           />
         </div>
