@@ -15,8 +15,8 @@
             </h2>
             <div class="blog-articles__date">
               Écrit le
-              <time :datetime="article.date">{{
-                formatDate(article.date)
+              <time :datetime="formatMachineDate(article.date)">{{
+                formatHumanDate(article.date)
               }}</time>
             </div>
             <p>{{ article.description }}</p>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import formatDate from '@/helpers/formatDate'
+import { formatHumanDate, formatMachineDate } from '@/helpers/formatDate'
 
 export default {
   name: 'ArticleList',
@@ -40,8 +40,11 @@ export default {
     }
   },
   methods: {
-    formatDate(date) {
-      return formatDate(date)
+    formatHumanDate(date) {
+      return formatHumanDate(date)
+    },
+    formatMachineDate(date) {
+      return formatMachineDate(date)
     }
   }
 }

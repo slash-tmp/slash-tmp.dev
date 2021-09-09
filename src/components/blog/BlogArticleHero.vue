@@ -3,7 +3,8 @@
     <Container>
       <h1 class="blog-article-hero__title">{{ title }}</h1>
       <div class="blog-article-hero__date">
-        Écrit le <time>{{ date }}</time> —
+        Écrit le
+        <time :datetime="machineDate">{{ humanDate }}</time> —
         <NuxtLink :to="{ name: 'blog' }">
           Retour à la liste des articles
         </NuxtLink>
@@ -14,6 +15,7 @@
 </template>
 
 <script>
+import { formatHumanDate, formatMachineDate } from '@/helpers/formatDate'
 export default {
   name: 'BlogArticleHero',
   props: {
@@ -28,6 +30,14 @@ export default {
     date: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    humanDate() {
+      return formatHumanDate(this.date)
+    },
+    machineDate() {
+      return formatMachineDate(this.date)
     }
   }
 }
