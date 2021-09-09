@@ -30,7 +30,7 @@ Elle est d'ailleurs supportée partout sauf sur Internet Explorer. Mais le HTML 
 
 ## Un attribut, mais pour les machines
 
-En plus des attributs globaux, l'élément `<time>` possède un attribut un peu particulier : `datetime`. Ce dernier est destiné aux machines qui vont l'interpréter (à la différence d'un attribut comme ) plutôt qu'aux personnes. C'est à dire les navigateurs, les clients email, les lecteurs de flux RSS, les lecteurs d'écran...
+En plus des attributs globaux, l'élément `<time>` possède un attribut un peu particulier : `datetime`. Ce dernier est destiné aux machines qui vont l'interpréter plutôt qu'aux personnes. C'est à dire les navigateurs, les clients email, les lecteurs de flux RSS, les lecteurs d'écran...
 
 Il attend par conséquent une valeur normée dont [les formats sont détaillés sur MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values). Ces [formats pour la balise `<time>` sont détaillés sur CSS-tricks](https://css-tricks.com/time-element/).
 
@@ -47,7 +47,7 @@ Voici les résultats de vocalisations effectuées sur plusieurs combinaisons pop
 
 <div class="table-wrapper">
 
-| Combinaison lecteur d'écran + navigateur | Sans l'attribut `datetime`         | Avec l'attribut `datetime` |
+| Combinaison lecteur d'écran + navigateur | Avec l'attribut `datetime`         | Sans l'attribut `datetime` |
 | ---------------------------------------- | ---------------------------------- | -------------------------- |
 | VoiceOver + Safari                       | 8 septembre 2021, 8 septembre 2021 | 8 septembre 2021           |
 | VoiceOver + Chrome                       | 8 septembre 2021                   | 8 septembre 2021           |
