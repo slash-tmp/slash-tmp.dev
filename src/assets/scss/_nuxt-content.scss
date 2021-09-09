@@ -91,4 +91,40 @@
       width: $spacing * 10;
     }
   }
+
+  .table-wrapper {
+    overflow: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 0.5rem;
+    }
+
+    thead {
+      th {
+        background-image: $gradient-background-dark;
+        border: 0.0625rem solid $color-text-dark;
+        color: $color-text-light;
+        text-align: initial;
+
+        &:not(:last-child) {
+          border-right: 0.0625rem solid $color-text-light;
+        }
+      }
+    }
+
+    tbody {
+      tr td {
+        border: 0.0625rem solid $color-text-dark;
+      }
+
+      tr:nth-child(even) td {
+        background-color: rgba($color-text-dark, 0.1);
+      }
+    }
+  }
 }
