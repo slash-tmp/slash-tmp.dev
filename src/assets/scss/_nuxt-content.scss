@@ -7,13 +7,14 @@
 
   h2,
   h3 {
-    align-items: center;
-    display: flex;
     margin-top: $spacing * 5;
+    padding-right: 1.5rem;
+    position: relative;
 
     a {
-      margin-left: $spacing * 1.5;
-      order: 1;
+      position: absolute;
+      right: 0;
+      top: 0.4em;
     }
 
     a::after {
@@ -28,6 +29,11 @@
       transform: translateX(-0.5rem);
       transition: opacity 0.2s, transform 0.2s;
       width: 0.6em;
+
+      @media (max-width: $breakpoint-medium) {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   }
 
