@@ -1,8 +1,8 @@
 ---
-title: '[TBD]'
-description: '[TBD]'
+title: 'Sémantique et accessibilité de la balise <time>'
+description: "Anatomie et analyse de l'accessibilité de la balise <time> avec les différents lecteurs d'écran."
 date: 2021-09-13
-published: false
+published: true
 ---
 
 Il existe plus de 100 balises HTML (essayez le [HTML Tags Memory Test](https://codepen.io/plfstr/full/zYqQeRw) pour voir combien vous en connaissez). Chaque balise a ses spécificités et permet, dans la plupart des cas, d'attributer un sens au contenu qu'elle contient. C'est ce qu'on appelle la **sémantique**, obligatoire entre autres pour rendre un site accessible.
