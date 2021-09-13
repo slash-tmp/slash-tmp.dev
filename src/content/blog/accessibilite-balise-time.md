@@ -15,7 +15,7 @@ La balise `<time>` attend un contenu temporel qui peut se présenter de 3 maniè
 
 - Une **heure** : "L'heure du goûter c'est **16h00**".
 - Une **date** : "On fête la nouvelle année le **1er janvier**".
-- Une **durée** : "Le Seigneur des anneaux : Le Retour du roi dure \*\*4 heures et 22 heures et 36 minutes
+- Une **durée** : "Le Seigneur des anneaux : Le Retour du roi dure **4 heures et 22 heures et 36 minutes**".
 
 ```html
 <p>
