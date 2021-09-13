@@ -55,8 +55,8 @@ Voici les résultats de vocalisations effectuées sur plusieurs combinaisons pop
 | VoiceOver + Safari           | "8 septembre 2021, 8 septembre 2021"     | "08 barre oblique 09 barre oblique 2021, 8 septembre 2021" | "2 heures et 36 minutes, deux heures et trente-six minutes" |
 | VoiceOver + Chrome           | "8 septembre 2021"                       | "08 barre oblique 09 barre oblique 2021"                   | "2 heures et 36 minutes"                                    |
 | Talkback + Chrome            | "8 septembre 2021"                       | "8 9 2021"                                                 | "2 heures et 36 minutes"                                    |
-| NVDA + Chrome                | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un"                   | "2 heures et 36 minutes"                                    |
-| NVDA + Firefox               | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un"                   | "2 heures et 36 minutes"                                    |
+| NVDA + Chrome                | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un"                   | "deux heures trente-six minutes"                            |
+| NVDA + Firefox               | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un"                   | "deux heures trente-six minutes"                            |
 
 </div>
 
@@ -64,13 +64,13 @@ Voici les résultats de vocalisations effectuées sur plusieurs combinaisons pop
 
 <div class="table-wrapper">
 
-| Lecteur d'écran + navigateur | 8 septembre 2021                         | 08/09/2021                               | 2 heures et 36 minutes   |
-| ---------------------------- | ---------------------------------------- | ---------------------------------------- | ------------------------ |
-| VoiceOver + Safari           | "8 septembre 2021"                       | "08 barre oblique 09 barre oblique 2021" | "2 heures et 36 minutes" |
-| VoiceOver + Chrome           | "8 septembre 2021"                       | "08 barre oblique 09 barre oblique 2021" | "2 heures et 36 minutes" |
-| Talkback + Chrome            | "8 septembre 2021"                       | "8 9 2021"                               | "2 heures et 36 minutes" |
-| NVDA + Chrome                | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un" | "2 heures et 36 minutes" |
-| NVDA + Firefox               | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un" | "2 heures et 36 minutes" |
+| Lecteur d'écran + navigateur | 8 septembre 2021                         | 08/09/2021                               | 2 heures et 36 minutes           |
+| ---------------------------- | ---------------------------------------- | ---------------------------------------- | -------------------------------- |
+| VoiceOver + Safari           | "8 septembre 2021"                       | "08 barre oblique 09 barre oblique 2021" | "2 heures et 36 minutes"         |
+| VoiceOver + Chrome           | "8 septembre 2021"                       | "08 barre oblique 09 barre oblique 2021" | "2 heures et 36 minutes"         |
+| Talkback + Chrome            | "8 septembre 2021"                       | "8 9 2021"                               | "2 heures et 36 minutes"         |
+| NVDA + Chrome                | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un" | "deux heures trente-six minutes" |
+| NVDA + Firefox               | "huit septembre deux-milles-vingt-et-un" | "huit septembre deux-milles-vingt-et-un" | "deux heures trente-six minutes" |
 
 </div>
 
@@ -79,6 +79,7 @@ En résumé :
 - Il n'existe a priori pas de rôle ARIA particulier pour ce type d'élément. Dans les 2 cas, il est perçu comme un texte standard.
 - L'attribut `datetime` est seulement lu et interprété par la combinaison VoiceOver + Safari (pas la possibilité de tester sur iOS) mais cela provoque un doublon dans l'annonce.
 - Certains lecteurs d'écran comprennent le format abrégé 08/09/2021 (ce n'est pas lié à la balise `<time>`) et le traduisent en toutes lettres sauf VoiceOver qui lit les séparateurs (/) littéralement.
+- Dans le cas d'une heure (2 heures et 36 minutes), la valeur de l'attribut `datetime` est ignorée par NVDA : `<time datetime="PT2H12M">2h36m</time>` sera lu "deux heures trente-six minutes".
 
 ---
 
