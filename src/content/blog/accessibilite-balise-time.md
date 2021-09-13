@@ -1,6 +1,6 @@
 ---
-title: 'Sémantique et accessibilité de la balise <time>'
-description: "Anatomie et analyse de l'accessibilité de la balise <time> avec les différents lecteurs d'écran."
+title: 'Sémantique et accessibilité de la balise HTML time'
+description: "Anatomie et analyse de l'accessibilité de la balise HTML time avec les différents lecteurs d'écran."
 date: 2021-09-13
 published: true
 ---
