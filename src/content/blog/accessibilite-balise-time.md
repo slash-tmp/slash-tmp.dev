@@ -79,7 +79,6 @@ En résumé :
 - Il n'existe a priori pas de rôle ARIA particulier pour ce type d'élément. Dans les 2 cas, il est perçu comme un texte standard.
 - L'attribut `datetime` est seulement lu et interprété par la combinaison VoiceOver + Safari (pas la possibilité de tester sur iOS) mais cela provoque un doublon dans l'annonce.
 - Certains lecteurs d'écran comprennent le format abrégé 08/09/2021 (ce n'est pas lié à la balise `<time>`) et le traduisent en toutes lettres sauf VoiceOver qui lit les séparateurs (/) littéralement.
-- Dans le cas d'une heure (2 heures et 36 minutes), la valeur de l'attribut `datetime` est ignorée par NVDA : `<time datetime="PT2H12M">2h36m</time>` sera lu "deux heures trente-six minutes".
 
 ---
 
