@@ -3,7 +3,7 @@
     <BlogArticleHero
       :title="title"
       :description="article.description"
-      :date="formattedDate"
+      :date="article.date"
     />
     <BlogArticle :article="article" />
 
@@ -13,7 +13,6 @@
 
 <script>
 import setPageMeta from '@/helpers/setPageMeta'
-import formatDate from '@/helpers/formatDate'
 import AnnouncedPageMixin from '@/mixins/announced-page'
 
 export default {
@@ -36,11 +35,6 @@ export default {
       this.article.description,
       this.$route.path
     )
-  },
-  computed: {
-    formattedDate() {
-      return formatDate(this.article.date)
-    }
   }
 }
 </script>
