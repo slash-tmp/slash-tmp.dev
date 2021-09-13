@@ -40,7 +40,7 @@ La valeur de cet attribut peut aussi servir à parser plus facilement en JavaScr
 
 C'était la plus grande question en écrivant cet article : est-ce que les lecteurs d'écran comprennent la balise `<time>` et est-ce qu'elle améliore l'expérience de navigation ?
 
-Voici les résultats de vocalisations effectuées sur plusieurs combinaisons populaires de navigateurs et de lecteurs d'écran pour les contenus suivants :
+Voici les résultats de vocalisations effectuées sur plusieurs combinaisons populaires de navigateurs et de lecteurs d'écran pour les contenus suivants (et [le code d'exemple](https://code.slash-tmp.dev/accessibilite-balise-time/)):
 
 - Date : 8 septembre 2021 (avec et sans attribut `datetime`).
 - Date : 08/09/2021 (avec et sans attribut `datetime`).
