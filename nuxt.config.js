@@ -115,14 +115,18 @@ export default {
         content: description
       },
       { hid: 'og:url', name: 'og:url', content: baseUrl },
-      { hid: 'og:image', name: 'og:image', content: '/og.jpg' },
+      { hid: 'og:image', name: 'og:image', content: `${baseUrl}/og.jpg` },
       { hid: 'twitter:title', name: 'twitter:title', content: title },
       {
         hid: 'twitter:card',
         name: 'twitter:card',
         content: 'summary_large_image'
       },
-      { hid: 'twitter:image', name: 'twitter:image', content: '/og.jpg' },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: `${baseUrl}/og.jpg`
+      },
       {
         hid: 'twitter:image:alt',
         name: 'twitter:image:alt',
