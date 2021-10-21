@@ -1,0 +1,8 @@
+website: https://troops.fr
+clientName: Troops
+description: Amélioration des performances du site vitrine (optimisation des images, des requêtes réseau, réduction de la taille des fichiers...), correction des problèmes d'accessibilité et développement de nouvelles fonctionnalités.
+tags:
+  - Nuxt.js
+  - Contentful
+  - Performance web
+logo: /clients/troops-logo.svg

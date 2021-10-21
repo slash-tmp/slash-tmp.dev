@@ -1,0 +1,8 @@
+website: https://careline.fr
+clientName: CareLine Solutions
+description: Intégration de la nouvelle navigation de l'application web et refonte de l'interface avec Material UI.
+tags:
+  - React
+  - TypeScript
+  - Material UI
+logo: /clients/careline-logo.svg

@@ -5,6 +5,7 @@
       <HomeQuality />
     </div>
     <HomeServices class="home-page__services" />
+    <HomeProjects class="home-page__projects" :projects="projects" />
   </div>
 </template>
 
@@ -15,6 +16,10 @@ import AnnouncedPageMixin from '@/mixins/announced-page'
 export default {
   name: 'Index',
   mixins: [AnnouncedPageMixin],
+  async asyncData({ $content }) {
+    const projects = await $content('projects').fetch()
+    return { projects }
+  },
   data() {
     return {
       title: 'Petit studio web — développement et qualité',
@@ -53,6 +58,14 @@ export default {
   }
 
   &__services {
+    margin-bottom: $spacing * 23;
+
+    @media (max-width: $breakpoint-medium) {
+      margin-bottom: $spacing * 10;
+    }
+  }
+
+  &__projects {
     margin-bottom: $spacing * 23;
 
     @media (max-width: $breakpoint-medium) {
