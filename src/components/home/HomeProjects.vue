@@ -63,7 +63,7 @@ export default {
   &__item {
     display: grid;
     gap: 0 $spacing * 2;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: $spacing * 20 1fr;
 
     & + & {
       margin-top: $spacing * 6;
@@ -75,8 +75,12 @@ export default {
   }
 
   &__item-logo {
-    height: $spacing * 4;
+    width: 100%;
     object-fit: contain;
+
+    @media (max-width: $breakpoint-medium) {
+      max-width: $spacing * 20;
+    }
   }
 
   &__item-title {
