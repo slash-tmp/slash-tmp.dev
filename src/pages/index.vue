@@ -6,6 +6,7 @@
     </div>
     <HomeServices class="home-page__services" />
     <HomeProjects class="home-page__projects" :projects="projects" />
+    <HomeAuditForm class="home-page__audit-form" />
   </div>
 </template>
 
@@ -66,6 +67,14 @@ export default {
   }
 
   &__projects {
+    margin-bottom: $spacing * 23;
+
+    @media (max-width: $breakpoint-medium) {
+      margin-bottom: $spacing * 10;
+    }
+  }
+
+  &__audit-form {
     margin-bottom: $spacing * 23;
 
     @media (max-width: $breakpoint-medium) {
