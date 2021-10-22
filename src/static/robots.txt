@@ -1,4 +1,6 @@
 User-agent: *
 Disallow:
+Disallow: /erreur
+Disallow: /succes
 
 Sitemap: https://slash-tmp.dev/sitemap.xml
