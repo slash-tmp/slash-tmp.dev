@@ -75,7 +75,7 @@ export default {
   }
 
   &__audit-form {
-    margin-bottom: $spacing * 23;
+    margin-bottom: $spacing * 10;
 
     @media (max-width: $breakpoint-medium) {
       margin-bottom: $spacing * 10;

@@ -36,38 +36,6 @@
 
       <hr class="site-footer__ruler" />
 
-      <form
-        action="/.netlify/functions/free-audit"
-        method="POST"
-        @submit="requestFreeAudit"
-      >
-        <div>
-          <label for="form-email">Email</label>
-          <input
-            id="form-email"
-            type="email"
-            autocomplete="email"
-            required
-            name="email"
-          />
-        </div>
-
-        <div>
-          <label for="form-url">URL</label>
-          <input
-            id="form-url"
-            type="url"
-            autocomplete="url"
-            required
-            name="url"
-          />
-        </div>
-
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-
       <section
         aria-describedby="additional-info-title"
         class="site-footer__informations"
@@ -100,29 +68,6 @@ export default {
     copyEmail() {
       navigator.clipboard.writeText(this.email)
       this.notify("L'adresse email a été copiée dans le presse-papier.")
-    },
-    requestFreeAudit(e) {
-      e.preventDefault()
-
-      const formData = new FormData(e.target)
-      const urlData = new URLSearchParams(formData).toString()
-
-      fetch('/.netlify/functions/free-audit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: urlData
-      }).then(res => {
-        if (!res.ok) {
-          // TODO: display an error message instead of toast.
-          this.notify(
-            'Une erreur serveur est survenue. Vous pouvez nous contacter par email : contact@slash-tmp.dev.'
-          )
-        } else {
-          this.notify('Votre demande a bien été envoyée.')
-        }
-      })
     }
   }
 }

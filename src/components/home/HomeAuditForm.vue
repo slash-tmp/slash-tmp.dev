@@ -1,5 +1,5 @@
 <template>
-  <div class="home-audit-form">
+  <section class="home-audit-form">
     <Container class="home-audit-form__container">
       <h2 class="home-audit-form__title">Votre site est-il accessible ?</h2>
       <p class="home-audit-form__description">
@@ -50,7 +50,7 @@
         </small>
       </p>
     </Container>
-  </div>
+  </section>
 </template>
 
 <script>
