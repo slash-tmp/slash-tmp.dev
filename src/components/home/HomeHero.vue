@@ -164,7 +164,7 @@ export default {
     @media (max-width: $breakpoint-medium) {
       --avatar-size: #{$spacing * 10};
 
-      border-width: $spacing / 2;
+      border-width: $spacing * 0.5;
     }
 
     &--adrien {
