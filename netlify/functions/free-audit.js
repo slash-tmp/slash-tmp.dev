@@ -2,10 +2,13 @@ const fetch = require('node-fetch')
 
 const WEBHOOK_URL = process.env.CHAT_WEBHOOK_URL
 
-exports.handler = function ({ body }) {
+exports.handler = function (event) {
+  const { body } = event
   const params = new URLSearchParams(body)
   const email = params.get('email')
   const url = params.get('url')
+
+  console.log(event)
 
   return fetch(WEBHOOK_URL, {
     method: 'POST',
