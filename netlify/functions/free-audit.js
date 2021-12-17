@@ -2,10 +2,19 @@ const fetch = require('node-fetch')
 
 const WEBHOOK_URL = process.env.CHAT_WEBHOOK_URL
 
-exports.handler = function ({ body }) {
+exports.handler = function (event) {
+  const { body, httpMethod } = event
   const params = new URLSearchParams(body)
   const email = params.get('email')
   const url = params.get('url')
+
+  console.log(event)
+
+  if (httpMethod !== 'POST') {
+    return {
+      statusCode: 404
+    }
+  }
 
   return fetch(WEBHOOK_URL, {
     method: 'POST',
