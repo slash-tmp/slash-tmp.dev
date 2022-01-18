@@ -191,10 +191,12 @@ export default {
         }
       },
       // Custom highlight.js theme
-      highlighter(rawCode, lang) {
-        const highlightedCode = highlightjs.highlight(lang, rawCode).value
+      highlighter(rawCode, language) {
+        const highlightedCode = highlightjs.highlight(rawCode, {
+          language
+        }).value
 
-        return `<pre><code tabindex="0" class="hljs ${lang}">${highlightedCode}</code></pre>`
+        return `<pre><code tabindex="0" class="hljs ${language}">${highlightedCode}</code></pre>`
       }
     }
   },

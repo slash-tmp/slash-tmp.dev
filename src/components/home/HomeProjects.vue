@@ -3,9 +3,9 @@
     <Container>
       <h2 class="home-projects__title">Projets récents</h2>
       <article
-        class="home-projects__item"
         v-for="project in projects"
         :key="project.slug"
+        class="home-projects__item"
       >
         <h3 class="home-projects__item-title">
           <a :href="project.website">

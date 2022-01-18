@@ -12,8 +12,8 @@
       <form
         action="/.netlify/functions/free-audit"
         method="POST"
-        @submit="requestFreeAudit"
         class="home-audit-form__form"
+        @submit="requestFreeAudit"
       >
         <div class="home-audit-form__form-group">
           <label for="form-url">URL du site (requis)</label>
