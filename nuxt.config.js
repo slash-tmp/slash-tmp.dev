@@ -174,7 +174,9 @@ export default {
   styleResources: {
     scss: ['@/assets/scss/_variables.scss', '@/assets/scss/_mixins.scss']
   },
-  components: true,
+  components: {
+    dirs: ['@/components', '@/components/icons']
+  },
   buildModules: ['@nuxtjs/style-resources', '@aceforth/nuxt-optimized-images'],
   modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/feed'],
   content: {
