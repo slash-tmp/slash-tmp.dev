@@ -6,8 +6,6 @@
       :date="article.date"
     />
     <BlogArticle :article="article" />
-
-    <SubscribeForm class="blog-slug__subscribe-form" />
   </article>
 </template>
 

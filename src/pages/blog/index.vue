@@ -2,7 +2,6 @@
   <div class="blog-index">
     <BlogHero />
     <BlogArticles :articles="articles" />
-    <SubscribeForm class="blog-index__subscribe-form" />
   </div>
 </template>
 
