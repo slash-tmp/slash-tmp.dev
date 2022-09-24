@@ -6,7 +6,7 @@
     </div>
     <HomeServices class="home-page__services" />
     <HomeProjects class="home-page__projects" :projects="projects" />
-    <HomeAuditForm class="home-page__audit-form" />
+    <!-- <HomeAuditForm class="home-page__audit-form" /> -->
   </div>
 </template>
 

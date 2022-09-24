@@ -9,7 +9,7 @@
         <strong>réaliser gratuitement un audit simplifié</strong> pour avoir un
         premier aperçu du niveau d'accessibilité de votre site.
       </p>
-      <!-- <form
+      <form
         action="/.netlify/functions/free-audit"
         method="POST"
         class="home-audit-form__form"
@@ -48,7 +48,7 @@
           Vos données personnelles sont traitées avec respect et votre email est
           uniquement utilisé dans le cadre de cet audit.
         </small>
-      </p> -->
+      </p>
     </Container>
   </section>
 </template>
