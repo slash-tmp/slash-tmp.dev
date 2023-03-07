@@ -1,0 +1,8 @@
+website: https://design.numerique.gouv.fr/
+clientName: DINUM
+description: Accompagnement de la DINUM et de DesignGouv dans la refonte de la checklist de qualité web PiDila et le développement d’Ara, un outil en ligne pour faciliter la création d’audits RGAA.
+tags:
+  - Audit RGAA
+  - Vue.js
+  - Accessibilité numérique
+logo: /clients/dinum-logo.svg
