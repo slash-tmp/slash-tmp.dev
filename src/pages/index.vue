@@ -19,7 +19,7 @@ export default {
   mixins: [AnnouncedPageMixin],
   async asyncData({ $content }) {
     const projects = await $content('projects').fetch()
-    return { projects }
+    return { projects: projects.filter(p => !p.archived) }
   },
   data() {
     return {
